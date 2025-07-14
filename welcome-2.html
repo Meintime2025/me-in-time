@@ -4,42 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Welcome | Me In Time</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
   <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: sans-serif;
-      line-height: 1.6;
-      margin: 40px;
-      background-color: #f5f1ee;
-      color: #333;
-      max-width: 700px;
+      font-family: 'Lora', serif;
+      background-color: #f9f6f2;
+      color: #4a423a;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
     }
+
     nav {
-      text-align: center;
-      margin-bottom: 30px;
+      position: sticky;
+      top: 0;
+      background-color: #f3ede6;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      z-index: 100;
+      margin-bottom: 40px;
     }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      font-family: 'Montserrat', sans-serif;
       font-weight: 600;
+      font-size: 1rem;
     }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #6b6152;
+      padding: 8px 15px;
+      border-radius: 30px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background-color: #c4b6a6;
+      color: #fff;
+      outline: none;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #3c362f;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      color: #5e5349;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .poem {
       font-style: italic;
-      margin-top: 40px;
-      padding-left: 20px;
-      border-left: 4px solid #ccc;
+      border-left: 5px solid #bfb1a3;
+      background-color: #f3ede6;
+      padding: 25px 30px;
+      margin-top: 50px;
+      color: #5e5349;
+      line-height: 1.9;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      p, .poem {
+        font-size: 1rem;
+        padding: 0 10px;
+      }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="index.html">Home</a> |
-    <a href="welcome-2.html">Welcome</a> |
-    <a href="services.html">Services</a> |
-    <a href="blog.html">Blog</a> |
-    <a href="contact.html">Contact</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="welcome-2.html" aria-current="page">Welcome</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
+
+  <h1>Welcome to Me In Time</h1>
 
   <p>Maybe you're feeling stuck. Maybe you’re holding more than you can manage on your own. Maybe something's shifted — or maybe nothing has, and that’s part of the problem.</p>
 
@@ -55,93 +147,47 @@
 
   <div class="poem">
     <p>You sit down, shoulders hunched like guilt,</p>
-    <p>Lips are already forming the words:<br />
+    <p>Lips are already forming the words:<br>
     “Sorry — I don’t talk about this much.”</p>
 
-    <p>And I nod, though inside I sigh.<br />
-    Not at you.<br />
-    At all the years that taught you<br />
-    Your pain was something to preface.<br />
-    To pad.<br />
+    <p>And I nod, though inside I sigh.<br>
+    Not at you.<br>
+    At all the years that taught you<br>
+    Your pain was something to preface.<br>
+    To pad.<br>
     To apologise for.</p>
 
-    <p>You’re not a burden.<br />
-    You’re a person.<br />
-    With a past.<br />
-    A knot of thoughts you’ve carried<br />
-    in silence,<br />
+    <p>You’re not a burden.<br>
+    You’re a person.<br>
+    With a past.<br>
+    A knot of thoughts you’ve carried<br>
+    in silence,<br>
     afraid your story would take up too much space.</p>
 
-    <p>I’ve heard it a hundred ways:<br />
-    “I’m not good at this...”<br />
-    “Don’t want to waste your time...”<br />
-    “Sorry, it’s probably stupid...”<br />
-    And my heart gets heavier<br />
-    Not from what you say<br />
+    <p>I’ve heard it a hundred ways:<br>
+    “I’m not good at this...”<br>
+    “Don’t want to waste your time...”<br>
+    “Sorry, it’s probably stupid...”<br>
+    And my heart gets heavier<br>
+    Not from what you say<br>
     But from all you felt you couldn’t.</p>
 
-    <p>No one taught you<br />
-    That grief has a right to speak<br />
+    <p>No one taught you<br>
+    That grief has a right to speak<br>
     Even in your voice.</p>
 
-    <p>So here’s what I wish I could tattoo on the moment:<br />
-    You do not need permission<br />
-    To feel.<br />
-    To speak.<br />
+    <p>So here’s what I wish I could tattoo on the moment:<br>
+    You do not need permission<br>
+    To feel.<br>
+    To speak.<br>
     To be heard.</p>
 
-    <p>No need to be polished.<br />
-    No need to be strong.<br />
+    <p>No need to be polished.<br>
+    No need to be strong.<br>
     No need to be sorry.</p>
 
     <p>Just begin.</p>
   </div>
 
-</body>
-</html>
-
-      <p>You sit down, shoulders hunched like guilt,</p>
-      <p>Lips are already forming the words:<br />
-      “Sorry — I don’t talk about this much.”</p>
-
-      <p>And I nod, though inside I sigh.<br />
-      Not at you.<br />
-      At all the years that taught you<br />
-      Your pain was something to preface.<br />
-      To pad.<br />
-      To apologise for.</p>
-
-      <p>You’re not a burden.<br />
-      You’re a person.<br />
-      With a past.<br />
-      A knot of thoughts you’ve carried<br />
-      in silence,<br />
-      afraid your story would take up too much space.</p>
-
-      <p>I’ve heard it a hundred ways:<br />
-      “I’m not good at this...”<br />
-      “Don’t want to waste your time...”<br />
-      “Sorry, it’s probably stupid...”<br />
-      And my heart gets heavier<br />
-      Not from what you say<br />
-      But from all you felt you couldn’t.</p>
-
-      <p>No one taught you<br />
-      That grief has a right to speak<br />
-      Even in your voice.</p>
-
-      <p>So here’s what I wish I could tattoo on the moment:<br />
-      You do not need permission<br />
-      To feel.<br />
-      To speak.<br />
-      To be heard.</p>
-
-      <p>No need to be polished.<br />
-      No need to be strong.<br />
-      No need to be sorry.</p>
-
-      <p>Just begin.</p>
-    </div>
-  </section>
 </body>
 </html>
