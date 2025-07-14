@@ -1,11 +1,11 @@
-/* Reset box-sizing and margin/padding */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Base font styles and layout */
+/* Body and content */
 body {
   font-family: 'Lora', serif;
   color: #4a423a;
@@ -13,93 +13,41 @@ body {
   line-height: 1.7;
   background-color: #f9f6f2;
   max-width: 900px;
-  margin: 40px auto;
+  margin: 60px auto 40px auto; /* margin top to clear sticky nav */
   padding: 20px;
   text-align: left;
+  position: relative;
 }
 
-/* Headings font style */
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #3c362f;
-  font-size: 3rem;
-  margin-top: 50px;
-  margin-bottom: 25px;
-  text-align: left;
-  line-height: 1.2;
-}
-
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #3c362f;
-  font-size: 2.25rem;
-  margin-top: 45px;
-  margin-bottom: 20px;
-  text-align: left;
-  line-height: 1.3;
-}
-
-h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #3c362f;
-  font-size: 1.75rem;
-  margin-top: 35px;
-  margin-bottom: 18px;
-  text-align: left;
-  line-height: 1.4;
-}
-
-/* Paragraph styling */
-p, li {
-  font-family: 'Lora', serif;
-  font-weight: 400;
-  font-size: 1.1rem;
-  color: #5e5349;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-/* Lists styling */
-ul, ol {
-  margin-left: 25px;
-  margin-bottom: 20px;
-  color: #5e5349;
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* Sticky full-width navigation banner */
+/* Sticky full-width nav banner */
 nav {
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 100vw; /* full viewport width */
   background-color: #f3ede6;
-  padding: 15px 40px;
+  padding: 15px 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   z-index: 1000;
+  margin: 0;
   box-sizing: border-box;
 }
 
-/* Navigation list styling */
+/* Nav list centered inside nav */
 nav ul {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
   display: flex;
-  justify-content: flex-start; /* left aligned */
   gap: 30px;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  padding-left: 0;
-  margin: 0;
+  justify-content: flex-start;
 }
 
-/* Navigation links */
+/* Nav links styling */
 nav a {
   color: #6b6152;
   text-decoration: none;
@@ -111,7 +59,7 @@ nav a {
   font-weight: 600;
 }
 
-/* Hover/focus nav link styles */
+/* Hover/focus effect */
 nav a:hover,
 nav a:focus {
   background-color: #c4b6a6;
@@ -119,7 +67,39 @@ nav a:focus {
   outline: none;
 }
 
-/* Contact link / button style */
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #3c362f;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+/* Paragraphs and list items */
+p, li {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #5e5349;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #5e5349;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Contact link/button */
 a.contact-link, .button-link, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -136,7 +116,6 @@ a.contact-link, .button-link, button {
   line-height: 1.4;
 }
 
-/* Contact link / button hover/focus */
 a.contact-link:hover, a.contact-link:focus,
 .button-link:hover, .button-link:focus,
 button:hover, button:focus {
@@ -144,7 +123,7 @@ button:hover, button:focus {
   outline: none;
 }
 
-/* Form inputs and textarea styling */
+/* Form inputs and textarea */
 input, textarea {
   font-family: 'Lora', serif;
   font-size: 1.1rem;
@@ -158,53 +137,7 @@ input, textarea {
   box-sizing: border-box;
 }
 
-/* FAQ details spacing */
-details {
-  background: #fff;
-  border-radius: 6px;
-  margin-bottom: 25px;
-  padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  cursor: pointer;
-}
-
-/* Summary styling */
-summary {
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.15rem;
-  outline: none;
-  user-select: none;
-  margin-bottom: 10px;
-  list-style: none;
-}
-
-/* Hide default marker */
-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Custom arrow icons */
-details[open] summary::before {
-  content: "▼ ";
-  color: #6b6152;
-}
-
-summary::before {
-  content: "► ";
-  color: #6b6152;
-}
-
-/* FAQ paragraph and list inside details */
-details p, details ul {
-  margin-top: 12px;
-  font-size: 1rem;
-  color: #5e5349;
-  padding-left: 20px;
-  line-height: 1.6;
-}
-
-/* Footer styling */
+/* Footer */
 footer {
   text-align: left;
   margin-top: 60px;
@@ -214,68 +147,32 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Footer images like logos */
+/* Footer logos/images */
 footer img {
   height: 40px;
   width: auto;
   margin-top: 10px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 900px) {
-  body {
-    padding: 15px 20px;
-  }
-  nav {
-    padding: 12px 20px;
-  }
-  nav ul {
-    gap: 20px;
-  }
-  h1 {
-    font-size: 2.6rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
-  }
-  h2 {
-    font-size: 1.9rem;
-    margin-top: 35px;
-    margin-bottom: 18px;
-  }
-  h3 {
-    font-size: 1.5rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
-}
-
-/* Mobile specific tweaks */
+/* Responsive adjustments */
 @media (max-width: 600px) {
   body {
-    padding: 15px 15px;
-    margin: 20px auto;
-    max-width: 100%;
+    padding: 15px 20px;
+    margin-top: 80px; /* a little more for nav height */
   }
   nav ul {
     flex-direction: column;
-    gap: 12px;
+    gap: 15px;
   }
-  nav a {
-    padding: 8px 12px;
+  nav {
+    padding: 10px 15px;
   }
-  h1 {
-    font-size: 2.2rem;
+  h1, h2, h3, h4, h5, h6 {
     margin-top: 30px;
     margin-bottom: 15px;
   }
-  h2 {
-    font-size: 1.5rem;
-    margin-top: 25px;
-    margin-bottom: 12px;
-  }
-  h3 {
-    font-size: 1.25rem;
-    margin-top: 20px;
-    margin-bottom: 10px;
+  nav a {
+    padding: 8px 12px;
+    font-size: 0.95rem;
   }
 }
