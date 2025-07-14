@@ -25,12 +25,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #3c362f;
   margin-top: 40px;
   margin-bottom: 20px;
-  line-height: 1.2;
   text-align: left;
-  scroll-margin-top: 70px; /* offset for sticky nav */
+  line-height: 1.2;
 }
 
-/* Paragraph and list styling */
+/* Paragraph styling */
 p, li {
   font-family: 'Lora', serif;
   font-weight: 400;
@@ -41,6 +40,7 @@ p, li {
   text-align: left;
 }
 
+/* Lists styling */
 ul, ol {
   margin-left: 20px;
   margin-bottom: 20px;
@@ -54,25 +54,22 @@ ul, ol {
 nav {
   position: sticky;
   top: 0;
-  width: 100vw;
+  width: 100%;
   background-color: #f3ede6;
   padding: 15px 40px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   z-index: 1000;
-  left: 0;
-  right: 0;
 }
 
 /* Navigation list styling */
 nav ul {
-  display: flex !important;
-  justify-content: space-between;
+  display: flex;
+  justify-content: flex-start; /* left-aligned */
   gap: 30px;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  overflow-x: auto; /* horizontal scroll on small screens */
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  flex-wrap: nowrap; /* default no wrap on desktop */
 }
 
 /* Navigation links */
@@ -83,7 +80,6 @@ nav a {
   border-radius: 30px;
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
-  white-space: nowrap; /* prevent breaking */
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
 }
@@ -139,7 +135,7 @@ input, textarea {
 details {
   background: #fff;
   border-radius: 6px;
-  margin-bottom: 25px;
+  margin-bottom: 25px;  /* space between FAQs */
   padding: 20px 25px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   cursor: pointer;
@@ -202,20 +198,21 @@ footer img {
 @media (max-width: 600px) {
   body {
     padding: 15px 20px;
-    margin: 20px auto;
   }
   nav ul {
-    gap: 15px;
+    flex-wrap: wrap;      /* allow wrapping on small screens */
+    gap: 15px 25px;       /* vertical and horizontal gaps */
+    justify-content: center; /* center nav items */
   }
   nav {
     padding: 10px 20px;
   }
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
   nav a {
     padding: 8px 12px;
     font-size: 0.9rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 30px;
+    margin-bottom: 15px;
   }
 }
