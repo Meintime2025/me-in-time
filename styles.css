@@ -1,7 +1,13 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500;700&display=swap');
 
 /* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Lora', serif;
   color: #4a423a;
@@ -11,55 +17,212 @@ body {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Banner */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #f3ede6;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 100;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 10px;
+}
+
+/* Nav Links */
+nav ul li a {
+  text-decoration: none;
+  color: #6b6152;
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover/focus on nav links */
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #c4b6a6;
+  color: #fff;
+  outline: none;
+}
+
+/* Contact nav link styled as button */
+nav ul li a.contact-link {
+  background-color: #6b6152;
+  color: #fff !important;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover/focus for contact button */
+nav ul li a.contact-link:hover,
+nav ul li a.contact-link:focus {
+  background-color: #574c3f;
+  color: #fff !important;
+  outline: none;
 }
 
 /* Headings */
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   color: #3c362f;
+  font-weight: 700;
   margin-top: 40px;
-  font-weight: 700;
 }
 
-/* Navigation Links */
-nav a {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #6b6152;
-  text-decoration: none;
-}
-
-nav a:hover,
-nav a:focus {
-  background-color: #c4b6a6;
-  color: #fff;
-  outline: none;
-}
-
-/* Blog post styling */
-.blog-post h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: #3c362f;
-  font-weight: 700;
-}
-
-/* Footer styling */
-footer {
+/* Specific spacing for h1 */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
   text-align: center;
-  margin-top: 60px;
-  padding: 20px;
-  color: #7a6d5a;
+}
+
+/* Paragraph styling */
+p {
   font-family: 'Lora', serif;
-  font-size: 14px;
+  font-size: 1.1rem;
+  color: #5e5349;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Links */
 a {
   color: #6b6152;
   text-decoration: underline;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
   color: #3c362f;
+  outline: none;
 }
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 16px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Lora', serif;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 45px;
+}
+
+/* Bigger textarea */
+textarea {
+  min-height: 160px;
+}
+
+/* Buttons */
+button {
+  width: 180px;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: #6b6152;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+button:hover,
+button:focus {
+  background-color: #574c3f;
+  outline: none;
+}
+
+/* Privacy section */
+.privacy {
+  font-size: 0.9rem;
+  color: #5e5349;
+  border-top: 1px solid #ccc;
+  padding-top: 25px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+.privacy h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #3c362f;
+  margin-bottom: 15px;
+}
+
+.privacy a {
+  color: #6b6152;
+  text-decoration: underline;
+}
+
+.privacy a:hover,
+.privacy a:focus {
+  color: #574c3f;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #7a6d5a;
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+  nav ul {
+    gap: 15px;
+  }
+  button {
+    width: 100%;
+  }
+}
+
