@@ -1,171 +1,233 @@
-/* Reset box-sizing and margin/padding */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Me In Time | Uniform Navigation</title>
 
-/* Base font styles and layout */
-body {
-  font-family: 'Lora', serif;
-  color: #4a423a;
-  font-size: 16px;
-  line-height: 1.7;
-  background-color: #f9f6f2;
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  text-align: left;
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@600;700&display=swap" rel="stylesheet" />
 
-/* Headings font style */
-h1, h2, h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #3c362f;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  text-align: left;
-}
+  <!-- Link to your external stylesheet -->
+  <!-- <link rel="stylesheet" href="styles.css" /> -->
 
-/* Paragraph styling */
-p, li {
-  font-family: 'Lora', serif;
-  font-weight: 400;
-  font-size: 1.1rem;
-  color: #5e5349;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: left;
-}
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* Lists styling */
-ul, ol {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  color: #5e5349;
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
+    /* Prevent horizontal scroll on mobile */
+    html, body {
+      overflow-x: hidden;
+    }
 
-/* Sticky navigation banner wrapper */
-nav {
-  position: sticky;
-  top: 0;
-  background-color: #f3ede6;
-  padding: 15px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  z-index: 1000;
-  max-width: 900px;
-  margin: 0 auto; /* center the nav within max-width */
-  border-radius: 0 0 8px 8px; /* optional, nice rounded bottom edges */
-}
+    /* Base styles */
+    body {
+      font-family: 'Lora', serif;
+      color: #4a423a;
+      font-size: 16px;
+      line-height: 1.7;
+      background-color: #f9f6f2;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: left;
+    }
 
-/* Navigation list styling */
-nav ul {
-  display: flex;
-  flex-wrap: wrap; /* allow wrapping */
-  justify-content: flex-start; /* left aligned */
-  gap: 15px 30px; /* vertical and horizontal spacing */
-  list-style: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  padding-left: 0;
-  margin: 0;
-}
+    /* Headings */
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #3c362f;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
 
-/* Navigation links */
-nav a {
-  color: #6b6152;
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 30px;
-  transition: background-color 0.3s, color 0.3s;
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  white-space: nowrap; /* prevent wrapping inside a link */
-}
+    /* Paragraphs and lists */
+    p, li {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: #5e5349;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: left;
+    }
 
-/* Hover/focus nav link styles */
-nav a:hover,
-nav a:focus {
-  background-color: #c4b6a6;
-  color: #fff;
-  outline: none;
-}
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
 
-/* Contact link / button style */
-a.contact-link, .button-link, button {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  background-color: #6b6152;
-  color: white;
-  padding: 10px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: none;
-  font-size: 1rem;
-  line-height: 1.4;
-}
+    /* Sticky nav: full viewport width */
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100vw;
+      left: 0;
+      background-color: #f3ede6;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
 
-/* Contact link / button hover/focus */
-a.contact-link:hover, a.contact-link:focus,
-.button-link:hover, .button-link:focus,
-button:hover, button:focus {
-  background-color: #574c3f;
-  outline: none;
-}
+    /* Inner nav container */
+    nav .nav-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 15px 20px;
+    }
 
-/* Form inputs and textarea styling */
-input, textarea {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  color: #4a423a;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  resize: vertical;
-  width: 100%;
-  box-sizing: border-box;
-}
+    /* Nav list: flex wrap */
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 15px 30px;
+      list-style: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
 
-/* Footer styling */
-footer {
-  text-align: left;
-  margin-top: 60px;
-  padding: 20px 0;
-  color: #7a6d5a;
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
-}
+    /* Nav links */
+    nav a {
+      color: #6b6152;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 30px;
+      transition: background-color 0.3s, color 0.3s;
+      display: inline-block;
+      white-space: nowrap;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
 
-/* Footer images like logos */
-footer img {
-  height: 40px;
-  width: auto;
-  margin-top: 10px;
-}
+    /* Hover and focus */
+    nav a:hover,
+    nav a:focus {
+      background-color: #c4b6a6;
+      color: #fff;
+      outline: none;
+    }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  body {
-    padding: 15px 20px;
-  }
-  nav {
-    padding: 10px 20px;
-  }
-  nav ul {
-    justify-content: flex-start;
-    gap: 10px 20px; /* slightly smaller gap */
-  }
-  nav a {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
-}
+    /* Buttons and contact links */
+    a.contact-link, .button-link, button {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      background-color: #6b6152;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      border: none;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    a.contact-link:hover, a.contact-link:focus,
+    .button-link:hover, .button-link:focus,
+    button:hover, button:focus {
+      background-color: #574c3f;
+      outline: none;
+    }
+
+    /* Form inputs */
+    input, textarea {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      color: #4a423a;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      resize: vertical;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Footer */
+    footer {
+      text-align: left;
+      margin-top: 60px;
+      padding: 20px 0;
+      color: #7a6d5a;
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+    }
+
+    /* Footer images */
+    footer img {
+      height: 40px;
+      width: auto;
+      margin-top: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 15px 20px;
+      }
+      nav .nav-container {
+        padding: 10px 15px;
+      }
+      nav ul {
+        justify-content: flex-start;
+        gap: 10px 20px;
+      }
+      nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="welcome-2.html">Welcome</a></li>
+        <li><a href="counselling.html">Counselling</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="reflections.html">Reflections</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Me In Time</h1>
+    <p class="tagline">Counselling in Manchester — A space for reflection, support, and growth</p>
+    <p class="intro">
+      Counselling &amp; Emotional Support for Life’s Toughest Moments<br />
+      Me In Time offers one-to-one counselling, psychoeducation, and a space for real, human conversations — with a focus on grief, loss, and men’s mental health.
+    </p>
+  </header>
+
+  <section class="content">
+    <h2>Not sure what’s right for you?</h2>
+    <p>Sometimes life throws challenges at us, and not everyone needs counselling or psychotherapy to work through them. Especially when it’s about work, goals, or feeling stuck, coaching can often be a better fit.</p>
+    <p>Both counselling and coaching help you feel stronger and more confident, but they do it in different ways.</p>
+    <p>Think of counselling as a gentle space where you can unpack your emotions, heal old wounds, and better understand yourself — especially when life feels heavy or complicated.</p>
+    <p>Coaching, on the other hand, is more like having a supportive guide who helps you figure out what you want next, build your confidence, and take practical steps toward your goals.</p>
+    <p>If you’re wondering which might suit you, feel free to check out my <a href="counselling.html">Counselling</a> and <a href="coaching.html">Coaching</a> pages, or just <a href="contact.html">get in touch</a> for a friendly, no-pressure chat.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Me In Time | Stuart Walker Counselling
+    <br /><br />
+    <a href="contact.html">
+      Privacy & Confidentiality
+    </a> — Your privacy matters. If you have questions or want to know more, please don’t hesitate to <a href="contact.html">get in touch</a>.
+  </footer>
+
+</body>
+</html>
