@@ -24,9 +24,15 @@
 <h1>Contact Me</h1>
 
 <form action="mailto:stuart.meintime@gmail.com" method="post" enctype="text/plain">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" placeholder="Your Message" rows="8" required></textarea>
+  <label for="name">Your Name:</label><br />
+  <input type="text" id="name" name="name" placeholder="Your Name" required /><br /><br />
+
+  <label for="email">Your Email:</label><br />
+  <input type="email" id="email" name="email" placeholder="Your Email" required /><br /><br />
+
+  <label for="message">Your Message:</label><br />
+  <textarea id="message" name="message" placeholder="Your Message" rows="8" required></textarea><br /><br />
+
   <button type="submit">Send Message</button>
 </form>
 
@@ -50,3 +56,4 @@
 
 </body>
 </html>
+
