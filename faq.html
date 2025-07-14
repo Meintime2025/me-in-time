@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQs | Me In Time</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+    body {
+      font-family: 'Lora', serif;
+      background-color: #f9f6f2;
+      color: #4a423a;
+      line-height: 1.7;
+      min-height: 100vh;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #f3ede6;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      z-index: 100;
+      margin-bottom: 40px;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #6b6152;
+      padding: 8px 15px;
+      border-radius: 30px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background-color: #c4b6a6;
+      color: #fff;
+      outline: none;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 35px;
+      text-align: center;
+      color: #3c362f;
+    }
+    details {
+      background-color: #f3ede6;
+      border-radius: 6px;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.05);
+    }
+    summary {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      outline: none;
+      list-style: none;
+      user-select: none;
+      position: relative;
+      padding-right: 25px;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      font-weight: 900;
+      transition: transform 0.3s ease;
+    }
+    details[open] summary::after {
+      content: "−";
+      transform: rotate(180deg);
+    }
+    details > p {
+      margin-top: 12px;
+      font-size: 1rem;
+      color: #5e5349;
+      white-space: pre-line;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 15px;
+      }
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+      }
+      details {
+        padding: 12px 15px;
+      }
+      summary {
+        font-size: 1rem;
+        padding-right: 20px;
+      }
+      details > p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="welcome-2.html">Welcome</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html" aria-current="page">FAQs</a></li>
+    </ul>
+  </nav>
+
+  <h1>Frequently Asked Questions</h1>
+
+  <details>
+    <summary>How do I book a session?</summary>
+    <p>You can book online via the “Book Counselling Online” tab, or get in touch by email, phone, the contact form at the bottom of this page, or through social media. We’ll then arrange an initial session—either in person, by phone, or online.</p>
+  </details>
+
+  <details>
+    <summary>What happens in the first session?</summary>
+    <p>The initial session is a chance for us to get to know each other and explore how we might work together. There’s no obligation to continue, and I always encourage clients to find the therapist who feels like the right fit.</p>
+  </details>
+
+  <details>
+    <summary>How soon can I start?</summary>
+    <p>I usually have availability within the same week you're in touch, and I offer flexible appointment times to suit your schedule.</p>
+  </details>
+
+  <details>
+    <summary>How long will counselling take?</summary>
+    <p>There’s no fixed number of sessions. Some people come for just a few sessions, others longer term. We might start with six and review together as we go. It’s always your choice—and you’re free to pause or stop at any time.</p>
+  </details>
+
+  <details>
+    <summary>What can I expect from the first session?</summary>
+    <p>The first session is a chance for us to get to know each other. We'll explore what’s brought you to therapy, talk through any goals or hopes you may have, and give you space to ask any questions. It’s a gentle introduction — there’s no pressure to share anything you’re not ready to.</p>
+  </details>
+
+  <details>
+    <summary>How much does it cost?</summary>
+    <p>Sessions cost £50. A concessionary rate of £25 is available for those who need it. Payment is usually made by bank transfer after each session.</p>
+  </details>
+
+  <details>
+    <summary>How do I book a session?</summary>
+    <p>You can book a session by filling out the contact form on this website or emailing me directly. I’ll get back to you promptly to arrange a time that works.</p>
+  </details>
+
+  <details>
+    <summary>How long are sessions and how often will we meet?</summary>
+    <p>Sessions are 50 minutes long. Most people come weekly, but we can agree together on what works best for you — some prefer fortnightly or a more flexible arrangement.</p>
+  </details>
+
+  <details>
+    <summary>What if I can’t afford therapy?</summary>
+    <p>I understand that therapy is an investment, and it’s important that it feels manageable. If cost is a barrier, please feel free to talk to me about this — I offer a limited number of lower-cost spaces, and I may also be able to signpost you to other services.</p>
+  </details>
+
+  <details>
+    <summary>Is therapy confidential?</summary>
+    <p>Yes, therapy is confidential. What you share stays between us, with a few legal and ethical exceptions — for example, if there’s a risk of serious harm, safeguarding concerns, or a legal requirement to disclose information. I’ll explain all of this clearly in our first session so you feel informed and safe.</p>
+  </details>
+
+  <details>
+    <summary>What kinds of issues do you work with?</summary>
+    <p>I work with a wide range of concerns, including anxiety, depression, grief and loss, trauma, low self-esteem, relationship difficulties, identity questions, men’s mental health, and more. If you're unsure whether I can help, please do get in touch — I'm happy to talk it through.</p>
+  </details>
+
+  <details>
+    <summary>Do I need to prepare or bring anything to sessions?</summary>
+    <p>No preparation is needed. Just bring yourself. Therapy is your space, and we can take things at a pace that feels right for you.</p>
+  </details>
+
+  <details>
+    <summary>How do I know if therapy is right for me?</summary>
+    <p>Many people feel uncertain at first. The best way to find out is to try a session and see how it feels. There’s no obligation to continue if it doesn’t feel like the right fit — this is your process.</p>
+  </details>
+
+  <details>
+    <summary>What if I don’t feel comfortable?</summary>
+    <p>Feeling safe and heard is key to good therapy. If something doesn’t feel right, I encourage you to talk about it — it’s an important part of the process. I also know I may not be the right fit for everyone, and that’s okay. We can discuss this openly, and if needed, I can help signpost you to another therapist who may be a better match for you.</p>
+  </details>
+
+  <details>
+    <summary>Can sessions be held online or in person?</summary>
+    <p>I offer sessions online and in person (depending on availability). We can discuss what suits you best when you get in touch.</p>
+  </details>
+
+  <details>
+    <summary>What’s your cancellation policy?</summary>
+    <p>I ask for 48 hours’ notice if you need to cancel or reschedule a session. Cancellations made with less notice may be charged at the full session fee, unless there are exceptional circumstances.</p>
+  </details>
+
+  <details>
+    <summary>Do you work with men, LGBTQ+ or neurodivergent clients?</summary>
+    <p>Yes. My practice is inclusive and welcoming to people of all genders, identities, and backgrounds. I work with individuals from all walks of life and aim to create a space where you feel safe, seen, and respected.</p>
+  </details>
+
+</body>
+</html>
