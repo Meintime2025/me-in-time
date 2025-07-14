@@ -3,72 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact | Me In Time</title>
+  <title>Contact Me | Me In Time</title>
   <style>
     body {
-      font-family: sans-serif;
-      line-height: 1.6;
-      margin: 40px;
-      background-color: #f5f1ee;
-      color: #333;
+      font-family: 'Lora', serif;
+      background-color: #f9f6f2;
+      color: #4a423a;
       max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.7;
     }
-    nav {
-      text-align: center;
-      margin-bottom: 30px;
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      padding: 15px 0;
+      background-color: #f3ede6;
+      margin-bottom: 40px;
     }
     nav a {
-      margin: 0 15px;
       text-decoration: none;
-      color: #333;
+      color: #6b6152;
+      font-family: 'Montserrat', sans-serif;
       font-weight: 600;
+      padding: 8px 15px;
+      border-radius: 30px;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #c4b6a6;
+      color: #fff;
+      outline: none;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.8rem;
+      color: #3c362f;
+    }
+    p {
+      color: #5e5349;
+      font-size: 1.15rem;
+      margin-bottom: 2em;
+      text-align: center;
     }
     form {
       display: flex;
       flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #4a423a;
     }
     input, textarea {
-      padding: 10px;
-      margin-bottom: 15px;
+      padding: 12px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 6px;
       font-size: 1rem;
+      font-family: 'Lora', serif;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 120px;
     }
     button {
-      padding: 12px;
-      background: #333;
-      color: #fff;
+      padding: 14px;
+      background-color: #6b6152;
+      color: white;
       border: none;
-      border-radius: 4px;
+      border-radius: 30px;
+      font-size: 1.1rem;
       cursor: pointer;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    button:hover, button:focus {
+      background-color: #574c3f;
+      outline: none;
+    }
+    .contact-info {
+      margin-top: 40px;
+      text-align: center;
       font-size: 1rem;
+      color: #5e5349;
+      line-height: 1.6;
+    }
+    .contact-info a {
+      color: #6b6152;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-info a:hover, .contact-info a:focus {
+      text-decoration: underline;
+      outline: none;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <ul>
-     <li><a href="index.html">Home</a></li>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
     <li><a href="welcome-2.html">Welcome</a></li>
     <li><a href="counselling.html">Counselling</a></li>
     <li><a href="coaching.html">Coaching</a></li>
     <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" aria-current="page">Contact</a></li>
     <li><a href="faq.html">FAQs</a></li>
-  </nav>
+  </ul>
+</nav>
 
-  <h1>Contact</h1>
+<h1>Contact Me</h1>
 
+<p>I’m glad you’re here. Whether you have questions, want to book a session, or just need a little guidance on what comes next, you’re welcome to reach out.</p>
+
+<p>You can get in touch by email, phone, or by filling out the contact form below. I aim to respond within two working days.</p>
+
+<form action="mailto:stuart.meintime@gmail.com" method="post" enctype="text/plain">
+  <label for="name">Name *</label>
+  <input type="text" id="name" name="Name" required placeholder="Your full name" />
+  
+  <label for="email">Email *</label>
+  <input type="email" id="email" name="Email" required placeholder="your.email@example.com" />
+  
+  <label for="phone">Phone (optional)</label>
+  <input type="tel" id="phone" name="Phone" placeholder="Optional" />
+  
+  <label for="message">Message *</label>
+  <textarea id="message" name="Message" required placeholder="Write your message here..."></textarea>
+  
+  <button type="submit">Send Message</button>
+</form>
+
+<div class="contact-info">
   <p>Email: <a href="mailto:stuart.meintime@gmail.com">stuart.meintime@gmail.com</a></p>
-  <p>Phone: 07889 249507</p>
-
-  <form action="mailto:stuart.meintime@gmail.com" method="post" enctype="text/plain">
-    <input type="text" name="Name" placeholder="Your Name" required />
-    <input type="email" name="Email" placeholder="Your Email" required />
-    <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+  <p>Phone: <a href="tel:+447889249507">07889 249507</a></p>
+</div>
 
 </body>
 </html>
