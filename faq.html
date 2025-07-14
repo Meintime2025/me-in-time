@@ -22,6 +22,7 @@
       padding: 15px 0;
       background-color: #f3ede6;
       margin-bottom: 40px;
+      flex-wrap: wrap;
     }
     nav a {
       text-decoration: none;
@@ -40,42 +41,64 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 35px;
       font-size: 2.8rem;
       color: #3c362f;
     }
     details {
       background: #fff;
-      border-left: 4px solid #6b6152;
-      margin-bottom: 20px;
-      padding: 15px 20px;
       border-radius: 6px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
     }
     summary {
       font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
       font-size: 1.1rem;
-      cursor: pointer;
-      color: #3c362f;
       outline: none;
+      user-select: none;
     }
     summary::-webkit-details-marker {
       display: none;
     }
-    details[open] summary::after {
-      content: "▲";
-      float: right;
-      font-size: 0.8rem;
+    details[open] summary::before {
+      content: "▼ ";
+      color: #6b6152;
     }
-    summary::after {
-      content: "▼";
-      float: right;
-      font-size: 0.8rem;
+    summary::before {
+      content: "► ";
+      color: #6b6152;
     }
-    p {
+    p, ul {
       margin-top: 10px;
-      color: #5e5349;
       font-size: 1rem;
+      color: #5e5349;
+      padding-left: 20px;
+    }
+    a.contact-link {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #6b6152;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+    a.contact-link:hover, a.contact-link:focus {
+      background-color: #574c3f;
+      outline: none;
+    }
+    .closing-text {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.1rem;
+      color: #4a423a;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -97,74 +120,96 @@
 
 <details>
   <summary>How do I book a session?</summary>
-  <p>You can book easily by filling out the contact form on this site, sending me an email, giving me a call, or even messaging via social media. I’ll get back to you quickly to find a time that fits your life.</p>
+  <p>You can book online via the “Book Counselling Online” tab, or get in touch by email, phone, the contact form at the bottom of this page, or through social media. We’ll then arrange an initial session—either in person, by phone, or online.</p>
 </details>
 
 <details>
   <summary>What happens in the first session?</summary>
-  <p>Our first meeting is just a gentle getting-to-know-you. There’s no pressure to share more than you want — it’s simply a chance to explore what brought you here and see if we feel like a good fit to work together.</p>
+  <p>The initial session is a chance for us to get to know each other and explore how we might work together. There’s no obligation to continue, and I always encourage clients to find the therapist who feels like the right fit.</p>
 </details>
 
 <details>
   <summary>How soon can I start?</summary>
-  <p>Usually, I have availability within the week you reach out. I’m flexible with timings to help fit around your schedule, so we can get started as soon as you’re ready.</p>
+  <p>I usually have availability within the same week you're in touch, and I offer flexible appointment times to suit your schedule.</p>
 </details>
 
 <details>
   <summary>How long will counselling take?</summary>
-  <p>There’s no one-size-fits-all answer. Some people find a few sessions helpful; others benefit from longer-term support. We’ll review things together regularly, and you’re free to pause or stop whenever you feel it’s right.</p>
+  <p>There’s no fixed number of sessions. Some people come for just a few sessions, others longer term. We might start with six and review together as we go. It’s always your choice—and you’re free to pause or stop at any time.</p>
+</details>
+
+<details>
+  <summary>What can I expect from the first session?</summary>
+  <p>The first session is a chance for us to get to know each other. We'll explore what’s brought you to therapy, talk through any goals or hopes you may have, and give you space to ask any questions. It’s a gentle introduction — there’s no pressure to share anything you’re not ready to.</p>
 </details>
 
 <details>
   <summary>How much does it cost?</summary>
-  <p>Sessions are £50 each, with a concessionary rate of £25 available for those who need it. Payment is usually made by bank transfer after each session.</p>
+  <p>Sessions cost £50. A concessionary rate of £25 is available for those who need it. Payment is usually made by bank transfer after each session.</p>
+</details>
+
+<details>
+  <summary>How do I book a session?</summary>
+  <p>You can book a session by filling out the contact form on this website or emailing me directly. I’ll get back to you promptly to arrange a time that works.</p>
+</details>
+
+<details>
+  <summary>How long are sessions and how often will we meet?</summary>
+  <p>Sessions are 50 minutes long. Most people come weekly, but we can agree together on what works best for you — some prefer fortnightly or a more flexible arrangement.</p>
 </details>
 
 <details>
   <summary>What if I can’t afford therapy?</summary>
-  <p>I understand therapy is an investment. If cost feels like a barrier, please talk to me. I offer a limited number of lower-cost spaces and can help guide you to other services if needed.</p>
+  <p>I understand that therapy is an investment, and it’s important that it feels manageable. If cost is a barrier, please feel free to talk to me about this — I offer a limited number of lower-cost spaces, and I may also be able to signpost you to other services.</p>
 </details>
 
 <details>
   <summary>Is therapy confidential?</summary>
-  <p>Yes. Everything you share stays between us, with a few important exceptions like safeguarding concerns or legal requirements — which I’ll explain clearly upfront so you always feel safe.</p>
+  <p>Yes, therapy is confidential. What you share stays between us, with a few legal and ethical exceptions — for example, if there’s a risk of serious harm, safeguarding concerns, or a legal requirement to disclose information. I’ll explain all of this clearly in our first session so you feel informed and safe.</p>
 </details>
 
 <details>
   <summary>What kinds of issues do you work with?</summary>
-  <p>I support people through many challenges, including anxiety, depression, grief, trauma, low self-esteem, relationship difficulties, identity questions, and men’s mental health. If you’re unsure, just ask — I’m happy to chat.</p>
+  <p>I work with a wide range of concerns, including anxiety, depression, grief and loss, trauma, low self-esteem, relationship difficulties, identity questions, men’s mental health, and more. If you're unsure whether I can help, please do get in touch — I'm happy to talk it through.</p>
 </details>
 
 <details>
   <summary>Do I need to prepare or bring anything to sessions?</summary>
-  <p>No special preparation is needed. Just bring yourself and we’ll take things at a pace that feels comfortable for you.</p>
+  <p>No preparation is needed. Just bring yourself. Therapy is your space, and we can take things at a pace that feels right for you.</p>
 </details>
 
 <details>
   <summary>How do I know if therapy is right for me?</summary>
-  <p>Many people feel unsure at first. The best way is to try a session and see how it feels. There’s no pressure to continue if it doesn’t feel right — this is your journey.</p>
+  <p>Many people feel uncertain at first. The best way to find out is to try a session and see how it feels. There’s no obligation to continue if it doesn’t feel like the right fit — this is your process.</p>
 </details>
 
 <details>
   <summary>What if I don’t feel comfortable?</summary>
-  <p>Feeling safe and heard is key. If something doesn’t feel right, please let me know. Sometimes I might not be the best fit, and that’s okay — I’ll help you find someone who is.</p>
+  <p>Feeling safe and heard is key to good therapy. If something doesn’t feel right, I encourage you to talk about it — it’s an important part of the process. I also know I may not be the right fit for everyone, and that’s okay. We can discuss this openly, and if needed, I can help signpost you to another therapist who may be a better match for you.</p>
 </details>
 
 <details>
   <summary>Can sessions be held online or in person?</summary>
-  <p>Yes, I offer both online and in-person sessions depending on your preference and availability. We can decide what works best for you.</p>
+  <p>I offer sessions online and in person (depending on availability). We can discuss what suits you best when you get in touch.</p>
 </details>
 
 <details>
   <summary>What’s your cancellation policy?</summary>
-  <p>I ask for at least 48 hours’ notice if you need to cancel or reschedule. If notice is shorter, there may be a charge unless there are exceptional circumstances.</p>
+  <p>I ask for 48 hours’ notice if you need to cancel or reschedule a session. Cancellations made with less notice may be charged at the full session fee, unless there are exceptional circumstances.</p>
 </details>
 
 <details>
   <summary>Do you work with men, LGBTQ+ or neurodivergent clients?</summary>
-  <p>Absolutely. My practice welcomes and supports people of all genders, identities, and backgrounds. I aim to create a safe, respectful space where everyone feels seen.</p>
+  <p>Yes. My practice is inclusive and welcoming to people of all genders, identities, and backgrounds. I work with individuals from all walks of life and aim to create a space where you feel safe, seen, and respected.</p>
 </details>
+
+<div class="closing-text">
+  <p>If you have any other questions or simply want to have a warm, friendly chat about how I might support you, please don’t hesitate to get in touch.</p>
+  <p>I’m here to listen, understand, and help you take that next gentle step.</p>
+  <p><a href="contact.html" class="contact-link">Reach out anytime — I’d love to hear from you.</a></p>
+</div>
 
 </body>
 </html>
+
 
