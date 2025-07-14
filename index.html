@@ -26,6 +26,15 @@
     header p {
       font-size: 1.2rem;
     }
+    nav {
+      text-align: center;
+      margin: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
     section {
       padding: 40px 20px;
       max-width: 800px;
@@ -59,6 +68,24 @@
       background: #e0e0e0;
       font-size: 0.9rem;
     }
+    .blog-entry {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    .blog-entry h3 {
+      margin-bottom: 5px;
+    }
+    .blog-date {
+      font-size: 0.85rem;
+      color: #777;
+      margin-bottom: 10px;
+    }
+    .blog-entry img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 <body>
@@ -67,17 +94,26 @@
     <p>Counselling in Manchester — A space for reflection, support, and growth</p>
   </header>
 
-  <section>
+  <nav>
+    <a href="#welcome">Welcome</a>
+    <a href="#how">How I Work</a>
+    <a href="#offer">What I Offer</a>
+    <a href="#consult">Free Consultation</a>
+    <a href="#contact">Contact</a>
+    <a href="#blog">Blog</a>
+  </nav>
+
+  <section id="welcome">
     <h2>Welcome</h2>
     <p>I'm Stuart Walker, a counsellor offering in-person and online therapy for adults navigating life’s difficult bits — grief, stress, transitions, or just feeling stuck. My approach is warm, grounded, and human. Therapy with me is a space to reflect, reconnect, and move forward with clarity.</p>
   </section>
 
-  <section>
+  <section id="how">
     <h2>How I Work</h2>
     <p>I offer integrative, person-centred counselling. Sessions are 50 minutes, held weekly either in person (Manchester M21) or online. We start with a free 30-minute consultation to get a sense of whether we’re a good fit.</p>
   </section>
 
-  <section>
+  <section id="offer">
     <h2>What I Offer</h2>
     <ul>
       <li>Individual Counselling</li>
@@ -87,12 +123,12 @@
     </ul>
   </section>
 
-  <section>
+  <section id="consult">
     <h2>Free Consultation</h2>
     <p>A 30-minute virtual consultation to talk, ask questions, and see if we’re a good fit. No pressure, no obligation — just space to start the conversation.</p>
   </section>
 
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
     <form>
       <input type="text" placeholder="Your Name" required>
@@ -102,6 +138,25 @@
     </form>
     <p>Email: <a href="mailto:stuart@meintime.co.uk">stuart@meintime.co.uk</a><br>
     Location: Manchester M21 & Online UK-wide</p>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+
+    <div class="blog-entry">
+      <img src="https://via.placeholder.com/800x400?text=Humans+vs+AI" alt="AI and Human connection">
+      <h3>That’s Not What AI Is For. That’s What Humans Do.</h3>
+      <div class="blog-date">Posted July 2, 2025</div>
+      <p>Humans sometimes wake up heavy with someone else’s sadness...</p>
+    </div>
+
+    <div class="blog-entry">
+      <img src="https://via.placeholder.com/800x400?text=AI+is+not+cheating" alt="AI and writing support">
+      <h3>Is It Cheating If You Use AI to Speak Your Truth?</h3>
+      <div class="blog-date">Posted July 8, 2025</div>
+      <p>Saw a post where someone complained that something was “obviously written by AI.”...</p>
+    </div>
+
   </section>
 
   <footer>
