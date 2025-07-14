@@ -1,4 +1,11 @@
-/* Base font styles for the entire site */
+/* Reset box-sizing and margin/padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
   color: #4a423a;
@@ -7,7 +14,8 @@ body {
   background-color: #f9f6f2;
   max-width: 900px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 20px;
+  text-align: left;
 }
 
 /* Headings font style */
@@ -17,26 +25,59 @@ h1, h2, h3 {
   color: #3c362f;
   margin-top: 40px;
   margin-bottom: 20px;
+  text-align: left;
 }
 
-/* Paragraphs */
+/* Paragraph styling */
 p {
-  font-weight: 400; /* normal */
+  font-weight: 400;
   font-size: 1.1rem;
   color: #5e5349;
   line-height: 1.6;
   margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Sticky navigation banner */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #f3ede6;
+  padding: 15px 40px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+/* Navigation list styling */
+nav ul {
+  display: flex;
+  justify-content: flex-start; /* left-aligned */
+  gap: 30px;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 
 /* Navigation links */
 nav a {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
   color: #6b6152;
   text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
 }
 
-/* Contact link button */
+/* Hover/focus nav link styles */
+nav a:hover,
+nav a:focus {
+  background-color: #c4b6a6;
+  color: #fff;
+  outline: none;
+}
+
+/* Contact link / button style */
 a.contact-link, .button-link {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -48,8 +89,43 @@ a.contact-link, .button-link {
   display: inline-block;
   transition: background-color 0.3s ease;
 }
+
 a.contact-link:hover, a.contact-link:focus,
 .button-link:hover, .button-link:focus {
   background-color: #574c3f;
   outline: none;
+}
+
+/* Footer styling */
+footer {
+  text-align: left;
+  margin-top: 60px;
+  padding: 20px 0;
+  color: #7a6d5a;
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+}
+
+/* Footer image (like logos) */
+footer img {
+  height: 40px;
+  width: auto;
+  margin-top: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  body {
+    padding: 15px 20px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav {
+    padding: 10px 20px;
+  }
+  h1, h2, h3 {
+    margin-top: 30px;
+  }
 }
