@@ -24,6 +24,7 @@
       margin-bottom: 40px;
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
+      flex-wrap: wrap;
     }
     nav a {
       text-decoration: none;
@@ -49,6 +50,9 @@
       flex-direction: column;
       gap: 15px;
       margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
     input, textarea {
       padding: 12px;
@@ -56,9 +60,10 @@
       border-radius: 6px;
       font-size: 1rem;
       font-family: inherit;
+      resize: vertical;
     }
     button {
-      width: 150px;
+      width: 180px;
       padding: 12px;
       font-size: 1rem;
       font-family: 'Montserrat', sans-serif;
@@ -69,6 +74,7 @@
       border-radius: 25px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      align-self: center;
     }
     button:hover,
     button:focus {
@@ -80,6 +86,9 @@
       color: #5e5349;
       border-top: 1px solid #ccc;
       padding-top: 25px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .privacy h2 {
       font-family: 'Montserrat', sans-serif;
@@ -93,6 +102,18 @@
     .privacy a:hover, .privacy a:focus {
       color: #574c3f;
       outline: none;
+    }
+    @media (max-width: 600px) {
+      body {
+        margin: 20px auto;
+        padding: 0 15px;
+      }
+      nav ul {
+        gap: 15px;
+      }
+      button {
+        width: 100%;
+      }
     }
   </style>
 </head>
