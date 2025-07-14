@@ -22,12 +22,12 @@
       padding: 15px 0;
       background-color: #f3ede6;
       margin-bottom: 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
     }
     nav a {
       text-decoration: none;
       color: #6b6152;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
       padding: 8px 15px;
       border-radius: 30px;
     }
@@ -40,48 +40,45 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 35px;
-      font-size: 2.8rem;
-      color: #3c362f;
-    }
-    h2 {
-      color: #3c362f;
-      margin-bottom: 10px;
-    }
-    p {
-      color: #5e5349;
-      margin-bottom: 1.2em;
-    }
-    .blog-entry {
       margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #ccc;
+      color: #3c362f;
     }
-    .blog-entry img {
+    .blog-post {
+      margin-bottom: 50px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+    .blog-post img {
       width: 100%;
+      max-height: 250px;
+      object-fit: cover;
       border-radius: 8px;
       margin-bottom: 15px;
-      object-fit: cover;
-      max-height: 300px;
     }
-    .blog-date {
-      font-style: italic;
+    .blog-post h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #3c362f;
+      margin-bottom: 5px;
+      font-size: 1.8rem;
+    }
+    .blog-post .date {
       font-size: 0.9rem;
-      color: #7b6f5e;
+      color: #7a6d5a;
       margin-bottom: 10px;
     }
-    a.read-more {
-      display: inline-block;
-      margin-top: 10px;
-      background-color: #6b6152;
-      color: white;
-      padding: 8px 20px;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: 600;
+    .blog-post p {
+      color: #5e5349;
+      margin-bottom: 10px;
     }
-    a.read-more:hover, a.read-more:focus {
-      background-color: #574c3f;
+    .read-more {
+      color: #6b6152;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .read-more:hover, .read-more:focus {
+      border-color: #c4b6a6;
       outline: none;
     }
   </style>
@@ -102,39 +99,51 @@
 
 <h1>Blog</h1>
 
-<div class="blog-entry">
-  <h2>Why I Chose a Week Off Over New Wardrobes…</h2>
-  <p class="blog-date">June 8, 2025</p>
-  <img src="images/why-i-chose-wardrobes.jpg" alt="Red bucket hat and book on a wooden table" />
-  <p>A reflection on choices and priorities — like catching a train or deciding to rest instead of chasing material things...</p>
-  <a href="blog-post-wardrobes.html" class="read-more">Read more</a>
+<div class="blog-post">
+  <img src="images/men.png" alt="Men Reflecting Together" />
+  <h2><a href="blog-you-do-not-need-permission.html">You Do Not Need Permission</a></h2>
+  <div class="date">July 10, 2025</div>
+  <p>A heartfelt reflection on how grief and pain don’t require apologies — an invitation to just begin.</p>
+  <a href="blog-you-do-not-need-permission.html" class="read-more">Read more →</a>
 </div>
 
-<div class="blog-entry">
-  <h2>Ian Brown once said...</h2>
-  <p class="blog-date">June 24, 2025</p>
+<div class="blog-post">
   <img src="images/stone-roses.jpg" alt="The Stone Roses band photo" />
-  <p>I’m a bit of a fan of Ian Brown, The Stone Roses, and most things Madchester (for those that remember it)...</p>
-  <a href="blog-post-ian-brown.html" class="read-more">Read more</a>
+  <h2><a href="blog-ian-brown.html">Ian Brown once said...</a></h2>
+  <div class="date">June 24, 2025</div>
+  <p>Reflecting on identity, growth, and holding onto pieces of who we are as we evolve.</p>
+  <a href="blog-ian-brown.html" class="read-more">Read more →</a>
 </div>
 
-<div class="blog-entry">
-  <h2>Train Door at Platform</h2>
-  <p class="blog-date">June 10, 2025</p>
+<div class="blog-post">
   <img src="images/train-door.jpg" alt="Train door at platform" />
-  <p>A reflection on choices and priorities — like catching a train or deciding to rest instead of chasing material things...</p>
-  <a href="blog-post-train-door.html" class="read-more">Read more</a>
+  <h2><a href="blog-why-i-chose-holiday.html">Why I Chose a Week Off Over New Wardrobes…</a></h2>
+  <div class="date">June 8, 2025</div>
+  <p>A personal reflection on priorities, rest, and the small moments that shape life.</p>
+  <a href="blog-why-i-chose-holiday.html" class="read-more">Read more →</a>
 </div>
 
-<div class="blog-entry">
-  <h2>Being a Supporter of Charlton Athletic is Never Straightforward</h2>
-  <p class="blog-date">June 20, 2025</p>
-  <img src="images/charlton-crowd-flags.jpg" alt="Charlton Athletic fans waving flags" />
-  <p>The club’s journey has been full of ups and downs, but through it all, the passion of fans remains...</p>
-  <a href="blog-post-charlton.html" class="read-more">Read more</a>
+<div class="blog-post">
+  <img src="images/charlton-crowd-flags.jpg" alt="Charlton Athletic fans waving flags at stadium" />
+  <h2><a href="blog-charlton-fan.html">Being a supporter of Charlton Athletic is never straightforward</a></h2>
+  <div class="date">June 20, 2025</div>
+  <p>The ups and downs of supporting a beloved football club, and what it teaches us about fatherhood.</p>
+  <a href="blog-charlton-fan.html" class="read-more">Read more →</a>
 </div>
 
-<!-- Add additional blog entries here as needed -->
+<div class="blog-post">
+  <img src="images/why-i-chose-wardrobes.jpg" alt="Train door at platform" />
+  <h2><a href="blog-dads-unlimited.html">Looking for advice – funding support for ongoing counselling for men and dads</a></h2>
+  <div class="date">June 29, 2025</div>
+  <p>The end of Dad's Unlimited leaves a gap. Exploring support options for men and dads struggling to continue therapy.</p>
+  <a href="blog-dads-unlimited.html" class="read-more">Read more →</a>
+</div>
+
+<!-- Add more blog posts here following the same structure -->
+
+<footer style="text-align:center; margin-top: 60px; padding: 20px; color:#7a6d5a; font-family: 'Lora', serif;">
+  &copy; 2025 Me In Time | Stuart Walker Counselling
+</footer>
 
 </body>
 </html>
