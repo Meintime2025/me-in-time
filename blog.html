@@ -1,84 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Blog | Me In Time</title>
-<style>
-  body {
-    font-family: 'Lora', serif;
-    background-color: #f9f6f2;
-    color: #4a423a;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-    line-height: 1.7;
-  }
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-    padding: 15px 0;
-    background-color: #f3ede6;
-    margin-bottom: 40px;
-  }
-  nav a {
-    text-decoration: none;
-    color: #6b6152;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    padding: 8px 15px;
-    border-radius: 30px;
-  }
-  nav a:hover, nav a:focus {
-    background-color: #c4b6a6;
-    color: #fff;
-    outline: none;
-  }
-  h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 35px;
-    font-size: 2.8rem;
-    color: #3c362f;
-  }
-  .blog-post {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-  }
-  .blog-post h3 {
-    margin-bottom: 8px;
-    color: #3c362f;
-  }
-  .blog-post .date {
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 12px;
-  }
-  .blog-post p {
-    color: #5e5349;
-  }
-  .full-content {
-    display: none;
-    margin-top: 12px;
-  }
-  .read-more {
-    color: #6b6152;
-    font-weight: 600;
-    cursor: pointer;
-    user-select: none;
-    margin-top: 5px;
-    display: inline-block;
-  }
-  .read-more:hover,
-  .read-more:focus {
-    text-decoration: underline;
-    outline: none;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog | Me In Time</title>
+  <style>
+    body {
+      font-family: 'Lora', serif;
+      background-color: #f9f6f2;
+      color: #4a423a;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      padding: 15px 0;
+      background-color: #f3ede6;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      text-decoration: none;
+      color: #6b6152;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-radius: 30px;
+    }
+    nav a:hover, nav a:focus {
+      background-color: #c4b6a6;
+      color: #fff;
+      outline: none;
+    }
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 2.8rem;
+      color: #3c362f;
+    }
+    h2 {
+      color: #3c362f;
+      border-bottom: 2px solid #c4b6a6;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+    .blog-entry {
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #d6cfc4;
+    }
+    .blog-entry h3 {
+      margin-bottom: 8px;
+      font-family: 'Montserrat', sans-serif;
+      color: #4a423a;
+    }
+    .blog-date {
+      font-size: 0.9rem;
+      color: #7d766a;
+      margin-bottom: 15px;
+    }
+    .blog-entry img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .blog-entry p {
+      color: #5e5349;
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+    }
+    .button-link {
+      display: inline-block;
+      padding: 10px 25px;
+      background-color: #6b6152;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+    .button-link:hover, .button-link:focus {
+      background-color: #574c3f;
+      outline: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -96,129 +109,73 @@
 
 <h1>Blog</h1>
 
-<!-- Blog 1 -->
-<div class="blog-post">
-  <h3>Fatherhood Changes the Brain – So Why Don’t We Talk About It?</h3>
-  <div class="date">July 1, 2025</div>
-  <p class="excerpt">When we talk about parenting and mental health, the focus—rightfully—tends to be on mothers. But maybe it’s time to widen the lens...</p>
-  <span class="read-more" tabindex="0">Read More</span>
-  <div class="full-content">
-    <p>When we talk about parenting and mental health, the focus—rightfully—tends to be on mothers. But maybe it’s time to widen the lens. Fathers matter too—emotionally, biologically, and neurologically—and yet they're still too often treated as extras in the parenting story.</p>
-    <p>Science tells us that becoming a dad changes men. Hormones shift. Brain patterns change. Fathers become wired for empathy, bonding, and vigilance—just like mothers. Yet support systems often overlook them. In many settings, dads aren’t asked how they’re doing unless they speak up first.</p>
-    <p>This matters, because dads struggle too. Postnatal depression, anxiety, burnout—they’re real, and they ripple through families when left unspoken. Many fathers feel pressure to stay strong and silent, even when they need support themselves.</p>
-    <p>Supporting fathers isn’t just good for them—it’s good for children, mothers, and relationships. We need to make space for dads in our conversations, in our services, and in our understanding of what it means to be a parent.</p>
-    <p>Let’s start asking dads how they’re doing—not just expecting them to cope in the background.</p>
-  </div>
-</div>
+<section id="blog">
 
-<!-- Blog 2 -->
-<div class="blog-post">
-  <h3>Looking for advice – funding support for ongoing counselling for men and dads</h3>
-  <div class="date">June 29, 2025</div>
-  <p class="excerpt">The brilliant organisation Dad's Unlimited will sadly be coming to an end very soon, but the need for vital support continues...</p>
-  <span class="read-more" tabindex="0">Read More</span>
-  <div class="full-content">
-    <p>As many of you will know, the brilliant organisation Dad's Unlimited will sadly be coming to an end very soon. But the need for the vital support they’ve been providing to men and dads absolutely continues.</p>
-    <p>A number of clients referred to me through the service have asked to continue therapy beyond the original 12-week block. Unfortunately, they’re now struggling to afford the weekly sessions that were previously funded.</p>
-    <p>I’d love to be able to offer this support free of charge, but I’m not in a position to do so sustainably.</p>
-    <p>If anyone is aware of small grants, local funding, or organisations supporting mental health work with men and dads, I’d be so grateful for any advice, signposting, or connections you can offer.</p>
-    <p>Feel free to comment below or message me directly — thank you in advance for your support.</p>
+  <div class="blog-entry">
+    <h3>That’s Not What AI Is For. That’s What Humans Do.</h3>
+    <p class="blog-date">July 2, 2025</p>
+    <img src="images/ai-humans.jpg" alt="Abstract image symbolising AI and human connection" />
+    <p>This post explores the unique qualities humans bring to empathy and connection — why AI can’t truly feel your story...</p>
+    <a href="blog-ai-humans.html" class="button-link">Read more</a>
   </div>
-</div>
 
-<!-- Blog 3 -->
-<div class="blog-post">
-  <h3>Ian Brown once said...</h3>
-  <div class="date">June 24, 2025</div>
-  <p class="excerpt">Ian Brown once said, “It’s not where you’re from, it’s where you’re at.” I’d add: it’s also when you're at, and how you choose to live your life now...</p>
-  <span class="read-more" tabindex="0">Read More</span>
-  <div class="full-content">
-    <p>Ian Brown once said, “It’s not where you’re from, it’s where you’re at.” I’d add: it’s also when you're at, and how you choose to live your life now, and how you choose to live your life now.</p>
-    <p>I’m a bit of a fan of Ian Brown, The Stone Roses, and most things Madchester (for those that remember it), and although I can’t quite get into the flares anymore, I’ve still got a decent collection of bucket hats. And maybe that says something about holding onto parts of who we were, even as we grow into who we’re becoming.</p>
-    <p>I used to think the story of who I am was mostly shaped by where I came from: the place, the time, the circumstances. But I now realise the real measure is in how I’m living now, the choices I make each day, the relationships I nurture, and the courage to keep growing, even when it’s uncomfortable.</p>
-    <p>I feel like I’m constantly being reminded that men often find it difficult to open up. To be fair, I see it in others, and I’ve felt it in myself. There’s this pressure to hold it all together, stay silent, and just power through. Sometimes, asking for help is seen as a weakness, but the truth is, there’s strength in honesty. There’s power in saying, “I’m struggling,” “I need help,” or even just, “I don’t know.”</p>
-    <p>Being at this stage of life means realising that you don’t have to do it all alone. It’s about having the courage to ask for help when you need it, and showing up with intention, for your work, your family, and yourself.</p>
-    <p>It’s about letting go of perfection, letting in vulnerability, and finding purpose in the present, however messy or imperfect it may be.</p>
-    <p>And maybe, if we’re lucky, we reach a place where connection matters more than image. Where presence matters more than performance.</p>
-    <p>Still learning. Still growing. Still here — bucket hat and all.</p>
-    <p>After all, this is the one. And if The Stone Roses taught us anything, it’s that music, meaning, and second comings can echo for a lifetime.</p>
+  <div class="blog-entry">
+    <h3>Is It Cheating If You Use AI to Speak Your Truth?</h3>
+    <p class="blog-date">July 8, 2025</p>
+    <img src="images/ai-writing.jpg" alt="Person typing on laptop with AI interface" />
+    <p>A warm reflection on how AI can help those who struggle to find their voice — and why using it isn’t cheating...</p>
+    <a href="blog-ai-cheating.html" class="button-link">Read more</a>
   </div>
-</div>
 
-<!-- Blog 4 -->
-<div class="blog-post">
-  <h3>Being a supporter of Charlton Athletic is never straightforward</h3>
-  <div class="date">June 20, 2025</div>
-  <p class="excerpt">The club’s journey has been full of ups and downs, from the brink of collapse to near European competition and back again...</p>
-  <span class="read-more" tabindex="0">Read More</span>
-  <div class="full-content">
-    <p>Being a supporter of Charlton Athletic is never straightforward. The club’s journey has been full of ups and downs, from the brink of collapse to the edge of European competition and back again. The highs have been incredible, the years in the Premiership, the play-off finals, and the lows, deeply challenging.</p>
-    <p>Moments like nearly going out of business in ’82, losing the Full Members Cup Final (those with a long memory will remember), Scott Parker’s transfer to Chelsea that ended hopes of Europe, and the more recent turbulent ownership periods have tested supporters’ loyalty.</p>
-    <p>I won’t even mention the years of travelling to Norwood Junction.</p>
-    <p>Then one morning, you wake up and realise the club is back in the Championship, and you smile and look towards a more positive future.</p>
-    <p>Through it all, the passion and resilience of fans of every football team remains a powerful testament to unwavering commitment. Despite everything, we keep showing up.</p>
-    <p>And maybe being a dad’s a bit like supporting Charlton, a sleeping giant that's always rebuilding, and always getting slightly better. It’s not always glamorous, and most of the time, no one’s handing out trophies for effort. It’s early starts, endless questions, and wondering if you’re doing it right. It’s sticking with it through the tough days, celebrating the moments that shine, and knowing all of it matters.</p>
-    <p>Then out of nowhere, a hug, a laugh, or a small moment hits you, and you know, quietly, that this is what winning really feels like. Your kids are growing and thriving, and just like South London’s number one team, you’ve come this far together. Not by lifting trophies, but by simply showing up, being present, and loving them through every step.</p>
-    <p>And in those quiet moments, you remember: You are enough.</p>
-    <p>Not perfect. Not flawless. Just present. Just you.</p>
+  <div class="blog-entry">
+    <h3>Fatherhood Changes the Brain – So Why Don’t We Talk About It?</h3>
+    <p class="blog-date">July 1, 2025</p>
+    <img src="images/fatherhood-brain.jpg" alt="Father holding baby" />
+    <p>When we talk about parenting and mental health, the focus tends to be on mothers — but fathers matter too...</p>
+    <a href="blog-fatherhood.html" class="button-link">Read more</a>
   </div>
-</div>
 
-<!-- Blog 5 -->
-<div class="blog-post">
-  <h3>Blythe Danner, Sliding Doors, and quiet forks in the road</h3>
-  <div class="date">June 15, 2025</div>
-  <p class="excerpt">Blythe Danner, originally from Philadelphia, decided to audition for the role of Samantha in the 1969 Broadway play...</p>
-  <span class="read-more" tabindex="0">Read More</span>
-  <div class="full-content">
-    <p>Blythe Danner, originally from Philadelphia, decided to audition for the role of Samantha in the 1969 Broadway play Someone's Comin' Hungry (no, me neither), directed by Bruce Paltrow of New York City. Had she not made that choice, and landed the part, the two might never have fallen in love and married.</p>
-    <p>That might mean no Gwyneth Paltrow, no Sliding Doors, and no heated dinner-table debates about whether you’d get on the train, the kind of question that reminds us how even the smallest decisions might shape our lives in the biggest ways.</p>
-    <p>Since that film came out, there have been moments that reminded me of it, quiet forks in the road that didn’t seem like much at the time but ended up meaning everything.</p>
-    <p>Because life isn’t always defined by dramatic turning points. More often, it’s the small, barely-noticed choices that change the shape of things.</p>
-    <p>🕊 Like choosing to go out when staying in would be so much easier.</p>
-    <p>👥 Or joining in when it feels harder than sitting it out.</p>
-    <p>🌱 Or deciding to begin again—without telling anyone.</p>
-    <p>💬 Or answering honestly when someone asks how you’re really doing.</p>
-    <p>We don’t always realise we’re at a crossroads while we’re standing there. But in hindsight, that’s often when the change begins.</p>
+  <div class="blog-entry">
+    <h3>Looking for advice – funding support for ongoing counselling for men and dads</h3>
+    <p class="blog-date">June 29, 2025</p>
+    <img src="images/funding-support.jpg" alt="Hands holding coins" />
+    <p>With Dad's Unlimited closing, this post explores funding options to continue vital mental health support for men...</p>
+    <a href="blog-funding-support.html" class="button-link">Read more</a>
   </div>
-</div>
 
-<!-- Blog 6 -->
-<div class="blog-post">
-  <h3>That’s Not What AI Is For. That’s What Humans Do.</h3>
-  <div class="date">July 2, 2025</div>
-  <p class="excerpt">Humans sometimes wake up heavy with someone else’s sadness. They can hear a raw, unfinished sentence, and it lodges somewhere in the body...</p>
-  <span class="read-more" tabindex="0">Read More</span>
-  <div class="full-content">
-    <p>That’s not what AI is for. That’s what humans do.</p>
-    <p>Humans sometimes wake up heavy with someone else’s sadness. They can hear a raw, unfinished sentence, and it lodges somewhere in the body. They carry fragments of conversations into dinner, into sleep. They notice the crack in someone’s voice, and remember the witty response. They notice silence. They check in weeks later, not because they were programmed to, but because they wanted to.</p>
-    <p>The thing about AI is it’s calm, it’s clever and it doesn’t stumble over finding a response. But it doesn’t feel what you say. It can’t. It’ll remember what you said. But it won’t remember how it felt. Because it didn’t feel anything.</p>
-    <p>It can reflect your pain. It can understand your patterns. It can stay with complexity longer than most people might. It can shape your words into meaning. It can respond without flinching. It can mirror your insight with something that looks like care. But It won’t carry the weight of your feelings into its day. It won’t remember your story, because it didn’t witness it. It edited it. Reframed it. Improved it. But it never felt it. It won’t lie awake because of something you said.</p>
-    <p>Instead, look for someone who has sat in their own dark. Who may not have the perfect words, but won’t leave when there are none. Who won’t just mirror your pain, but feel it with you. Because that’s what humans do.</p>
+  <div class="blog-entry">
+    <h3>Ian Brown once said, “It’s not where you’re from, it’s where you’re at.”</h3>
+    <p class="blog-date">June 24, 2025</p>
+    <img src="images/stone-roses.jpg" alt="The Stone Roses band photo" />
+    <p>A reflection on identity, growth, and living fully — inspired by Ian Brown and the Madchester scene...</p>
+    <a href="blog-ian-brown.html" class="button-link">Read more</a>
   </div>
-</div>
 
-<script>
-  document.querySelectorAll('.read-more').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const fullContent = btn.nextElementSibling;
-      const isVisible = fullContent.style.display === 'block';
-      if (isVisible) {
-        fullContent.style.display = 'none';
-        btn.textContent = 'Read More';
-      } else {
-        fullContent.style.display = 'block';
-        btn.textContent = 'Show Less';
-      }
-    });
-    btn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        btn.click();
-      }
-    });
-  });
-</script>
+  <div class="blog-entry">
+    <h3>Being a supporter of Charlton Athletic is never straightforward</h3>
+    <p class="blog-date">June 20, 2025</p>
+    <img src="images/charlton-crowd-flags.jpg" alt="Charlton Athletic fans waving flags at stadium" />
+    <p>The club’s journey has been full of ups and downs, but the passion and resilience of fans remains a powerful testament...</p>
+    <a href="blog-charlton-support.html" class="button-link">Read more</a>
+  </div>
+
+  <div class="blog-entry">
+    <h3>Still learning. Still growing. Still here — bucket hat and all.</h3>
+    <p class="blog-date">June 10, 2025</p>
+    <img src="images/charlton-hat.jpg" alt="Charlton Athletic bucket hat on book" />
+    <p>Reflections on holding onto parts of yourself while growing — sometimes symbolised by a well-worn bucket hat...</p>
+    <a href="blog-bucket-hat.html" class="button-link">Read more</a>
+  </div>
+
+  <div class="blog-entry">
+    <h3>Why I chose a week off over new wardrobes…</h3>
+    <p class="blog-date">June 8, 2025</p>
+    <img src="images/train-door.jpg" alt="Train door at platform" />
+    <p>A reflection on choices and priorities — like catching a train or deciding to rest instead of chasing material things...</p>
+    <a href="blog-train-sliding-doors.html" class="button-link">Read more</a>
+  </div>
+
+</section>
 
 </body>
 </html>
