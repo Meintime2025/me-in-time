@@ -59,43 +59,30 @@
       font-size: 1.1rem;
       color: #5e5349;
     }
-    .poem {
-      font-style: italic;
-      background: #fff;
-      border-left: 4px solid #c4b6a6;
-      padding: 25px 30px;
-      margin: 40px 0;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #4a423a;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    #privacy {
-      background: #f3ede6;
-      border-radius: 8px;
-      padding: 25px 30px;
-      margin-top: 60px;
+    section.content {
+      max-width: 700px;
+      margin: 40px auto;
+      font-family: 'Lora', serif;
       color: #4a423a;
     }
-    #privacy h2 {
+    section.content h2 {
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
       color: #3c362f;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
-    #privacy ul {
-      margin-left: 20px;
-      margin-bottom: 15px;
+    section.content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1em;
     }
-    #privacy a {
+    section.content a {
       color: #6b6152;
       text-decoration: underline;
     }
-    #privacy img {
-      max-width: 180px;
-      display: block;
-      margin-bottom: 20px;
+    section.content a:hover,
+    section.content a:focus {
+      text-decoration: none;
+      color: #3c362f;
     }
     footer {
       text-align: center;
@@ -116,14 +103,14 @@
 
 <nav>
   <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="welcome-2.html">Welcome</a></li>
-  <li><a href="counselling.html">Counselling</a></li>
-  <li><a href="coaching.html">Coaching</a></li>
-  <li><a href="refelctions.html">Reflections</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="faq.html">FAQs</a></li>
-</ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="welcome-2.html">Welcome</a></li>
+    <li><a href="counselling.html">Counselling</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="reflections.html">Reflections</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="faq.html">FAQs</a></li>
+  </ul>
 </nav>
 
 <header>
@@ -135,34 +122,23 @@
   </p>
 </header>
 
-  <section style="max-width: 700px; margin: 40px auto; font-family: 'Lora', serif; color: #4a423a;">
-  <h2 style="font-family: 'Montserrat', sans-serif; color: #3c362f; margin-bottom: 10px;">Not sure what’s right for you?</h2>
-  <p style="font-size: 1.1rem; line-height: 1.6;">
-    Sometimes life throws challenges at us, and not everyone needs counselling or psychotherapy to work through them. Especially when it’s about work, goals, or feeling stuck, coaching can often be a better fit.
-  </p>
-  <p style="font-size: 1.1rem; line-height: 1.6;">
-    Both counselling and coaching help you feel stronger and more confident, but they do it in different ways.
-  </p>
-  <p style="font-size: 1.1rem; line-height: 1.6;">
-    Think of counselling as a gentle space where you can unpack your emotions, heal old wounds, and better understand yourself — especially when life feels heavy or complicated.
-  </p>
-  <p style="font-size: 1.1rem; line-height: 1.6;">
-    Coaching, on the other hand, is more like having a supportive guide who helps you figure out what you want next, build your confidence, and take practical steps toward your goals.
-  </p>
-  <p style="font-size: 1.1rem; line-height: 1.6;">
-    If you’re wondering which might suit you, feel free to check out my <a href="counselling.html" style="color: #6b6152; text-decoration: underline;">Counselling</a> and <a href="coaching.html" style="color: #6b6152; text-decoration: underline;">Coaching</a> pages, or just <a href="contact.html" style="color: #6b6152; text-decoration: underline;">get in touch</a> for a friendly, no-pressure chat.
-  </p>
+<section class="content">
+  <h2>Not sure what’s right for you?</h2>
+  <p>Sometimes life throws challenges at us, and not everyone needs counselling or psychotherapy to work through them. Especially when it’s about work, goals, or feeling stuck, coaching can often be a better fit.</p>
+  <p>Both counselling and coaching help you feel stronger and more confident, but they do it in different ways.</p>
+  <p>Think of counselling as a gentle space where you can unpack your emotions, heal old wounds, and better understand yourself — especially when life feels heavy or complicated.</p>
+  <p>Coaching, on the other hand, is more like having a supportive guide who helps you figure out what you want next, build your confidence, and take practical steps toward your goals.</p>
+  <p>If you’re wondering which might suit you, feel free to check out my <a href="counselling.html">Counselling</a> and <a href="coaching.html">Coaching</a> pages, or just <a href="contact.html">get in touch</a> for a friendly, no-pressure chat.</p>
 </section>
 
-
-</footer>
-<footer style="text-align:center; margin-top: 60px; padding: 20px; color:#7a6d5a; font-family: 'Lora', serif;">
+<footer>
   &copy; 2025 Me In Time | Stuart Walker Counselling
   <br /><br />
-  <a href="contact.html" style="color:#6b6152; text-decoration: underline;">
+  <a href="contact.html">
     Privacy & Confidentiality
-  </a> — Your privacy matters. If you have questions or want to know more, please don’t hesitate to get in touch.
+  </a> — Your privacy matters. If you have questions or want to know more, please don’t hesitate to <a href="contact.html">get in touch</a>.
 </footer>
+
 </body>
 </html>
 
