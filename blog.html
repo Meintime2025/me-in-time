@@ -22,7 +22,6 @@
       padding: 15px 0;
       background-color: #f3ede6;
       margin-bottom: 40px;
-      flex-wrap: wrap;
     }
     nav a {
       text-decoration: none;
@@ -47,47 +46,41 @@
     }
     h2 {
       color: #3c362f;
-      border-bottom: 2px solid #c4b6a6;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #5e5349;
+      margin-bottom: 1.2em;
     }
     .blog-entry {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       padding-bottom: 20px;
-      border-bottom: 1px solid #d6cfc4;
-    }
-    .blog-entry h3 {
-      margin-bottom: 8px;
-      font-family: 'Montserrat', sans-serif;
-      color: #4a423a;
-    }
-    .blog-date {
-      font-size: 0.9rem;
-      color: #7d766a;
-      margin-bottom: 15px;
+      border-bottom: 1px solid #ccc;
     }
     .blog-entry img {
       width: 100%;
       border-radius: 8px;
       margin-bottom: 15px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      object-fit: cover;
+      max-height: 300px;
     }
-    .blog-entry p {
-      color: #5e5349;
-      font-size: 1.05rem;
-      margin-bottom: 15px;
+    .blog-date {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #7b6f5e;
+      margin-bottom: 10px;
     }
-    .button-link {
+    a.read-more {
       display: inline-block;
-      padding: 10px 25px;
+      margin-top: 10px;
       background-color: #6b6152;
       color: white;
+      padding: 8px 20px;
       text-decoration: none;
       border-radius: 25px;
       font-weight: 600;
-      transition: background-color 0.3s ease;
     }
-    .button-link:hover, .button-link:focus {
+    a.read-more:hover, a.read-more:focus {
       background-color: #574c3f;
       outline: none;
     }
@@ -109,73 +102,39 @@
 
 <h1>Blog</h1>
 
-<section id="blog">
+<div class="blog-entry">
+  <h2>Why I Chose a Week Off Over New Wardrobes…</h2>
+  <p class="blog-date">June 8, 2025</p>
+  <img src="images/why-i-chose-wardrobes.jpg" alt="Red bucket hat and book on a wooden table" />
+  <p>A reflection on choices and priorities — like catching a train or deciding to rest instead of chasing material things...</p>
+  <a href="blog-post-wardrobes.html" class="read-more">Read more</a>
+</div>
 
-  <div class="blog-entry">
-    <h3>That’s Not What AI Is For. That’s What Humans Do.</h3>
-    <p class="blog-date">July 2, 2025</p>
-    <img src="images/ai-humans.jpg" alt="Abstract image symbolising AI and human connection" />
-    <p>This post explores the unique qualities humans bring to empathy and connection — why AI can’t truly feel your story...</p>
-    <a href="blog-ai-humans.html" class="button-link">Read more</a>
-  </div>
+<div class="blog-entry">
+  <h2>Ian Brown once said...</h2>
+  <p class="blog-date">June 24, 2025</p>
+  <img src="images/stone-roses.jpg" alt="The Stone Roses band photo" />
+  <p>I’m a bit of a fan of Ian Brown, The Stone Roses, and most things Madchester (for those that remember it)...</p>
+  <a href="blog-post-ian-brown.html" class="read-more">Read more</a>
+</div>
 
-  <div class="blog-entry">
-    <h3>Is It Cheating If You Use AI to Speak Your Truth?</h3>
-    <p class="blog-date">July 8, 2025</p>
-    <img src="images/ai-writing.jpg" alt="Person typing on laptop with AI interface" />
-    <p>A warm reflection on how AI can help those who struggle to find their voice — and why using it isn’t cheating...</p>
-    <a href="blog-ai-cheating.html" class="button-link">Read more</a>
-  </div>
+<div class="blog-entry">
+  <h2>Train Door at Platform</h2>
+  <p class="blog-date">June 10, 2025</p>
+  <img src="images/train-door.jpg" alt="Train door at platform" />
+  <p>A reflection on choices and priorities — like catching a train or deciding to rest instead of chasing material things...</p>
+  <a href="blog-post-train-door.html" class="read-more">Read more</a>
+</div>
 
-  <div class="blog-entry">
-    <h3>Fatherhood Changes the Brain – So Why Don’t We Talk About It?</h3>
-    <p class="blog-date">July 1, 2025</p>
-    <img src="images/fatherhood-brain.jpg" alt="Father holding baby" />
-    <p>When we talk about parenting and mental health, the focus tends to be on mothers — but fathers matter too...</p>
-    <a href="blog-fatherhood.html" class="button-link">Read more</a>
-  </div>
+<div class="blog-entry">
+  <h2>Being a Supporter of Charlton Athletic is Never Straightforward</h2>
+  <p class="blog-date">June 20, 2025</p>
+  <img src="images/charlton-crowd-flags.jpg" alt="Charlton Athletic fans waving flags" />
+  <p>The club’s journey has been full of ups and downs, but through it all, the passion of fans remains...</p>
+  <a href="blog-post-charlton.html" class="read-more">Read more</a>
+</div>
 
-  <div class="blog-entry">
-    <h3>Looking for advice – funding support for ongoing counselling for men and dads</h3>
-    <p class="blog-date">June 29, 2025</p>
-    <img src="images/funding-support.jpg" alt="Hands holding coins" />
-    <p>With Dad's Unlimited closing, this post explores funding options to continue vital mental health support for men...</p>
-    <a href="blog-funding-support.html" class="button-link">Read more</a>
-  </div>
-
-  <div class="blog-entry">
-    <h3>Ian Brown once said, “It’s not where you’re from, it’s where you’re at.”</h3>
-    <p class="blog-date">June 24, 2025</p>
-    <img src="images/stone-roses.jpg" alt="The Stone Roses band photo" />
-    <p>A reflection on identity, growth, and living fully — inspired by Ian Brown and the Madchester scene...</p>
-    <a href="blog-ian-brown.html" class="button-link">Read more</a>
-  </div>
-
-  <div class="blog-entry">
-    <h3>Being a supporter of Charlton Athletic is never straightforward</h3>
-    <p class="blog-date">June 20, 2025</p>
-    <img src="images/charlton-crowd-flags.jpg" alt="Charlton Athletic fans waving flags at stadium" />
-    <p>The club’s journey has been full of ups and downs, but the passion and resilience of fans remains a powerful testament...</p>
-    <a href="blog-charlton-support.html" class="button-link">Read more</a>
-  </div>
-
-  <div class="blog-entry">
-    <h3>Still learning. Still growing. Still here — bucket hat and all.</h3>
-    <p class="blog-date">June 10, 2025</p>
-    <img src="images/charlton-hat.jpg" alt="Charlton Athletic bucket hat on book" />
-    <p>Reflections on holding onto parts of yourself while growing — sometimes symbolised by a well-worn bucket hat...</p>
-    <a href="blog-bucket-hat.html" class="button-link">Read more</a>
-  </div>
-
-  <div class="blog-entry">
-    <h3>Why I chose a week off over new wardrobes…</h3>
-    <p class="blog-date">June 8, 2025</p>
-    <img src="images/train-door.jpg" alt="Train door at platform" />
-    <p>A reflection on choices and priorities — like catching a train or deciding to rest instead of chasing material things...</p>
-    <a href="blog-train-sliding-doors.html" class="button-link">Read more</a>
-  </div>
-
-</section>
+<!-- Add additional blog entries here as needed -->
 
 </body>
 </html>
