@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Me | Me In Time</title>
+  <title>Contact | Me In Time</title>
   <style>
     body {
       font-family: 'Lora', serif;
       background-color: #f9f6f2;
       color: #4a423a;
-      max-width: 700px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.7;
@@ -17,21 +17,22 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 25px;
       justify-content: center;
       padding: 15px 0;
       background-color: #f3ede6;
       margin-bottom: 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
     }
     nav a {
       text-decoration: none;
       color: #6b6152;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
       padding: 8px 15px;
       border-radius: 30px;
     }
-    nav a:hover, nav a:focus {
+    nav a:hover,
+    nav a:focus {
       background-color: #c4b6a6;
       color: #fff;
       outline: none;
@@ -40,66 +41,57 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 2.8rem;
+      margin-bottom: 40px;
       color: #3c362f;
-    }
-    p {
-      color: #5e5349;
-      font-size: 1.15rem;
-      margin-bottom: 2em;
-      text-align: center;
     }
     form {
       display: flex;
       flex-direction: column;
       gap: 15px;
-    }
-    label {
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: #4a423a;
+      margin-bottom: 40px;
     }
     input, textarea {
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 1rem;
-      font-family: 'Lora', serif;
-      resize: vertical;
-    }
-    textarea {
-      min-height: 120px;
+      font-family: inherit;
     }
     button {
-      padding: 14px;
+      width: 150px;
+      padding: 12px;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: #fff;
       background-color: #6b6152;
-      color: white;
       border: none;
-      border-radius: 30px;
-      font-size: 1.1rem;
+      border-radius: 25px;
       cursor: pointer;
-      font-weight: 700;
       transition: background-color 0.3s ease;
     }
-    button:hover, button:focus {
+    button:hover,
+    button:focus {
       background-color: #574c3f;
       outline: none;
     }
-    .contact-info {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 1rem;
+    .privacy {
+      font-size: 0.9rem;
       color: #5e5349;
-      line-height: 1.6;
+      border-top: 1px solid #ccc;
+      padding-top: 25px;
     }
-    .contact-info a {
+    .privacy h2 {
+      font-family: 'Montserrat', sans-serif;
+      color: #3c362f;
+      margin-bottom: 15px;
+    }
+    .privacy a {
       color: #6b6152;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .contact-info a:hover, .contact-info a:focus {
       text-decoration: underline;
+    }
+    .privacy a:hover, .privacy a:focus {
+      color: #574c3f;
       outline: none;
     }
   </style>
@@ -108,42 +100,42 @@
 
 <nav>
   <ul>
-  <li><a href="index.html">Home</a></li>
-  <li><a href="welcome-2.html">Welcome</a></li>
-  <li><a href="counselling.html">Counselling</a></li>
-  <li><a href="coaching.html">Coaching</a></li>
-  <li><a href="reflections.html">Reflections</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="faq.html">FAQs</a></li>
-</ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="welcome-2.html">Welcome</a></li>
+    <li><a href="counselling.html">Counselling</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="space-to-reflect.html">Space to Reflect</a></li>
+    <li><a href="contact.html" aria-current="page">Contact</a></li>
+    <li><a href="faq.html">FAQs</a></li>
+  </ul>
 </nav>
 
 <h1>Contact Me</h1>
 
-<p>I’m glad you’re here. Whether you have questions, want to book a session, or just need a little guidance on what comes next, you’re welcome to reach out.</p>
-
-<p>You can get in touch by email, phone, or by filling out the contact form below. I aim to respond within two working days.</p>
-
 <form action="mailto:stuart.meintime@gmail.com" method="post" enctype="text/plain">
-  <label for="name">Name *</label>
-  <input type="text" id="name" name="Name" required placeholder="Your full name" />
-  
-  <label for="email">Email *</label>
-  <input type="email" id="email" name="Email" required placeholder="your.email@example.com" />
-  
-  <label for="phone">Phone (optional)</label>
-  <input type="tel" id="phone" name="Phone" placeholder="Optional" />
-  
-  <label for="message">Message *</label>
-  <textarea id="message" name="Message" required placeholder="Write your message here..."></textarea>
-  
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
   <button type="submit">Send Message</button>
 </form>
 
-<div class="contact-info">
-  <p>Email: <a href="mailto:stuart.meintime@gmail.com">stuart.meintime@gmail.com</a></p>
-  <p>Phone: <a href="tel:+447889249507">07889 249507</a></p>
+<div class="privacy">
+  <h2>Privacy & Confidentiality</h2>
+  <p>Your privacy matters.</p>
+  <p>All sessions are confidential and handled in line with the ethical guidelines of the British Association for Counselling and Psychotherapy (BACP).</p>
+  <p>As a practitioner, I am committed to protecting your personal information and complying with the UK General Data Protection Regulation (GDPR). I am registered with the Information Commissioner's Office (ICO) and adhere to their data protection standards.</p>
+  <p><strong>How your information is used:</strong></p>
+  <ul>
+    <li>Contact information submitted via the website is used solely to respond to your enquiry.</li>
+    <li>No information is shared with third parties.</li>
+    <li>Messages are stored securely and deleted when no longer needed.</li>
+  </ul>
+  <p>If you would like to know more about how your information is handled, you're welcome to <a href="mailto:stuart.meintime@gmail.com">get in touch</a>.</p>
 </div>
+
+<footer style="text-align:center; margin-top: 60px; padding: 20px; color:#7a6d5a; font-family: 'Lora', serif;">
+  &copy; 2025 Me In Time | Stuart Walker Counselling
+</footer>
 
 </body>
 </html>
