@@ -1,90 +1,101 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog | Me In Time</title>
-  <style>
-    body {
-      font-family: 'Lora', serif;
-      background-color: #f9f6f2;
-      color: #4a423a;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.7;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blog | Me In Time</title>
+<style>
+  body {
+    font-family: 'Lora', serif;
+    background-color: #f9f6f2;
+    color: #4a423a;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    line-height: 1.7;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    padding: 15px 0;
+    background-color: #f3ede6;
+    margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+  nav a {
+    text-decoration: none;
+    color: #6b6152;
+    padding: 8px 15px;
+    border-radius: 30px;
+  }
+  nav a:hover,
+  nav a:focus {
+    background-color: #c4b6a6;
+    color: #fff;
+    outline: none;
+  }
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #3c362f;
+  }
+  .blog-post {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+  }
+  .blog-post img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  .blog-post h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #3c362f;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+  }
+  .blog-post .date {
+    font-size: 0.9rem;
+    color: #7a6d5a;
+    margin-bottom: 10px;
+  }
+  .blog-post p.excerpt {
+    color: #5e5349;
+    margin-bottom: 5px;
+  }
+  .blog-post p.full-content {
+    color: #5e5349;
+    margin-top: 10px;
+    display: none;
+  }
+  .read-more {
+    color: #6b6152;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    user-select: none;
+  }
+</style>
+<script>
+  function toggleContent(id, link) {
+    const content = document.getElementById(id);
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      link.textContent = "Read more →";
+    } else {
+      content.style.display = "block";
+      link.textContent = "Show less ↑";
     }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      justify-content: center;
-      padding: 15px 0;
-      background-color: #f3ede6;
-      margin-bottom: 40px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-    }
-    nav a {
-      text-decoration: none;
-      color: #6b6152;
-      padding: 8px 15px;
-      border-radius: 30px;
-    }
-    nav a:hover,
-    nav a:focus {
-      background-color: #c4b6a6;
-      color: #fff;
-      outline: none;
-    }
-    h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 40px;
-      color: #3c362f;
-    }
-    .blog-post {
-      margin-bottom: 50px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 20px;
-    }
-    .blog-post img {
-      width: 100%;
-      max-height: 250px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-    .blog-post h2 {
-      font-family: 'Montserrat', sans-serif;
-      color: #3c362f;
-      margin-bottom: 5px;
-      font-size: 1.8rem;
-    }
-    .blog-post .date {
-      font-size: 0.9rem;
-      color: #7a6d5a;
-      margin-bottom: 10px;
-    }
-    .blog-post p {
-      color: #5e5349;
-      margin-bottom: 10px;
-    }
-    .read-more {
-      color: #6b6152;
-      font-weight: 600;
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s ease;
-    }
-    .read-more:hover,
-    .read-more:focus {
-      border-color: #c4b6a6;
-      outline: none;
-    }
-  </style>
+  }
+</script>
 </head>
 <body>
 
@@ -102,51 +113,131 @@
 
 <h1>Blog</h1>
 
+<!-- Blog 1 -->
 <div class="blog-post">
   <img src="images/men.png" alt="Men Reflecting Together" />
-  <h2><a href="blog-you-do-not-need-permission.html">You Do Not Need Permission</a></h2>
+  <h2>You Do Not Need Permission</h2>
   <div class="date">July 10, 2025</div>
-  <p>A heartfelt reflection on how grief and pain don’t require apologies — an invitation to just begin.</p>
-  <a href="blog-you-do-not-need-permission.html" class="read-more">Read more →</a>
+  <p class="excerpt">A heartfelt reflection on how grief and pain don’t require apologies — an invitation to just begin.</p>
+  <p id="content1" class="full-content">
+    You sit down, shoulders hunched like guilt,<br><br>
+    Lips are already forming the words:<br>
+    “Sorry — I don’t talk about this much.”<br><br>
+    And I nod, though inside I sigh.<br>
+    Not at you.<br>
+    At all the years that taught you<br>
+    Your pain was something to preface.<br>
+    To pad.<br>
+    To apologise for.<br><br>
+    You’re not a burden.<br>
+    You’re a person.<br>
+    With a past.<br>
+    A knot of thoughts you’ve carried in silence,<br>
+    afraid your story would take up too much space.<br><br>
+    I’ve heard it a hundred ways:<br>
+    “I’m not good at this...”<br>
+    “Don’t want to waste your time...”<br>
+    “Sorry, it’s probably stupid...”<br>
+    And my heart gets heavier<br>
+    Not from what you say<br>
+    But from all you felt you couldn’t.<br><br>
+    No one taught you<br>
+    That grief has a right to speak<br>
+    Even in your voice.<br><br>
+    So here’s what I wish I could tattoo on the moment:<br>
+    You do not need permission<br>
+    To feel.<br>
+    To speak.<br>
+    To be heard.<br><br>
+    No need to be polished.<br>
+    No need to be strong.<br>
+    No need to be sorry.<br><br>
+    Just begin.
+  </p>
+  <span class="read-more" onclick="toggleContent('content1', this)">Read more →</span>
 </div>
 
+<!-- Blog 2 -->
 <div class="blog-post">
   <img src="images/stone-roses.jpg" alt="The Stone Roses band photo" />
-  <h2><a href="blog-ian-brown.html">Ian Brown once said...</a></h2>
+  <h2>Ian Brown once said...</h2>
   <div class="date">June 24, 2025</div>
-  <p>Reflecting on identity, growth, and holding onto pieces of who we are as we evolve.</p>
-  <a href="blog-ian-brown.html" class="read-more">Read more →</a>
+  <p class="excerpt">Reflecting on identity, growth, and holding onto pieces of who we are as we evolve.</p>
+  <p id="content2" class="full-content">
+    Ian Brown once said, “It’s not where you’re from, it’s where you’re at.” I’d add: it’s also when you're at, and how you choose to live your life now.<br><br>
+    I’m a bit of a fan of Ian Brown, The Stone Roses, and most things Madchester (for those that remember it), and although I can’t quite get into the flares anymore, I’ve still got a decent collection of bucket hats.<br><br>
+    I used to think the story of who I am was mostly shaped by where I came from: the place, the time, the circumstances. But I now realise the real measure is in how I’m living now, the choices I make each day, the relationships I nurture, and the courage to keep growing, even when it’s uncomfortable.<br><br>
+    I feel like I’m constantly being reminded that men often find it difficult to open up. To be fair, I see it in others, and I’ve felt it in myself. There’s this pressure to hold it all together, stay silent, and just power through. Sometimes, asking for help is seen as a weakness, but the truth is, there’s strength in honesty.<br><br>
+    Being at this stage of life means realising that you don’t have to do it all alone. It’s about having the courage to ask for help when you need it, and showing up with intention, for your work, your family, and yourself.<br><br>
+    It’s about letting go of perfection, letting in vulnerability, and finding purpose in the present, however messy or imperfect it may be.<br><br>
+    And maybe, if we’re lucky, we reach a place where connection matters more than image. Where presence matters more than performance.<br><br>
+    Still learning. Still growing. Still here — bucket hat and all.<br><br>
+    After all, this is the one. And if The Stone Roses taught us anything, it’s that music, meaning, and second comings can echo for a lifetime.
+  </p>
+  <span class="read-more" onclick="toggleContent('content2', this)">Read more →</span>
 </div>
 
+<!-- Blog 3 -->
 <div class="blog-post">
   <img src="images/train-door.jpg" alt="Train door at platform" />
-  <h2><a href="blog-why-i-chose-holiday.html">Why I Chose a Week Off Over New Wardrobes…</a></h2>
+  <h2>Why I Chose a Week Off Over New Wardrobes…</h2>
   <div class="date">June 8, 2025</div>
-  <p>A personal reflection on priorities, rest, and the small moments that shape life.</p>
-  <a href="blog-why-i-chose-holiday.html" class="read-more">Read more →</a>
+  <p class="excerpt">A personal reflection on priorities, rest, and the small moments that shape life.</p>
+  <p id="content3" class="full-content">
+    A reflection on choices and priorities — like catching a train or deciding to rest instead of chasing material things...<br><br>
+    It’s easy to get caught up in the rush and noise of life. Sometimes choosing rest and pause is the bravest decision we can make. We can’t pour from an empty cup.<br><br>
+    This blog is about noticing what truly matters and honouring those moments.
+  </p>
+  <span class="read-more" onclick="toggleContent('content3', this)">Read more →</span>
 </div>
 
+<!-- Blog 4 -->
 <div class="blog-post">
   <img src="images/charlton-crowd-flags.jpg" alt="Charlton Athletic fans waving flags at stadium" />
-  <h2><a href="blog-charlton-fan.html">Being a supporter of Charlton Athletic is never straightforward</a></h2>
+  <h2>Being a supporter of Charlton Athletic is never straightforward</h2>
   <div class="date">June 20, 2025</div>
-  <p>The ups and downs of supporting a beloved football club, and what it teaches us about fatherhood.</p>
-  <a href="blog-charlton-fan.html" class="read-more">Read more →</a>
+  <p class="excerpt">The ups and downs of supporting a beloved football club, and what it teaches us about fatherhood.</p>
+  <p id="content4" class="full-content">
+    Being a supporter of Charlton Athletic is never straightforward. The club’s journey has been full of ups and downs, from near collapse to close calls with European competition.<br><br>
+    The passion and resilience of fans remind us of the daily ups and downs of fatherhood — showing up, being present, and loving through it all.<br><br>
+    It’s not always glamorous, but it’s deeply meaningful.
+  </p>
+  <span class="read-more" onclick="toggleContent('content4', this)">Read more →</span>
 </div>
 
+<!-- Blog 5 -->
 <div class="blog-post">
   <img src="images/why-i-chose-wardrobes.jpg" alt="Reflective image for Dad's Unlimited blog" />
-  <h2><a href="blog-dads-unlimited.html">Looking for advice – funding support for ongoing counselling for men and dads</a></h2>
+  <h2>Looking for advice – funding support for ongoing counselling for men and dads</h2>
   <div class="date">June 29, 2025</div>
-  <p>The end of Dad's Unlimited leaves a gap. Exploring support options for men and dads struggling to continue therapy.</p>
-  <a href="blog-dads-unlimited.html" class="read-more">Read more →</a>
+  <p class="excerpt">The end of Dad's Unlimited leaves a gap. Exploring support options for men and dads struggling to continue therapy.</p>
+  <p id="content5" class="full-content">
+    As many of you will know, the brilliant organisation Dad's Unlimited will sadly be coming to an end very soon.<br><br>
+    The vital support they’ve provided to men navigating separation, emotional struggles, and loneliness is deeply missed.<br><br>
+    This post explores small grants, local funding, and organisations supporting mental health work with men and dads.<br><br>
+    If you have advice or connections, please get in touch.
+  </p>
+  <span class="read-more" onclick="toggleContent('content5', this)">Read more →</span>
 </div>
 
-<!-- Add more blog posts here with the same structure -->
+<!-- Add more blogs below using the same structure -->
 
 <footer style="text-align:center; margin-top: 60px; padding: 20px; color:#7a6d5a; font-family: 'Lora', serif;">
   &copy; 2025 Me In Time | Stuart Walker Counselling
 </footer>
+
+<script>
+  function toggleContent(id, link) {
+    const content = document.getElementById(id);
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      link.textContent = "Read more →";
+    } else {
+      content.style.display = "block";
+      link.textContent = "Show less ↑";
+    }
+  }
+</script>
 
 </body>
 </html>
