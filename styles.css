@@ -1,11 +1,11 @@
-/* Reset */
+/* Reset box-sizing and margin/padding */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Body and content */
+/* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
   color: #4a423a;
@@ -13,72 +13,24 @@ body {
   line-height: 1.7;
   background-color: #f9f6f2;
   max-width: 900px;
-  margin: 60px auto 40px auto; /* margin top to clear sticky nav */
+  margin: 40px auto;
   padding: 20px;
   text-align: left;
-  position: relative;
 }
 
-/* Sticky full-width nav banner */
-nav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw; /* full viewport width */
-  background-color: #f3ede6;
-  padding: 15px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  z-index: 1000;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-/* Nav list centered inside nav */
-nav ul {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  justify-content: flex-start;
-}
-
-/* Nav links styling */
-nav a {
-  color: #6b6152;
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 30px;
-  transition: background-color 0.3s, color 0.3s;
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-}
-
-/* Hover/focus effect */
-nav a:hover,
-nav a:focus {
-  background-color: #c4b6a6;
-  color: #fff;
-  outline: none;
-}
-
-/* Headings */
+/* Headings font style */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #3c362f;
   margin-top: 40px;
   margin-bottom: 20px;
-  text-align: left;
   line-height: 1.2;
+  text-align: left;
+  scroll-margin-top: 70px; /* offset for sticky nav */
 }
 
-/* Paragraphs and list items */
+/* Paragraph and list styling */
 p, li {
   font-family: 'Lora', serif;
   font-weight: 400;
@@ -89,7 +41,6 @@ p, li {
   text-align: left;
 }
 
-/* Lists */
 ul, ol {
   margin-left: 20px;
   margin-bottom: 20px;
@@ -99,7 +50,53 @@ ul, ol {
   line-height: 1.6;
 }
 
-/* Contact link/button */
+/* Sticky navigation banner */
+nav {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  background-color: #f3ede6;
+  padding: 15px 40px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 1000;
+  left: 0;
+  right: 0;
+}
+
+/* Navigation list styling */
+nav ul {
+  display: flex !important;
+  justify-content: space-between;
+  gap: 30px;
+  list-style: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  overflow-x: auto; /* horizontal scroll on small screens */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
+
+/* Navigation links */
+nav a {
+  color: #6b6152;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  white-space: nowrap; /* prevent breaking */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+/* Hover/focus nav link styles */
+nav a:hover,
+nav a:focus {
+  background-color: #c4b6a6;
+  color: #fff;
+  outline: none;
+}
+
+/* Contact link / button style */
 a.contact-link, .button-link, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -116,6 +113,7 @@ a.contact-link, .button-link, button {
   line-height: 1.4;
 }
 
+/* Contact link / button hover/focus */
 a.contact-link:hover, a.contact-link:focus,
 .button-link:hover, .button-link:focus,
 button:hover, button:focus {
@@ -123,7 +121,7 @@ button:hover, button:focus {
   outline: none;
 }
 
-/* Form inputs and textarea */
+/* Form inputs and textarea styling */
 input, textarea {
   font-family: 'Lora', serif;
   font-size: 1.1rem;
@@ -137,7 +135,53 @@ input, textarea {
   box-sizing: border-box;
 }
 
-/* Footer */
+/* FAQ details spacing */
+details {
+  background: #fff;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/* Summary styling */
+summary {
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  outline: none;
+  user-select: none;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+/* Hide default marker */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow icons */
+details[open] summary::before {
+  content: "▼ ";
+  color: #6b6152;
+}
+
+summary::before {
+  content: "► ";
+  color: #6b6152;
+}
+
+/* FAQ paragraph and list inside details */
+details p, details ul {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #5e5349;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+/* Footer styling */
 footer {
   text-align: left;
   margin-top: 60px;
@@ -147,25 +191,24 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Footer logos/images */
+/* Footer images like logos */
 footer img {
   height: 40px;
   width: auto;
   margin-top: 10px;
 }
 
-/* Responsive adjustments */
+/* Responsive tweaks */
 @media (max-width: 600px) {
   body {
     padding: 15px 20px;
-    margin-top: 80px; /* a little more for nav height */
+    margin: 20px auto;
   }
   nav ul {
-    flex-direction: column;
     gap: 15px;
   }
   nav {
-    padding: 10px 15px;
+    padding: 10px 20px;
   }
   h1, h2, h3, h4, h5, h6 {
     margin-top: 30px;
@@ -173,6 +216,6 @@ footer img {
   }
   nav a {
     padding: 8px 12px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
