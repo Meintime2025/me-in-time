@@ -19,23 +19,35 @@ body {
 }
 
 /* Headings font style */
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #3c362f;
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
+  line-height: 1.2;
 }
 
 /* Paragraph styling */
-p {
+p, li {
+  font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
   color: #5e5349;
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: left;
+}
+
+/* Lists styling */
+ul, ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #5e5349;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* Sticky navigation banner */
@@ -67,6 +79,8 @@ nav a {
   border-radius: 30px;
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
 }
 
 /* Hover/focus nav link styles */
@@ -78,7 +92,7 @@ nav a:focus {
 }
 
 /* Contact link / button style */
-a.contact-link, .button-link {
+a.contact-link, .button-link, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   background-color: #6b6152;
@@ -87,13 +101,33 @@ a.contact-link, .button-link {
   border-radius: 25px;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+  border: none;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
+/* Contact link / button hover/focus */
 a.contact-link:hover, a.contact-link:focus,
-.button-link:hover, .button-link:focus {
+.button-link:hover, .button-link:focus,
+button:hover, button:focus {
   background-color: #574c3f;
   outline: none;
+}
+
+/* Form inputs and textarea styling */
+input, textarea {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: #4a423a;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Footer styling */
@@ -106,7 +140,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Footer image (like logos) */
+/* Footer images like logos */
 footer img {
   height: 40px;
   width: auto;
@@ -125,7 +159,12 @@ footer img {
   nav {
     padding: 10px 20px;
   }
-  h1, h2, h3 {
+  h1, h2, h3, h4, h5, h6 {
     margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  nav a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
   }
 }
