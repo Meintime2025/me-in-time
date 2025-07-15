@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -115,6 +115,7 @@
       position: relative;
       z-index: 999;
       width: 100vw;
+      padding: 10px 20px;
       border-top: 1px solid #6C8C2C;
       border-bottom: 1px solid #6C8C2C;
     }
@@ -125,7 +126,7 @@
 
     .mobile-nav a {
       display: block;
-      padding: 16px 24px;
+      padding: 16px 0;
       color: white;
       text-decoration: none;
       font-family: 'Montserrat', sans-serif;
@@ -179,7 +180,7 @@
     </div>
   </nav>
 
-  <!-- MOBILE NAV -->
+  <!-- MOBILE NAV DROPDOWN -->
   <div class="mobile-nav" id="mobileNav">
     <a href="#home">Home</a>
     <a href="#about">About</a>
