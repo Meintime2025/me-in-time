@@ -8,7 +8,7 @@
 /* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
-  color: #6E7B8B; /* Warm Grey for body text */
+  color: #6E7B8B; /* Warm Grey for text */
   font-size: 16px;
   line-height: 1.7;
   background-color: #FAF9F6; /* Off-White background */
@@ -22,7 +22,7 @@ body {
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #2C6E91; /* Deep Teal for headings */
+  color: #2C6E91; /* Deep Teal */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
@@ -33,7 +33,7 @@ p, li {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
-  color: #6E7B8B; /* Warm Grey */
+  color: #6E7B8B;
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: left;
@@ -43,7 +43,7 @@ p, li {
 ul, ol {
   margin-left: 20px;
   margin-bottom: 20px;
-  color: #6E7B8B; /* Warm Grey */
+  color: #6E7B8B;
   font-family: 'Lora', serif;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -53,22 +53,26 @@ ul, ol {
 nav {
   position: sticky;
   top: 0;
-  width: 100%;
-  background-color: #E9D8A6; /* Soft Warm Sand */
-  padding: 15px 40px;
+  width: 100vw;  /* Full viewport width */
+  left: 0;       /* Ensure aligned left */
+  background-color: #E9D8A6; /* Warm Sand */
+  padding: 15px 20px;
   box-shadow: 0 2px 6px rgba(44, 110, 145, 0.3);
   z-index: 1000;
+  overflow-wrap: break-word; /* Prevent overflow */
 }
 
 /* Navigation list styling */
 nav ul {
   display: flex;
-  flex-wrap: wrap; /* allow wrapping on smaller screens */
-  justify-content: flex-start; /* left-aligned */
-  gap: 15px;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  justify-content: flex-start;
+  gap: 12px;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  padding-left: 0;
+  margin: 0;
 }
 
 /* Navigation links */
@@ -81,6 +85,7 @@ nav a {
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  white-space: nowrap; /* Prevent breaking inside nav links */
 }
 
 /* Hover/focus nav link styles */
@@ -159,7 +164,7 @@ summary::-webkit-details-marker {
 /* Custom arrow icons */
 details[open] summary::before {
   content: "▼ ";
-  color: #2C6E91; /* Deep Teal */
+  color: #2C6E91;
 }
 
 summary::before {
@@ -196,21 +201,21 @@ footer img {
 /* Responsive tweaks */
 @media (max-width: 600px) {
   body {
-    padding: 15px 20px;
+    padding: 15px 15px;
   }
   nav ul {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
   }
   nav {
-    padding: 10px 20px;
+    padding: 10px 15px;
   }
   h1, h2, h3 {
     margin-top: 30px;
   }
   nav a {
-    padding: 8px 12px;
+    padding: 6px 12px;
     font-size: 0.9rem;
   }
 }
