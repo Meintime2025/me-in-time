@@ -1,4 +1,4 @@
-/* Reset box-sizing and margin/padding */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,13 +8,13 @@
 /* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
-  color: #6E7B8B; /* Warm Grey for text */
+  color: #6A8DAD; /* Muted Steel Blue */
   font-size: 16px;
   line-height: 1.7;
-  background-color: #FAF9F6; /* Off-White background */
+  background-color: #F1F6F9; /* Light Misty Blue */
   max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 80px auto 40px; /* top margin to avoid overlap with sticky nav */
+  padding: 0 20px;
   text-align: left;
 }
 
@@ -22,10 +22,11 @@ body {
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #2C6E91; /* Deep Teal */
+  color: #1D3557; /* Deep Blue */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
+  line-height: 1.2;
 }
 
 /* Paragraph styling */
@@ -33,7 +34,7 @@ p, li {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
-  color: #6E7B8B;
+  color: #495464; /* Slate Grey */
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: left;
@@ -43,7 +44,7 @@ p, li {
 ul, ol {
   margin-left: 20px;
   margin-bottom: 20px;
-  color: #6E7B8B;
+  color: #495464;
   font-family: 'Lora', serif;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -51,48 +52,44 @@ ul, ol {
 
 /* Sticky navigation banner */
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
-  width: 100vw;  /* Full viewport width */
-  left: 0;       /* Ensure aligned left */
-  background-color: #E9D8A6; /* Warm Sand */
+  left: 0;
+  right: 0;
+  background-color: #457B9D; /* Soft Sky Blue */
   padding: 15px 20px;
-  box-shadow: 0 2px 6px rgba(44, 110, 145, 0.3);
-  z-index: 1000;
-  overflow-wrap: break-word; /* Prevent overflow */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 10000;
+  transition: top 0.3s ease;
 }
 
 /* Navigation list styling */
 nav ul {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping on small screens */
-  justify-content: flex-start;
-  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* left aligned */
+  gap: 15px;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  padding-left: 0;
-  margin: 0;
 }
 
 /* Navigation links */
 nav a {
-  color: #2C6E91; /* Deep Teal */
+  color: #F1F6F9; /* Light Misty Blue */
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 30px;
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  white-space: nowrap; /* Prevent breaking inside nav links */
 }
 
 /* Hover/focus nav link styles */
 nav a:hover,
 nav a:focus {
-  background-color: #F4A261; /* Muted Coral */
-  color: #fff;
+  background-color: #1D3557; /* Deep Blue */
+  color: #F1F6F9;
   outline: none;
 }
 
@@ -100,8 +97,8 @@ nav a:focus {
 a.contact-link, .button-link, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  background-color: #2C6E91; /* Deep Teal */
-  color: white;
+  background-color: #1D3557; /* Deep Blue */
+  color: #F1F6F9; /* Light Misty Blue */
   padding: 10px 25px;
   border-radius: 25px;
   text-decoration: none;
@@ -117,7 +114,7 @@ a.contact-link, .button-link, button {
 a.contact-link:hover, a.contact-link:focus,
 .button-link:hover, .button-link:focus,
 button:hover, button:focus {
-  background-color: #F4A261; /* Muted Coral */
+  background-color: #457B9D; /* Soft Sky Blue */
   outline: none;
 }
 
@@ -125,7 +122,7 @@ button:hover, button:focus {
 input, textarea {
   font-family: 'Lora', serif;
   font-size: 1.1rem;
-  color: #4a423a;
+  color: #495464;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -135,58 +132,12 @@ input, textarea {
   box-sizing: border-box;
 }
 
-/* FAQ details spacing */
-details {
-  background: #fff;
-  border-radius: 6px;
-  margin-bottom: 25px;
-  padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  cursor: pointer;
-}
-
-/* Summary styling */
-summary {
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.15rem;
-  outline: none;
-  user-select: none;
-  margin-bottom: 10px;
-  list-style: none;
-}
-
-/* Hide default marker */
-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Custom arrow icons */
-details[open] summary::before {
-  content: "▼ ";
-  color: #2C6E91;
-}
-
-summary::before {
-  content: "► ";
-  color: #2C6E91;
-}
-
-/* FAQ paragraph and list inside details */
-details p, details ul {
-  margin-top: 12px;
-  font-size: 1rem;
-  color: #6E7B8B;
-  padding-left: 20px;
-  line-height: 1.6;
-}
-
 /* Footer styling */
 footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #7a6d5a;
+  color: #495464;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
@@ -201,21 +152,18 @@ footer img {
 /* Responsive tweaks */
 @media (max-width: 600px) {
   body {
-    padding: 15px 15px;
+    margin-top: 120px; /* extra space for nav */
+    padding: 15px 20px;
   }
   nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
   }
-  nav {
-    padding: 10px 15px;
+  nav a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
   }
   h1, h2, h3 {
     margin-top: 30px;
-  }
-  nav a {
-    padding: 6px 12px;
-    font-size: 0.9rem;
   }
 }
