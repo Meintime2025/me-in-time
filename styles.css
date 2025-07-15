@@ -114,7 +114,8 @@
       background: none;
       border: none;
       cursor: pointer;
-      z-index: 1100;
+      z-index: 10000;
+      position: relative;
     }
 
     .hamburger span {
@@ -252,7 +253,7 @@
       }
 
       .sticky-contact {
-        display: inline-block !important;
+        display: block !important;
       }
     }
   </style>
@@ -288,7 +289,7 @@
     <a href="#faqs">FAQs</a>
   </div>
 
-  <main>
+  <main style="min-height: 600px">
     <h1 id="home">Welcome to Me In Time</h1>
     <p>This is a calm and grounded space for reflection, healing, and support. Whether you’re here for therapy, growth, or simply to explore, you’re welcome here just as you are. <a href="contact.html" class="button-link">Get in touch</a></p>
 
@@ -319,6 +320,15 @@
       nav.classList.toggle('open');
       burger.classList.toggle('open');
     }
+
+    // Automatically add .button-link class to all contact.html links if missing
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href="contact.html"]').forEach(link => {
+        if (!link.classList.contains('button-link')) {
+          link.classList.add('button-link');
+        }
+      });
+    });
   </script>
 </body>
 </html>
