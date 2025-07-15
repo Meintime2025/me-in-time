@@ -8,48 +8,34 @@
 /* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
-  color: #4a423a;
+  color: #4A4A4A; /* warm dark gray for text */
   font-size: 16px;
   line-height: 1.7;
-  background-color: #d0dafd; /* darker blue background */
+  background-color: #F6F3E8; /* cream/light beige background */
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
   text-align: left;
 }
 
-/* Headings font style - consistent for all levels */
-h1, h2, h3, h4, h5, h6 {
+/* Headings font style */
+h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #203070; /* darker blue */
+  color: #567D46; /* deep olive green */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
-  line-height: 1.25;
-  /* Consistent sizes - adjust as needed */
 }
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.1rem; }
-h6 { font-size: 1rem; }
 
-/* Paragraphs and list items */
-p, li {
-  font-family: 'Lora', serif;
+/* Paragraph styling */
+p {
   font-weight: 400;
   font-size: 1.1rem;
-  color: #2c3a83;
+  color: #4A4A4A;
   line-height: 1.6;
   margin-bottom: 20px;
-}
-
-/* Lists styling */
-ul, ol {
-  padding-left: 1.5rem;
-  margin-bottom: 20px;
+  text-align: left;
 }
 
 /* Sticky navigation banner */
@@ -57,9 +43,9 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #4a5ebc; /* medium blue */
+  background-color: #A8C686; /* soft pastel green */
   padding: 15px 40px;
-  box-shadow: 0 4px 8px rgba(25, 35, 70, 0.3);
+  box-shadow: 0 4px 8px rgba(88, 116, 55, 0.3); /* subtle greenish shadow */
   z-index: 1000;
 }
 
@@ -73,7 +59,7 @@ nav ul {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700; /* bold */
   font-size: 1rem;
-  overflow: visible;
+  overflow: visible; /* default for desktop */
 }
 
 /* Navigation links */
@@ -85,14 +71,14 @@ nav a {
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-weight: 700; /* bold */
 }
 
 /* Hover/focus nav link styles */
 nav a:hover,
 nav a:focus {
-  background-color: #2f3a70;
-  color: #d0dafd;
+  background-color: #7DA65D; /* medium moss green */
+  color: #F6F3E8; /* cream text on hover */
   outline: none;
 }
 
@@ -100,7 +86,7 @@ nav a:focus {
 a.contact-link, .button-link, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  background-color: #2f3a70; /* darker blue button */
+  background-color: #7DA65D; /* medium moss green button */
   color: white;
   padding: 10px 25px;
   border-radius: 25px;
@@ -116,17 +102,17 @@ a.contact-link, .button-link, button {
 a.contact-link:hover, a.contact-link:focus,
 .button-link:hover, .button-link:focus,
 button:hover, button:focus {
-  background-color: #203070; /* darkest blue */
+  background-color: #567D46; /* darker olive green */
   outline: none;
 }
 
 /* FAQ details spacing */
 details {
-  background: #fff;
+  background: white;
   border-radius: 6px;
   margin-bottom: 25px;
   padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(120, 140, 80, 0.1);
   cursor: pointer;
 }
 
@@ -139,7 +125,7 @@ summary {
   user-select: none;
   margin-bottom: 10px;
   list-style: none;
-  color: #203070;
+  color: #567D46;
 }
 
 /* Hide default marker */
@@ -150,19 +136,19 @@ summary::-webkit-details-marker {
 /* Custom arrow icons */
 details[open] summary::before {
   content: "▼ ";
-  color: #4a5ebc;
+  color: #A8C686;
 }
 
 summary::before {
   content: "► ";
-  color: #4a5ebc;
+  color: #A8C686;
 }
 
 /* FAQ paragraph and list inside details */
 details p, details ul {
   margin-top: 12px;
   font-size: 1rem;
-  color: #2c3a83;
+  color: #4A4A4A;
   padding-left: 20px;
   line-height: 1.6;
 }
@@ -172,7 +158,7 @@ footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #2f3a70;
+  color: #567D46;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
@@ -188,7 +174,7 @@ footer img {
 @media (max-width: 600px) {
   nav {
     padding: 10px 20px;
-    background-color: #4a5ebc; /* keep consistent */
+    background-color: #A8C686; /* keep consistent */
   }
   nav ul {
     display: flex;
@@ -205,14 +191,4 @@ footer img {
     font-size: 1.15rem; /* slightly bigger on mobile */
     white-space: nowrap; /* prevent wrapping */
   }
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
 }
-
