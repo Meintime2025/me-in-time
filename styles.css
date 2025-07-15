@@ -42,13 +42,14 @@ p {
 nav {
   position: sticky;
   top: 0;
-  width: 100%;
+  width: 100vw; /* full viewport width */
   background-color: #0a4c8a; /* blue banner */
-  padding: 15px 40px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* stronger shadow */
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   z-index: 1000;
   display: flex;
   justify-content: center;
+  left: 0;
 }
 
 /* Navigation list styling */
@@ -62,6 +63,8 @@ nav ul {
   flex-wrap: wrap;
   max-width: 900px;
   width: 100%;
+  padding: 0 20px;
+  margin: 0;
 }
 
 /* Navigation links */
@@ -73,6 +76,7 @@ nav a {
   transition: background-color 0.3s, color 0.3s;
   font-size: 1rem;
   display: inline-block;
+  white-space: nowrap;
 }
 
 /* Hover/focus nav link styles */
@@ -185,10 +189,10 @@ input, textarea {
     padding: 15px 20px;
   }
   nav {
-    padding: 10px 15px;
+    padding: 10px 0;
   }
   nav ul {
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
   }
   nav li {
@@ -196,8 +200,8 @@ input, textarea {
     text-align: center;
   }
   nav a {
-    font-size: 0.85rem;
-    padding: 6px 10px;
+    font-size: 0.75rem; /* smaller font */
+    padding: 5px 8px;   /* smaller padding */
   }
   h1, h2, h3 {
     margin-top: 30px;
