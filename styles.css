@@ -1,244 +1,217 @@
-/* Reset box-sizing and margin/padding */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Me In Time</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset box-sizing and margin/padding */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* Base font styles and layout */
-body {
-  font-family: 'Lora', serif;
-  color: #555A4A; /* darker warm gray-green text */
-  font-size: 16px;
-  line-height: 1.7;
-  background-color: #E7E9D1; /* richer cream/soft olive-beige */
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  text-align: left;
-}
+    /* Base font styles and layout */
+    body {
+      font-family: 'Lora', serif;
+      color: #555A4A; /* darker warm gray-green text */
+      font-size: 16px;
+      line-height: 1.7;
+      background-color: #E7E9D1; /* richer cream/soft olive-beige */
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      text-align: left;
+    }
 
-/* Standardize all headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #567235; /* darker olive green */
-  margin-top: 40px;
-  margin-bottom: 20px;
-  text-align: left;
-  line-height: 1.2;
-  font-size: inherit; /* will be overridden below */
-}
+    /* Standardize all headings */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #567235; /* darker olive green */
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-align: left;
+      line-height: 1.2;
+      font-size: inherit;
+    }
 
-/* Explicit font sizes for headings */
-h1 { font-size: 2rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.1rem; }
-h6 { font-size: 1rem; }
+    /* Explicit font sizes for headings */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1.1rem; }
+    h6 { font-size: 1rem; }
 
-/* Paragraph styling */
-p {
-  font-family: 'Lora', serif;
-  font-weight: 400;
-  font-size: 1.1rem;
-  color: #555A4A; /* darker text */
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: justify;
-}
+    /* Paragraph styling */
+    p {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: #555A4A;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
 
-/* Lists (ul, ol) styling */
-ul, ol {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  color: #555A4A;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  padding-left: 40px;
-}
+    /* Navigation styles (desktop) */
+    nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: #789E2D;
+      padding: 15px 40px;
+      box-shadow: 0 4px 8px rgba(70, 90, 40, 0.5);
+      z-index: 1000;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+    }
 
-/* Links */
-a {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #69892C; /* richer olive green */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
+    nav ul {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+    }
 
-a:hover,
-a:focus {
-  color: #8DB54B; /* brighter moss green */
-  outline: none;
-}
+    nav a {
+      color: white;
+      padding: 8px 15px;
+      border-radius: 30px;
+      display: inline-block;
+      text-decoration: none;
+    }
 
-/* Sticky navigation banner */
-nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: #789E2D; /* deeper pastel olive green */
-  padding: 15px 40px;
-  box-shadow: 0 4px 8px rgba(70, 90, 40, 0.5); /* stronger shadow */
-  z-index: 1000;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-}
+    nav a:hover,
+    nav a:focus {
+      background-color: #8DB54B;
+      color: #E7E9D1;
+      outline: none;
+    }
 
-/* Navigation list styling - Desktop only */
-nav ul {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between; /* spread nav items evenly */
-  list-style: none;
-  overflow: visible;
-}
+    /* Mobile-only hamburger menu */
+    .hamburger {
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+      padding: 10px 20px;
+    }
 
-/* Navigation links */
-nav a {
-  color: white;
-  padding: 8px 15px;
-  border-radius: 30px;
-  display: inline-block;
-}
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #789E2D;
+      padding: 10px 20px;
+    }
 
-/* Hover/focus nav link styles */
-nav a:hover,
-nav a:focus {
-  background-color: #8DB54B; /* lighter medium moss green */
-  color: #E7E9D1; /* pale cream text on hover */
-  outline: none;
-}
+    .mobile-nav a {
+      color: white;
+      padding: 10px 0;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
 
-/* Contact link / button style */
-a.contact-link,
-.button-link,
-button {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  background-color: #8DB54B; /* lighter medium moss green button */
-  color: white;
-  padding: 10px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: none;
-  font-size: 1rem;
-  line-height: 1.4;
-}
+    .mobile-nav a:hover {
+      background-color: #8DB54B;
+      color: #E7E9D1;
+    }
 
-a.contact-link:hover,
-a.contact-link:focus,
-.button-link:hover,
-.button-link:focus,
-button:hover,
-button:focus {
-  background-color: #567235; /* darker olive green */
-  outline: none;
-}
+    .mobile-nav.active {
+      display: flex;
+    }
 
-/* FAQ details spacing */
-details {
-  background: white;
-  border-radius: 6px;
-  margin-bottom: 25px;
-  padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(120, 140, 70, 0.15);
-  cursor: pointer;
-  font-family: 'Lora', serif;
-  font-size: 1rem;
-  color: #555A4A;
-  line-height: 1.6;
-}
+    /* Footer styling */
+    footer {
+      text-align: left;
+      margin-top: 60px;
+      padding: 20px 0;
+      color: #69892C;
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+    }
 
-/* Summary styling */
-summary {
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.15rem;
-  outline: none;
-  user-select: none;
-  margin-bottom: 10px;
-  list-style: none;
-  color: #69892C;
-}
+    footer img {
+      height: 40px;
+      width: auto;
+      margin-top: 10px;
+    }
 
-/* Hide default marker */
-summary::-webkit-details-marker {
-  display: none;
-}
+    /* Responsive styles for mobile */
+    @media (max-width: 600px) {
+      nav ul {
+        display: none; /* hide desktop nav */
+      }
 
-/* Custom arrow icons */
-details[open] summary::before {
-  content: "▼ ";
-  color: #789E2D;
-}
+      .hamburger {
+        display: block;
+      }
 
-summary::before {
-  content: "► ";
-  color: #789E2D;
-}
+      body {
+        font-size: 15px;
+      }
 
-/* FAQ paragraph and list inside details */
-details p,
-details ul {
-  margin-top: 12px;
-  padding-left: 20px;
-}
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
 
-/* Footer styling */
-footer {
-  text-align: left;
-  margin-top: 60px;
-  padding: 20px 0;
-  color: #69892C;
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
-}
+  <!-- Navigation bar -->
+  <nav>
+    <!-- Hamburger (mobile only) -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
 
-/* Footer images like logos */
-footer img {
-  height: 40px;
-  width: auto;
-  margin-top: 10px;
-}
+    <!-- Desktop nav -->
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-/* Responsive for mobile */
-@media (max-width: 600px) {
-  body {
-    font-size: 15px;
-  }
-  nav {
-    padding: 10px 20px;
-  }
-  nav ul {
-    display: flex;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    gap: 20px;
-    padding-bottom: 10px;
-    scrollbar-width: none; /* Firefox */
-  }
-  nav ul::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
-  }
-  nav a {
-    font-size: 1.15rem;
-    white-space: nowrap;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 30px;
-    margin-bottom: 15px;
-  }
-}
+  <!-- Mobile nav (initially hidden) -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- Page content -->
+  <main>
+    <h1>Welcome to Me In Time</h1>
+    <p>This is a calm and grounded space for reflection, healing, and support. Whether you’re here for therapy, growth, or simply to explore, you’re welcome here just as you are.</p>
+
+    <h2>What We Offer</h2>
+    <p>We provide a range of services including 1:1 counselling, online sessions, and resources designed to support you in your own time and your own way.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Me In Time. All rights reserved.
+  </footer>
+
+  <!-- JavaScript for mobile menu toggle -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
