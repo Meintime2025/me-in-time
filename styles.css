@@ -1,108 +1,110 @@
-/* Reset box-sizing and margin/padding */
+/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Base font styles and layout */
+/* Base styles */
 body {
   font-family: 'Lora', serif;
-  color: #4a423a;
+  color: #2c3e50; /* dark blue-grey */
   font-size: 16px;
   line-height: 1.7;
-  background-color: #f9f6f2;
+  background-color: #eaf2f8; /* light blue tint */
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
   text-align: left;
 }
 
-/* Headings font style */
+/* Headings */
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #3c362f;
+  color: #1a5276; /* stronger blue */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
+  line-height: 1.2;
 }
 
-/* Paragraph styling */
-p {
+/* Paragraphs and lists */
+p, li {
+  font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
-  color: #5e5349;
+  color: #34495e; /* medium blue-grey */
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: left;
 }
 
-/* Sticky navigation banner */
+/* Sticky banner container centered on desktop */
 nav {
   position: sticky;
   top: 0;
-  width: 100vw; /* full viewport width */
-  background-color: #0a4c8a; /* blue banner */
-  padding: 15px 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  background-color: #d6eaf8; /* subtle light blue */
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(26, 82, 118, 0.3); /* stronger blue shadow */
   z-index: 1000;
-  display: flex;
-  justify-content: center;
-  left: 0;
+  max-width: 900px;
+  margin: 0 auto 40px auto; /* center nav */
+  border-radius: 8px;
 }
 
-/* Navigation list styling */
+/* Navigation list */
 nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* center on desktop */
+  flex-wrap: wrap;
   gap: 25px;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  flex-wrap: wrap;
-  max-width: 900px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0;
 }
 
 /* Navigation links */
 nav a {
-  color: #f0f8ff;
+  color: #1a5276;
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 10px 18px;
   border-radius: 30px;
-  transition: background-color 0.3s, color 0.3s;
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 1rem;
   display: inline-block;
-  white-space: nowrap;
 }
 
-/* Hover/focus nav link styles */
+/* Hover and focus for nav */
 nav a:hover,
 nav a:focus {
-  background-color: #07325b;
+  background-color: #1a5276;
   color: #fff;
   outline: none;
 }
 
 /* Contact link / button style */
-a.contact-link, .button-link {
+a.contact-link, .button-link, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  background-color: #6b6152;
+  background-color: #1a5276;
   color: white;
-  padding: 10px 25px;
+  padding: 10px 30px;
   border-radius: 25px;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
   transition: background-color 0.3s ease;
+  border: none;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 a.contact-link:hover, a.contact-link:focus,
-.button-link:hover, .button-link:focus {
-  background-color: #574c3f;
+.button-link:hover, .button-link:focus,
+button:hover, button:focus {
+  background-color: #154360;
   outline: none;
 }
 
@@ -112,7 +114,7 @@ details {
   border-radius: 6px;
   margin-bottom: 25px;
   padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(26, 82, 118, 0.1);
   cursor: pointer;
 }
 
@@ -120,11 +122,12 @@ details {
 summary {
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   outline: none;
   user-select: none;
   margin-bottom: 10px;
   list-style: none;
+  color: #1a5276;
 }
 
 /* Hide default marker */
@@ -135,19 +138,19 @@ summary::-webkit-details-marker {
 /* Custom arrow icons */
 details[open] summary::before {
   content: "▼ ";
-  color: #6b6152;
+  color: #1a5276;
 }
 
 summary::before {
   content: "► ";
-  color: #6b6152;
+  color: #1a5276;
 }
 
 /* FAQ paragraph and list inside details */
 details p, details ul {
   margin-top: 12px;
   font-size: 1rem;
-  color: #5e5349;
+  color: #34495e;
   padding-left: 20px;
   line-height: 1.6;
 }
@@ -157,7 +160,7 @@ footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #7a6d5a;
+  color: #5d6d7e;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
@@ -169,42 +172,40 @@ footer img {
   margin-top: 10px;
 }
 
-/* Form inputs and textarea styling */
-input, textarea {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  color: #4a423a;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  resize: vertical;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  body {
-    padding: 15px 20px;
-  }
-  nav {
-    padding: 10px 0;
-  }
+/* Responsive styles */
+@media (max-width: 768px) {
   nav ul {
-    gap: 8px;
     justify-content: center;
-  }
-  nav li {
-    flex: 1 1 45%; /* two items per row */
-    text-align: center;
+    gap: 20px;
   }
   nav a {
-    font-size: 0.75rem; /* smaller font */
-    padding: 5px 8px;   /* smaller padding */
+    font-size: 0.9rem;
+    padding: 8px 14px;
   }
-  h1, h2, h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
+  body {
+    font-size: 17px; /* slightly bigger for mobile readability */
+    padding: 15px;
+  }
+  /* Nav wraps to 2 lines on mobile */
+  nav ul {
+    flex-wrap: wrap;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
+
+/* Smaller phones */
+@media (max-width: 480px) {
+  nav ul {
+    max-width: 280px;
+    gap: 15px;
+  }
+  nav a {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+  body {
+    font-size: 18px;
+    padding: 12px;
   }
 }
