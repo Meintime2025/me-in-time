@@ -8,10 +8,10 @@
 /* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
-  color: #2a3d66; /* Dark blue text */
+  color: #4a423a;
   font-size: 16px;
   line-height: 1.7;
-  background-color: #eaf0f6; /* Light blue-gray background */
+  background-color: #f9f6f2;
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
@@ -19,47 +19,34 @@ body {
 }
 
 /* Headings font style */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #1e2a47; /* Darker blue for headings */
+  color: #3c362f;
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
-  line-height: 1.2;
 }
 
 /* Paragraph styling */
-p, li {
-  font-family: 'Lora', serif;
+p {
   font-weight: 400;
   font-size: 1.1rem;
-  color: #3a4d7a; /* Medium blue text */
+  color: #5e5349;
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: left;
-}
-
-/* Lists styling */
-ul, ol {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  color: #3a4d7a;
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
 }
 
 /* Sticky navigation banner */
 nav {
   position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color: #c2d1f0; /* Soft blue background */
+  background-color: #0a4c8a; /* blue banner */
   padding: 15px 40px;
-  box-shadow: 0 3px 8px rgba(30, 42, 71, 0.4); /* Stronger shadow */
-  z-index: 10000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* stronger shadow */
+  z-index: 1000;
   display: flex;
   justify-content: center;
 }
@@ -67,85 +54,61 @@ nav {
 /* Navigation list styling */
 nav ul {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  width: 100%;
+  flex-wrap: wrap;
   max-width: 900px;
-  padding: 0;
-  margin: 0;
+  width: 100%;
 }
 
 /* Navigation links */
 nav a {
-  color: #1e2a47; /* Dark blue */
+  color: #f0f8ff;
   text-decoration: none;
-  padding: 8px 15px;
+  padding: 8px 12px;
   border-radius: 30px;
   transition: background-color 0.3s, color 0.3s;
+  font-size: 1rem;
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  white-space: nowrap;
 }
 
 /* Hover/focus nav link styles */
 nav a:hover,
 nav a:focus {
-  background-color: #1e2a47; /* Dark blue background */
-  color: #ffffff; /* White text */
+  background-color: #07325b;
+  color: #fff;
   outline: none;
 }
 
 /* Contact link / button style */
-a.contact-link, .button-link, button {
+a.contact-link, .button-link {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  background-color: #1e2a47;
+  background-color: #6b6152;
   color: white;
   padding: 10px 25px;
   border-radius: 25px;
   text-decoration: none;
   display: inline-block;
-  cursor: pointer;
   transition: background-color 0.3s ease;
-  border: none;
-  font-size: 1rem;
-  line-height: 1.4;
 }
 
-/* Contact link / button hover/focus */
 a.contact-link:hover, a.contact-link:focus,
-.button-link:hover, .button-link:focus,
-button:hover, button:focus {
-  background-color: #14203a;
+.button-link:hover, .button-link:focus {
+  background-color: #574c3f;
   outline: none;
-}
-
-/* Form inputs and textarea styling */
-input, textarea {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  color: #2a3d66;
-  padding: 12px;
-  border: 1px solid #8aa3d2;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  resize: vertical;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 /* FAQ details spacing */
 details {
-  background: #ffffff;
+  background: #fff;
   border-radius: 6px;
-  margin-bottom: 25px;  /* space between FAQs */
-  padding: 20px 25px;   /* padding inside boxes */
-  box-shadow: 0 2px 6px rgba(30, 42, 71, 0.1);
+  margin-bottom: 25px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   cursor: pointer;
 }
 
@@ -168,19 +131,19 @@ summary::-webkit-details-marker {
 /* Custom arrow icons */
 details[open] summary::before {
   content: "▼ ";
-  color: #1e2a47;
+  color: #6b6152;
 }
 
 summary::before {
   content: "► ";
-  color: #1e2a47;
+  color: #6b6152;
 }
 
 /* FAQ paragraph and list inside details */
 details p, details ul {
   margin-top: 12px;
   font-size: 1rem;
-  color: #3a4d7a;
+  color: #5e5349;
   padding-left: 20px;
   line-height: 1.6;
 }
@@ -190,7 +153,7 @@ footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #5771a3;
+  color: #7a6d5a;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
@@ -202,36 +165,42 @@ footer img {
   margin-top: 10px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 900px) {
-  nav ul {
-    gap: 15px;
-  }
+/* Form inputs and textarea styling */
+input, textarea {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: #4a423a;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Responsive tweaks */
 @media (max-width: 600px) {
   body {
     padding: 15px 20px;
   }
   nav {
-    padding: 10px 20px;
+    padding: 10px 15px;
   }
   nav ul {
-    flex-wrap: wrap;
-    gap: 12px;
-    max-width: 100%;
+    gap: 10px;
     justify-content: center;
   }
   nav li {
-    flex: 1 1 45%; /* Each nav item takes 45% width, so 2 per row */
+    flex: 1 1 45%; /* two items per row */
     text-align: center;
   }
   nav a {
-    white-space: normal; /* Wrap text if needed */
-    padding: 8px 10px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    padding: 6px 10px;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3 {
     margin-top: 30px;
+    margin-bottom: 15px;
   }
 }
