@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Me In Time</title>
-  <link href="https://https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -14,8 +14,8 @@
 
     body {
       font-family: 'Lora', serif;
-      color: #555A4A;
       background-color: #E7E9D1;
+      color: #555A4A;
       max-width: 900px;
       margin: 40px auto;
       padding: 20px;
@@ -39,14 +39,12 @@
     nav {
       background-color: #789E2D;
       box-shadow: 0 4px 8px rgba(70, 90, 40, 0.5);
-      z-index: 1000;
       border-radius: 10px;
-      margin-bottom: 30px;
+      margin: 0 auto 30px auto;
+      max-width: 900px;
     }
 
     .nav-inner {
-      max-width: 900px;
-      margin: 0 auto;
       padding: 20px 30px;
       display: flex;
       justify-content: space-between;
@@ -55,7 +53,6 @@
 
     nav ul {
       display: flex;
-      justify-content: center;
       gap: 30px;
       list-style: none;
     }
@@ -121,43 +118,17 @@
 
     .mobile-nav a {
       display: block;
-      opacity: 0;
-      transform: translateY(-10px);
       padding: 16px 30px;
       color: white;
       text-decoration: none;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 1.1rem;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-    }
-
-    .mobile-nav.open a {
-      opacity: 1;
-      transform: translateY(0);
     }
 
     .mobile-nav a:hover {
       background-color: rgba(255, 255, 255, 0.1);
       border-radius: 6px;
-    }
-
-    .mobile-nav .book-now {
-      background-color: #8DB54B;
-      color: white;
-      margin: 10px 30px 10px;
-      padding: 14px;
-      text-align: center;
-      border-radius: 25px;
-      font-size: 1.1rem;
-      display: block;
-      text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-    }
-
-    .mobile-nav .book-now:hover {
-      background-color: #567235;
     }
 
     .sticky-contact {
@@ -178,6 +149,42 @@
 
     .sticky-contact:hover {
       background-color: #567235;
+    }
+
+    details {
+      background: white;
+      border-radius: 6px;
+      margin-bottom: 25px;
+      padding: 20px 25px;
+      box-shadow: 0 2px 6px rgba(120, 140, 70, 0.15);
+      cursor: pointer;
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: #555A4A;
+      line-height: 1.6;
+    }
+
+    summary {
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      user-select: none;
+      list-style: none;
+      color: #69892C;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] summary::before {
+      content: "▼ ";
+      color: #789E2D;
+    }
+
+    summary::before {
+      content: "► ";
+      color: #789E2D;
     }
 
     footer {
@@ -201,8 +208,6 @@
   </style>
 </head>
 <body>
-
-  <!-- NAVIGATION -->
   <nav>
     <div class="nav-inner">
       <span style="color: white; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.4rem;">Me In Time</span>
@@ -220,31 +225,37 @@
     </div>
   </nav>
 
-  <!-- MOBILE NAV DROPDOWN -->
   <div class="mobile-nav" id="mobileNav">
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="contact.html">Contact</a>
-    <a href="contact.html" class="book-now">📞 Book Now</a>
   </div>
 
   <main>
-    <h1>Welcome to Me In Time</h1>
+    <h1 id="home">Welcome to Me In Time</h1>
     <p>This is a calm and grounded space for reflection, healing, and support. Whether you’re here for therapy, growth, or simply to explore, you’re welcome here just as you are.</p>
 
-    <h2>What We Offer</h2>
+    <h2 id="about">What We Offer</h2>
     <p>We provide a range of services including 1:1 counselling, online sessions, and resources designed to support you in your own time and your own way.</p>
+
+    <details>
+      <summary>How do I get started?</summary>
+      <p>You can reach out via the contact page and book an initial session or consultation.</p>
+    </details>
+
+    <details>
+      <summary>What approach do you use?</summary>
+      <p>We work integratively, with a person-centred heart, to meet you where you are.</p>
+    </details>
   </main>
 
   <footer>
     &copy; 2025 Me In Time. All rights reserved.
   </footer>
 
-  <!-- Sticky Contact Button -->
   <a href="contact.html" class="sticky-contact">📩 Get in Touch</a>
 
-  <!-- JavaScript for hamburger -->
   <script>
     function toggleMenu() {
       const nav = document.getElementById('mobileNav');
@@ -253,6 +264,5 @@
       burger.classList.toggle('open');
     }
   </script>
-
 </body>
 </html>
