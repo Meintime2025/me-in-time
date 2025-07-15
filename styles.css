@@ -16,7 +16,6 @@ body {
   margin: 40px auto;
   padding: 20px;
   text-align: left;
-  scroll-padding-top: 70px; /* To offset anchor jump under sticky nav */
 }
 
 /* Headings font style */
@@ -30,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-/* Paragraph and list item styling */
+/* Paragraph and list styling */
 p, li {
   font-family: 'Lora', serif;
   font-weight: 400;
@@ -56,18 +55,18 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #005f73; /* Vibrant but subtle blue */
+  background-color: #f3ede6;
   padding: 15px 40px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   z-index: 1000;
 }
 
 /* Navigation list styling */
 nav ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; /* left-aligned */
-  gap: 15px;
+  flex-wrap: nowrap;        /* No wrap on desktop */
+  justify-content: flex-start;
+  gap: 30px;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -75,7 +74,7 @@ nav ul {
 
 /* Navigation links */
 nav a {
-  color: #e0fbfc;
+  color: #6b6152;
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 30px;
@@ -88,7 +87,7 @@ nav a {
 /* Hover/focus nav link styles */
 nav a:hover,
 nav a:focus {
-  background-color: #0a9396;
+  background-color: #c4b6a6;
   color: #fff;
   outline: none;
 }
@@ -97,7 +96,7 @@ nav a:focus {
 a.contact-link, .button-link, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  background-color: #0a9396;
+  background-color: #6b6152;
   color: white;
   padding: 10px 25px;
   border-radius: 25px;
@@ -114,7 +113,7 @@ a.contact-link, .button-link, button {
 a.contact-link:hover, a.contact-link:focus,
 .button-link:hover, .button-link:focus,
 button:hover, button:focus {
-  background-color: #94d2bd;
+  background-color: #574c3f;
   outline: none;
 }
 
@@ -132,15 +131,14 @@ input, textarea {
   box-sizing: border-box;
 }
 
-/* FAQ details styling */
+/* FAQ details spacing */
 details {
   background: #fff;
   border-radius: 6px;
-  margin-bottom: 25px;  /* space between FAQs */
+  margin-bottom: 25px;
   padding: 20px 25px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   cursor: pointer;
-  border: 1px solid #ddd;   /* subtle border */
 }
 
 /* Summary styling */
@@ -152,7 +150,6 @@ summary {
   user-select: none;
   margin-bottom: 10px;
   list-style: none;
-  color: #3c362f;
 }
 
 /* Hide default marker */
@@ -163,12 +160,12 @@ summary::-webkit-details-marker {
 /* Custom arrow icons */
 details[open] summary::before {
   content: "▼ ";
-  color: #0a9396;
+  color: #6b6152;
 }
 
 summary::before {
   content: "► ";
-  color: #0a9396;
+  color: #6b6152;
 }
 
 /* FAQ paragraph and list inside details */
@@ -201,23 +198,22 @@ footer img {
 @media (max-width: 600px) {
   body {
     padding: 15px 20px;
-    scroll-padding-top: 90px; /* more offset on mobile for sticky nav */
   }
   nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap;       /* Allow wrap on mobile */
+    gap: 12px;
     justify-content: center;
-    gap: 10px;
   }
-  nav {
-    padding: 10px 15px;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 30px;
-    margin-bottom: 15px;
+  nav ul li {
+    flex: 1 1 45%;         /* approx two per row */
+    text-align: center;
   }
   nav a {
     padding: 6px 10px;
     font-size: 0.9rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 30px;
+    margin-bottom: 15px;
   }
 }
