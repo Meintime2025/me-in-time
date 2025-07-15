@@ -61,6 +61,7 @@
       margin: 0 auto 40px auto;
       max-width: 1100px;
       padding: 40px 0;
+      position: relative;
     }
 
     .nav-inner {
@@ -70,7 +71,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
     }
 
     .site-title {
@@ -78,7 +78,6 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 1.2rem;
-      flex: 1;
     }
 
     nav ul {
@@ -114,8 +113,7 @@
       background: none;
       border: none;
       cursor: pointer;
-      z-index: 10000;
-      position: relative;
+      z-index: 11000;
     }
 
     .hamburger span {
@@ -180,7 +178,7 @@
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       z-index: 9999;
-      display: inline-block;
+      display: block;
     }
 
     .sticky-contact:hover {
@@ -220,95 +218,3 @@
 
     summary::before {
       content: "► ";
-      color: #789E2D;
-    }
-
-    footer {
-      text-align: left;
-      margin-top: 60px;
-      padding: 20px 0;
-      color: #69892C;
-      font-family: 'Lora', serif;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        display: none !important;
-      }
-
-      .hamburger {
-        display: flex !important;
-      }
-
-      .sticky-contact {
-        display: block !important;
-      }
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <div class="nav-inner">
-      <span class="site-title">Me In Time</span>
-      <button class="hamburger" onclick="toggleMenu()" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#welcome">Welcome</a></li>
-        <li><a href="#services">Counselling</a></li>
-        <li><a href="#coaching">Coaching</a></li>
-        <li><a href="#reflections">Reflections</a></li>
-        <li><a href="contact.html" class="button-link">Contact</a></li>
-        <li><a href="#faqs">FAQs</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#home">Home</a>
-    <a href="#welcome">Welcome</a>
-    <a href="#services">Counselling</a>
-    <a href="#coaching">Coaching</a>
-    <a href="#reflections">Reflections</a>
-    <a href="contact.html" class="button-link">Contact</a>
-    <a href="#faqs">FAQs</a>
-  </div>
-
-  <main style="min-height: 600px">
-    <h1 id="home">Welcome to Me In Time</h1>
-    <p>This is a calm and grounded space for reflection, healing, and support. Whether you’re here for therapy, growth, or simply to explore, you’re welcome here just as you are. <a href="contact.html" class="button-link">Get in touch</a></p>
-
-    <h2 id="services">What We Offer</h2>
-    <p>We provide a range of services including 1:1 counselling, online sessions, and resources designed to support you in your own time and your own way. <a href="contact.html" class="button-link">Contact us</a></p>
-
-    <details id="faqs">
-      <summary>How do I get started?</summary>
-      <p>You can reach out via the <a href="contact.html" class="button-link">contact page</a> and book an initial session or consultation.</p>
-    </details>
-
-    <details>
-      <summary>What approach do you use?</summary>
-      <p>We work integratively, with a person-centred heart, to meet you where you are.</p>
-    </details>
-  </main>
-
-  <footer>
-    &copy; 2025 Me In Time. All rights reserved.
-  </footer>
-
-  <a href="contact.html" class="sticky-contact">📩 Get in Touch</a>
-
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('mobileNav');
-      const burger = document.getElementById('hamburger');
-      nav.classList.toggle('open');
-      burger.classList.toggle('open');
-    }
-  </script>
-</body>
-</html>
