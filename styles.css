@@ -13,8 +13,9 @@ body {
   line-height: 1.7;
   background-color: #F1F6F9; /* Light Misty Blue */
   max-width: 900px;
-  margin: 80px auto 40px; /* top margin to avoid overlap with sticky nav */
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 80px; /* To prevent content behind nav */
   text-align: left;
 }
 
@@ -29,7 +30,7 @@ h1, h2, h3 {
   line-height: 1.2;
 }
 
-/* Paragraph styling */
+/* Paragraph and list styling */
 p, li {
   font-family: 'Lora', serif;
   font-weight: 400;
@@ -40,7 +41,6 @@ p, li {
   text-align: left;
 }
 
-/* Lists styling */
 ul, ol {
   margin-left: 20px;
   margin-bottom: 20px;
@@ -56,10 +56,13 @@ nav {
   top: 0;
   left: 0;
   right: 0;
+  height: 60px;
   background-color: #457B9D; /* Soft Sky Blue */
-  padding: 15px 20px;
+  padding: 10px 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   z-index: 10000;
+  display: flex;
+  align-items: center;
   transition: top 0.3s ease;
 }
 
@@ -72,6 +75,9 @@ nav ul {
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  width: 100%;
+  padding-left: 0;
+  margin: 0;
 }
 
 /* Navigation links */
@@ -83,6 +89,7 @@ nav a {
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 /* Hover/focus nav link styles */
@@ -132,6 +139,56 @@ input, textarea {
   box-sizing: border-box;
 }
 
+/* FAQ details spacing */
+details {
+  background: #fff;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/* Summary styling */
+summary {
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  outline: none;
+  user-select: none;
+  margin-bottom: 10px;
+  list-style: none;
+  display: list-item;
+  cursor: pointer;
+}
+
+/* Hide default marker */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow icons */
+details[open] summary::before {
+  content: "▼ ";
+  color: #457B9D; /* Soft Sky Blue */
+  font-weight: 700;
+}
+
+summary::before {
+  content: "► ";
+  color: #457B9D; /* Soft Sky Blue */
+  font-weight: 700;
+}
+
+/* FAQ paragraph and list inside details */
+details p, details ul {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #495464;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
 /* Footer styling */
 footer {
   text-align: left;
@@ -152,8 +209,8 @@ footer img {
 /* Responsive tweaks */
 @media (max-width: 600px) {
   body {
-    margin-top: 120px; /* extra space for nav */
     padding: 15px 20px;
+    margin-top: 100px; /* extra space for nav */
   }
   nav ul {
     justify-content: center;
