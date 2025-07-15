@@ -44,9 +44,11 @@ nav {
   top: 0;
   width: 100%;
   background-color: #4a5ebc; /* medium blue */
-  padding: 15px 40px;
-  box-shadow: 0 4px 8px rgba(25, 35, 70, 0.3);
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(25, 35, 70, 0.35);
   z-index: 1000;
+  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 /* Navigation list styling */
@@ -58,7 +60,7 @@ nav ul {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700; /* bold */
   font-size: 1rem;
-  overflow: visible; /* default for desktop */
+  box-sizing: border-box;
 }
 
 /* Navigation links */
@@ -176,7 +178,6 @@ footer img {
     background-color: #4a5ebc; /* keep consistent */
   }
   nav ul {
-    /* Make nav a horizontal scroll container on mobile */
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
