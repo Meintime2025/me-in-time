@@ -8,10 +8,10 @@
 /* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
-  color: #5A5A5A; /* darker warm gray for text */
+  color: #8C8C8C; /* paler warm gray for text */
   font-size: 16px;
   line-height: 1.7;
-  background-color: #F0EFE6; /* slightly darker cream/light beige background */
+  background-color: #FBFAF4; /* paler cream/light beige background */
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
@@ -22,7 +22,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #6B7F3E; /* darker olive green */
+  color: #9AB777; /* paler olive green */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
@@ -43,7 +43,7 @@ p {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
-  color: #5A5A5A; /* darker text color */
+  color: #8C8C8C; /* paler text color */
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: justify; /* justified text */
@@ -53,7 +53,7 @@ p {
 ul, ol {
   font-family: 'Lora', serif;
   font-size: 1.1rem;
-  color: #5A5A5A; /* darker text color */
+  color: #8C8C8C; /* paler text color */
   line-height: 1.6;
   margin-bottom: 20px;
   padding-left: 40px;
@@ -63,14 +63,14 @@ ul, ol {
 a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #6B7F3E; /* darker olive green */
+  color: #9AB777; /* paler olive green */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #8CAD4F; /* slightly lighter moss green */
+  color: #B6D18F; /* lighter moss green */
   outline: none;
 }
 
@@ -79,9 +79,9 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #B3C37D; /* slightly darker pastel green */
-  padding: 15px 40px;
-  box-shadow: 0 4px 8px rgba(110, 135, 60, 0.4); /* stronger greenish shadow */
+  background-color: #D6E2BA; /* paler soft pastel green */
+  padding: 15px 0; /* Removed horizontal padding */
+  box-shadow: 0 4px 8px rgba(160, 182, 130, 0.3); /* subtle greenish shadow */
   z-index: 1000;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -90,12 +90,15 @@ nav {
 
 /* Navigation list styling - Desktop only */
 nav ul {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: none; /* Removed max-width */
+  margin: 0;
+  padding: 0 40px; /* Added horizontal padding */
+  width: 100%;
   display: flex;
   justify-content: space-between; /* spread nav items evenly */
   list-style: none;
   overflow: visible; /* default for desktop */
+  box-sizing: border-box;
 }
 
 /* Navigation links */
@@ -109,8 +112,8 @@ nav a {
 /* Hover/focus nav link styles */
 nav a:hover,
 nav a:focus {
-  background-color: #8CAD4F; /* lighter moss green */
-  color: #F0EFE6; /* cream text on hover */
+  background-color: #B6D18F; /* lighter medium moss green */
+  color: #FBFAF4; /* paler cream text on hover */
   outline: none;
 }
 
@@ -120,7 +123,7 @@ a.contact-link,
 button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  background-color: #8CAD4F; /* lighter medium moss green button */
+  background-color: #B6D18F; /* lighter medium moss green button */
   color: white;
   padding: 10px 25px;
   border-radius: 25px;
@@ -139,7 +142,7 @@ a.contact-link:focus,
 .button-link:focus,
 button:hover,
 button:focus {
-  background-color: #6B7F3E; /* darker olive green */
+  background-color: #9AB777; /* lighter darker olive green */
   outline: none;
 }
 
@@ -149,11 +152,11 @@ details {
   border-radius: 6px;
   margin-bottom: 25px;
   padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(130, 145, 90, 0.15);
+  box-shadow: 0 2px 6px rgba(180, 195, 140, 0.1);
   cursor: pointer;
   font-family: 'Lora', serif;
   font-size: 1rem;
-  color: #5A5A5A;
+  color: #8C8C8C;
   line-height: 1.6;
 }
 
@@ -166,7 +169,7 @@ summary {
   user-select: none;
   margin-bottom: 10px;
   list-style: none;
-  color: #6B7F3E;
+  color: #9AB777;
 }
 
 /* Hide default marker */
@@ -177,12 +180,12 @@ summary::-webkit-details-marker {
 /* Custom arrow icons */
 details[open] summary::before {
   content: "▼ ";
-  color: #B3C37D;
+  color: #D6E2BA;
 }
 
 summary::before {
   content: "► ";
-  color: #B3C37D;
+  color: #D6E2BA;
 }
 
 /* FAQ paragraph and list inside details */
@@ -197,7 +200,7 @@ footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #6B7F3E;
+  color: #9AB777;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
