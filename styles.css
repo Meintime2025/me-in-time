@@ -5,141 +5,127 @@
   padding: 0;
 }
 
-/* Base font styles and layout */
+/* Body and Layout */
 body {
   font-family: 'Lora', serif;
-  color: #6A8DAD; /* Muted Steel Blue */
+  color: #333a56;
   font-size: 16px;
   line-height: 1.7;
-  background-color: #F1F6F9; /* Light Misty Blue */
+  background-color: #f0f4f8;
   max-width: 900px;
   margin: 0 auto;
-  padding: 20px;
-  padding-top: 80px; /* To prevent content behind nav */
+  padding: 80px 20px 40px; /* top padding for sticky banner */
   text-align: left;
 }
 
-/* Headings font style */
-h1, h2, h3 {
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #1D3557; /* Deep Blue */
+  color: #0b2d66;
   margin-top: 40px;
   margin-bottom: 20px;
-  text-align: left;
   line-height: 1.2;
 }
 
-/* Paragraph and list styling */
+/* Paragraphs and lists */
 p, li {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
-  color: #495464; /* Slate Grey */
+  color: #4a536e;
   line-height: 1.6;
   margin-bottom: 20px;
-  text-align: left;
 }
 
 ul, ol {
   margin-left: 20px;
   margin-bottom: 20px;
-  color: #495464;
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
 }
 
-/* Sticky navigation banner */
+/* Sticky Navigation */
 nav {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background-color: #457B9D; /* Soft Sky Blue */
-  padding: 10px 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  z-index: 10000;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 900px;
+  background-color: #d9e4f5;
+  padding: 15px 20px;
+  box-shadow: 0 2px 6px rgba(11, 45, 102, 0.15);
+  z-index: 9999;
   display: flex;
-  align-items: center;
-  transition: top 0.3s ease;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-sizing: border-box;
 }
 
-/* Navigation list styling */
+/* Navigation list */
 nav ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; /* left aligned */
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
   width: 100%;
-  padding-left: 0;
+  padding: 0;
   margin: 0;
 }
 
 /* Navigation links */
 nav a {
-  color: #F1F6F9; /* Light Misty Blue */
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 30px;
-  transition: background-color 0.3s, color 0.3s;
-  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+  color: #0b2d66;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 30px;
+  background-color: #a8c1ff;
+  transition: background-color 0.3s, color 0.3s;
   white-space: nowrap;
+  display: inline-block;
 }
 
-/* Hover/focus nav link styles */
+/* Nav hover/focus */
 nav a:hover,
 nav a:focus {
-  background-color: #1D3557; /* Deep Blue */
-  color: #F1F6F9;
+  background-color: #083d99;
+  color: #fff;
   outline: none;
 }
 
-/* Contact link / button style */
-a.contact-link, .button-link, button {
+/* Contact links and buttons */
+a.contact-link,
+.button-link,
+button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  background-color: #1D3557; /* Deep Blue */
-  color: #F1F6F9; /* Light Misty Blue */
+  background-color: #0b2d66;
+  color: white;
   padding: 10px 25px;
   border-radius: 25px;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   border: none;
   font-size: 1rem;
   line-height: 1.4;
+  transition: background-color 0.3s ease;
 }
 
-/* Contact link / button hover/focus */
-a.contact-link:hover, a.contact-link:focus,
-.button-link:hover, .button-link:focus,
-button:hover, button:focus {
-  background-color: #457B9D; /* Soft Sky Blue */
+a.contact-link:hover,
+a.contact-link:focus,
+.button-link:hover,
+.button-link:focus,
+button:hover,
+button:focus {
+  background-color: #07214a;
   outline: none;
 }
 
-/* Form inputs and textarea styling */
-input, textarea {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  color: #495464;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  margin-bottom: 20px;
-  resize: vertical;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* FAQ details spacing */
+/* FAQ styles */
 details {
   background: #fff;
   border-radius: 6px;
@@ -149,7 +135,6 @@ details {
   cursor: pointer;
 }
 
-/* Summary styling */
 summary {
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
@@ -158,59 +143,68 @@ summary {
   user-select: none;
   margin-bottom: 10px;
   list-style: none;
-  display: list-item;
-  cursor: pointer;
 }
 
-/* Hide default marker */
 summary::-webkit-details-marker {
   display: none;
 }
 
-/* Custom arrow icons */
 details[open] summary::before {
   content: "▼ ";
-  color: #457B9D; /* Soft Sky Blue */
-  font-weight: 700;
+  color: #0b2d66;
 }
 
 summary::before {
   content: "► ";
-  color: #457B9D; /* Soft Sky Blue */
-  font-weight: 700;
+  color: #0b2d66;
 }
 
-/* FAQ paragraph and list inside details */
 details p, details ul {
   margin-top: 12px;
   font-size: 1rem;
-  color: #495464;
+  color: #4a536e;
   padding-left: 20px;
   line-height: 1.6;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #495464;
+  color: #7a7a8c;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
 
-/* Footer images like logos */
+/* Footer logos */
 footer img {
   height: 40px;
   width: auto;
   margin-top: 10px;
 }
 
+/* Inputs and textareas */
+input, textarea {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: #333a56;
+  padding: 12px;
+  border: 1px solid #a8c1ff;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 /* Responsive tweaks */
 @media (max-width: 600px) {
   body {
-    padding: 15px 20px;
-    margin-top: 100px; /* extra space for nav */
+    padding: 100px 15px 40px; /* extra top padding for sticky nav */
+  }
+  nav {
+    padding: 10px 10px;
   }
   nav ul {
     justify-content: center;
@@ -222,5 +216,6 @@ footer img {
   }
   h1, h2, h3 {
     margin-top: 30px;
+    margin-bottom: 15px;
   }
 }
