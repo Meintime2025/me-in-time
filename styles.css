@@ -1,4 +1,4 @@
-/* Reset box-sizing and margin/padding */
+//* Reset box-sizing and margin/padding */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,24 +18,60 @@ body {
   text-align: left;
 }
 
-/* Headings font style */
-h1, h2, h3 {
+/* Standardize all headings */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #567D46; /* deep olive green */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
+  line-height: 1.2;
+  font-size: inherit; /* will be overridden below */
 }
+
+/* Explicit font sizes for headings */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
 
 /* Paragraph styling */
 p {
+  font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
   color: #4A4A4A;
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: left;
+}
+
+/* Lists (ul, ol) styling */
+ul, ol {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: #4A4A4A;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding-left: 40px;
+}
+
+/* Links */
+a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #567D46;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #7DA65D; /* lighter moss green */
+  outline: none;
 }
 
 /* Sticky navigation banner */
@@ -47,6 +83,9 @@ nav {
   padding: 15px 40px;
   box-shadow: 0 4px 8px rgba(88, 116, 55, 0.3); /* subtle greenish shadow */
   z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 /* Navigation list styling - Desktop only */
@@ -56,22 +95,15 @@ nav ul {
   display: flex;
   justify-content: space-between; /* spread nav items evenly */
   list-style: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700; /* bold */
-  font-size: 1rem;
   overflow: visible; /* default for desktop */
 }
 
 /* Navigation links */
 nav a {
   color: white;
-  text-decoration: none;
   padding: 8px 15px;
   border-radius: 30px;
-  transition: background-color 0.3s, color 0.3s;
   display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700; /* bold */
 }
 
 /* Hover/focus nav link styles */
@@ -83,7 +115,9 @@ nav a:focus {
 }
 
 /* Contact link / button style */
-a.contact-link, .button-link, button {
+a.contact-link,
+.button-link,
+button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   background-color: #7DA65D; /* medium moss green button */
@@ -99,9 +133,12 @@ a.contact-link, .button-link, button {
   line-height: 1.4;
 }
 
-a.contact-link:hover, a.contact-link:focus,
-.button-link:hover, .button-link:focus,
-button:hover, button:focus {
+a.contact-link:hover,
+a.contact-link:focus,
+.button-link:hover,
+.button-link:focus,
+button:hover,
+button:focus {
   background-color: #567D46; /* darker olive green */
   outline: none;
 }
@@ -114,6 +151,10 @@ details {
   padding: 20px 25px;
   box-shadow: 0 2px 6px rgba(120, 140, 80, 0.1);
   cursor: pointer;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  color: #4A4A4A;
+  line-height: 1.6;
 }
 
 /* Summary styling */
@@ -145,12 +186,10 @@ summary::before {
 }
 
 /* FAQ paragraph and list inside details */
-details p, details ul {
+details p,
+details ul {
   margin-top: 12px;
-  font-size: 1rem;
-  color: #4A4A4A;
   padding-left: 20px;
-  line-height: 1.6;
 }
 
 /* Footer styling */
@@ -172,9 +211,11 @@ footer img {
 
 /* Responsive for mobile */
 @media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
   nav {
     padding: 10px 20px;
-    background-color: #A8C686; /* keep consistent */
   }
   nav ul {
     display: flex;
@@ -188,7 +229,16 @@ footer img {
     display: none; /* Chrome, Safari */
   }
   nav a {
-    font-size: 1.15rem; /* slightly bigger on mobile */
-    white-space: nowrap; /* prevent wrapping */
+    font-size: 1.15rem;
+    white-space: nowrap;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 30px;
+    margin-bottom: 15px;
   }
 }
