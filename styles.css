@@ -6,7 +6,6 @@
   <title>Me In Time</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* Reset and base styles */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -36,14 +35,20 @@
       text-align: justify;
     }
 
-    /* Navigation */
+    /* Full-width sticky nav banner */
     nav {
       position: sticky;
       top: 0;
+      width: 100vw;
       background-color: #789E2D;
-      padding: 15px 40px;
       box-shadow: 0 4px 8px rgba(70, 90, 40, 0.5);
       z-index: 1000;
+    }
+
+    .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -70,7 +75,6 @@
       color: #E7E9D1;
     }
 
-    /* Hamburger button */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -104,16 +108,17 @@
       transform: rotate(-45deg) translateY(-8px);
     }
 
-    /* Mobile nav dropdown */
     .mobile-nav {
       background-color: #789E2D;
       overflow: hidden;
       max-height: 0;
       transition: max-height 0.3s ease;
+      position: relative;
+      z-index: 999;
     }
 
     .mobile-nav.open {
-      max-height: 300px;
+      max-height: 500px;
     }
 
     .mobile-nav a {
@@ -140,7 +145,6 @@
       font-size: 0.9rem;
     }
 
-    /* Mobile styles */
     @media (max-width: 600px) {
       nav ul {
         display: none;
@@ -154,23 +158,25 @@
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- Full-width NAV -->
   <nav>
-    <span style="color: white; font-family: 'Montserrat', sans-serif; font-weight: 700;">Me In Time</span>
-    <button class="hamburger" onclick="toggleMenu()" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-inner">
+      <span style="color: white; font-family: 'Montserrat', sans-serif; font-weight: 700;">Me In Time</span>
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <!-- MOBILE NAV -->
+  <!-- MOBILE NAV DROPDOWN -->
   <div class="mobile-nav" id="mobileNav">
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -178,7 +184,6 @@
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- MAIN CONTENT -->
   <main>
     <h1>Welcome to Me In Time</h1>
     <p>This is a calm and grounded space for reflection, healing, and support. Whether you’re here for therapy, growth, or simply to explore, you’re welcome here just as you are.</p>
@@ -187,12 +192,10 @@
     <p>We provide a range of services including 1:1 counselling, online sessions, and resources designed to support you in your own time and your own way.</p>
   </main>
 
-  <!-- FOOTER -->
   <footer>
     &copy; 2025 Me In Time. All rights reserved.
   </footer>
 
-  <!-- SCRIPT -->
   <script>
     function toggleMenu() {
       const nav = document.getElementById('mobileNav');
