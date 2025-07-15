@@ -8,10 +8,10 @@
 /* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
-  color: #1f2a44; /* Darker blue text */
+  color: #4a423a;
   font-size: 16px;
   line-height: 1.7;
-  background-color: #e6f0ff; /* Very light blue background */
+  background-color: #d0dafd; /* darker blue background */
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
@@ -19,35 +19,23 @@ body {
 }
 
 /* Headings font style */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #1a2338; /* Darker blue for headings */
+  color: #203070; /* darker blue */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
-  line-height: 1.2;
 }
 
 /* Paragraph styling */
-p, li {
-  font-family: 'Lora', serif;
+p {
   font-weight: 400;
   font-size: 1.1rem;
-  color: #2c3e70; /* Medium dark blue */
+  color: #2c3a83;
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: left;
-}
-
-/* Lists styling */
-ul, ol {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  color: #2c3e70;
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
 }
 
 /* Sticky navigation banner */
@@ -55,41 +43,41 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #d0dafd; /* Lighter blue */
+  background-color: #4a5ebc; /* medium blue */
   padding: 15px 40px;
-  box-shadow: 0 4px 8px rgba(25, 35, 70, 0.3); /* stronger shadow */
+  box-shadow: 0 4px 8px rgba(25, 35, 70, 0.3);
   z-index: 1000;
 }
 
 /* Navigation list styling */
 nav ul {
   display: flex;
-  justify-content: flex-start; /* Left aligned */
-  gap: 25px;
+  justify-content: flex-start; /* left-aligned */
+  gap: 30px;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700; /* Bold nav links */
-  white-space: nowrap; /* Prevent wrapping, all on one line */
-  overflow-x: auto; /* In case screen is too narrow, allow horizontal scroll */
-  -webkit-overflow-scrolling: touch;
+  font-weight: 700; /* bold */
+  font-size: 1rem;
+  overflow: visible; /* default for desktop */
 }
 
 /* Navigation links */
 nav a {
-  color: #1a2338; /* Dark blue */
+  color: white;
   text-decoration: none;
   padding: 8px 15px;
   border-radius: 30px;
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
-  font-weight: 700; /* Ensure bold */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* bold */
 }
 
 /* Hover/focus nav link styles */
 nav a:hover,
 nav a:focus {
-  background-color: #364a9f; /* Darker blue on hover */
-  color: #fff;
+  background-color: #2f3a70;
+  color: #d0dafd;
   outline: none;
 }
 
@@ -97,7 +85,7 @@ nav a:focus {
 a.contact-link, .button-link, button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  background-color: #364a9f; /* Dark blue */
+  background-color: #2f3a70; /* darker blue button */
   color: white;
   padding: 10px 25px;
   border-radius: 25px;
@@ -110,26 +98,58 @@ a.contact-link, .button-link, button {
   line-height: 1.4;
 }
 
-/* Contact link / button hover/focus */
 a.contact-link:hover, a.contact-link:focus,
 .button-link:hover, .button-link:focus,
 button:hover, button:focus {
-  background-color: #22336a; /* Even darker blue */
+  background-color: #203070; /* darkest blue */
   outline: none;
 }
 
-/* Form inputs and textarea styling */
-input, textarea {
-  font-family: 'Lora', serif;
-  font-size: 1.1rem;
-  color: #1f2a44;
-  padding: 12px;
-  border: 1px solid #94a3ff; /* Light blue border */
+/* FAQ details spacing */
+details {
+  background: #fff;
   border-radius: 6px;
-  margin-bottom: 20px;
-  resize: vertical;
-  width: 100%;
-  box-sizing: border-box;
+  margin-bottom: 25px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/* Summary styling */
+summary {
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  outline: none;
+  user-select: none;
+  margin-bottom: 10px;
+  list-style: none;
+  color: #203070;
+}
+
+/* Hide default marker */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow icons */
+details[open] summary::before {
+  content: "▼ ";
+  color: #4a5ebc;
+}
+
+summary::before {
+  content: "► ";
+  color: #4a5ebc;
+}
+
+/* FAQ paragraph and list inside details */
+details p, details ul {
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #2c3a83;
+  padding-left: 20px;
+  line-height: 1.6;
 }
 
 /* Footer styling */
@@ -137,7 +157,7 @@ footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #5a6477; /* Medium blue-grey */
+  color: #2f3a70;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
@@ -149,23 +169,26 @@ footer img {
   margin-top: 10px;
 }
 
-/* Responsive tweaks */
+/* Responsive for mobile */
 @media (max-width: 600px) {
-  body {
-    padding: 15px 20px;
+  nav {
+    padding: 10px 20px;
+    background-color: #4a5ebc; /* keep consistent */
   }
   nav ul {
-    /* Still one line but allow horizontal scroll */
+    /* Make nav a horizontal scroll container on mobile */
+    display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    gap: 15px;
+    gap: 20px;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Firefox */
+  }
+  nav ul::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
   }
   nav a {
-    padding: 8px 12px;
-    font-size: 0.9rem;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    margin-top: 30px;
-    margin-bottom: 15px;
+    font-size: 1.15rem; /* slightly bigger on mobile */
+    white-space: nowrap; /* prevent wrapping */
   }
 }
