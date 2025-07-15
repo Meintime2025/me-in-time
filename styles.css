@@ -244,7 +244,7 @@
 
     @media (max-width: 768px) {
       nav ul {
-        display: none;
+        display: none !important;
       }
 
       .hamburger {
