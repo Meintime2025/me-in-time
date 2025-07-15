@@ -41,23 +41,25 @@
       box-shadow: 0 4px 12px rgba(70, 90, 40, 0.5);
       border-radius: 10px;
       margin: 0 auto 40px auto;
-      max-width: 1000px;
+      max-width: 1100px;
       padding: 40px 0;
     }
 
     .nav-inner {
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 30px;
+      padding: 0 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     nav ul {
       display: flex;
-      gap: 30px;
+      gap: 20px;
       list-style: none;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -65,8 +67,9 @@
       text-decoration: none;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      padding: 10px 15px;
+      padding: 8px 12px;
       border-radius: 30px;
+      font-size: 0.95rem;
     }
 
     nav a:hover {
@@ -148,6 +151,7 @@
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       z-index: 9999;
+      display: block;
     }
 
     .sticky-contact:hover {
@@ -201,15 +205,15 @@
 
     @media (max-width: 768px) {
       nav ul {
-        display: none;
+        display: none !important;
       }
 
       .hamburger {
-        display: flex;
+        display: flex !important;
       }
 
       .sticky-contact {
-        display: block;
+        display: block !important;
       }
     }
   </style>
@@ -217,7 +221,7 @@
 <body>
   <nav>
     <div class="nav-inner">
-      <span style="color: white; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.4rem;">Me In Time</span>
+      <span style="color: white; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem;">Me In Time</span>
       <button class="hamburger" onclick="toggleMenu()" id="hamburger">
         <span></span>
         <span></span>
@@ -225,28 +229,34 @@
       </button>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#services">Counselling</a></li>
+        <li><a href="#coaching">Coaching</a></li>
+        <li><a href="#reflections">Reflections</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="#faqs">FAQs</a></li>
       </ul>
     </div>
   </nav>
 
   <div class="mobile-nav" id="mobileNav">
     <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
+    <a href="#welcome">Welcome</a>
+    <a href="#services">Counselling</a>
+    <a href="#coaching">Coaching</a>
+    <a href="#reflections">Reflections</a>
     <a href="contact.html">Contact</a>
+    <a href="#faqs">FAQs</a>
   </div>
 
   <main>
     <h1 id="home">Welcome to Me In Time</h1>
     <p>This is a calm and grounded space for reflection, healing, and support. Whether you’re here for therapy, growth, or simply to explore, you’re welcome here just as you are.</p>
 
-    <h2 id="about">What We Offer</h2>
+    <h2 id="services">What We Offer</h2>
     <p>We provide a range of services including 1:1 counselling, online sessions, and resources designed to support you in your own time and your own way.</p>
 
-    <details>
+    <details id="faqs">
       <summary>How do I get started?</summary>
       <p>You can reach out via the contact page and book an initial session or consultation.</p>
     </details>
