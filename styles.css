@@ -1,4 +1,4 @@
-//* Reset box-sizing and margin/padding */
+/* Reset box-sizing and margin/padding */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,10 +8,10 @@
 /* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
-  color: #4A4A4A; /* warm dark gray for text */
+  color: #6B6B6B; /* lighter warm gray for text */
   font-size: 16px;
   line-height: 1.7;
-  background-color: #F6F3E8; /* cream/light beige background */
+  background-color: #F9F8F1; /* paler cream/light beige background */
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
@@ -22,7 +22,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #567D46; /* deep olive green */
+  color: #7FA46B; /* lighter olive green */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
@@ -43,17 +43,17 @@ p {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
-  color: #4A4A4A;
+  color: #6B6B6B; /* lighter text color */
   line-height: 1.6;
   margin-bottom: 20px;
-  text-align: left;
+  text-align: justify; /* changed from left */
 }
 
 /* Lists (ul, ol) styling */
 ul, ol {
   font-family: 'Lora', serif;
   font-size: 1.1rem;
-  color: #4A4A4A;
+  color: #6B6B6B; /* lighter text color */
   line-height: 1.6;
   margin-bottom: 20px;
   padding-left: 40px;
@@ -63,14 +63,14 @@ ul, ol {
 a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #567D46;
+  color: #7FA46B; /* lighter olive green */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #7DA65D; /* lighter moss green */
+  color: #A4C37F; /* lighter moss green */
   outline: none;
 }
 
@@ -79,9 +79,9 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #A8C686; /* soft pastel green */
+  background-color: #C4D89F; /* paler soft pastel green */
   padding: 15px 40px;
-  box-shadow: 0 4px 8px rgba(88, 116, 55, 0.3); /* subtle greenish shadow */
+  box-shadow: 0 4px 8px rgba(128, 154, 95, 0.3); /* subtle greenish shadow */
   z-index: 1000;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -109,8 +109,8 @@ nav a {
 /* Hover/focus nav link styles */
 nav a:hover,
 nav a:focus {
-  background-color: #7DA65D; /* medium moss green */
-  color: #F6F3E8; /* cream text on hover */
+  background-color: #A4C37F; /* lighter medium moss green */
+  color: #F9F8F1; /* paler cream text on hover */
   outline: none;
 }
 
@@ -120,7 +120,7 @@ a.contact-link,
 button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  background-color: #7DA65D; /* medium moss green button */
+  background-color: #A4C37F; /* lighter medium moss green button */
   color: white;
   padding: 10px 25px;
   border-radius: 25px;
@@ -139,7 +139,7 @@ a.contact-link:focus,
 .button-link:focus,
 button:hover,
 button:focus {
-  background-color: #567D46; /* darker olive green */
+  background-color: #7FA46B; /* lighter darker olive green */
   outline: none;
 }
 
@@ -149,11 +149,11 @@ details {
   border-radius: 6px;
   margin-bottom: 25px;
   padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(120, 140, 80, 0.1);
+  box-shadow: 0 2px 6px rgba(170, 185, 130, 0.1);
   cursor: pointer;
   font-family: 'Lora', serif;
   font-size: 1rem;
-  color: #4A4A4A;
+  color: #6B6B6B;
   line-height: 1.6;
 }
 
@@ -166,7 +166,7 @@ summary {
   user-select: none;
   margin-bottom: 10px;
   list-style: none;
-  color: #567D46;
+  color: #7FA46B;
 }
 
 /* Hide default marker */
@@ -177,12 +177,12 @@ summary::-webkit-details-marker {
 /* Custom arrow icons */
 details[open] summary::before {
   content: "▼ ";
-  color: #A8C686;
+  color: #C4D89F;
 }
 
 summary::before {
   content: "► ";
-  color: #A8C686;
+  color: #C4D89F;
 }
 
 /* FAQ paragraph and list inside details */
@@ -197,7 +197,7 @@ footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #567D46;
+  color: #7FA46B;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
