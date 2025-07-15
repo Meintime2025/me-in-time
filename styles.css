@@ -42,13 +42,13 @@ p {
 nav {
   position: sticky;
   top: 0;
-  width: 100%;
+  left: 0;
+  width: 100vw; /* full viewport width */
   background-color: #4a5ebc; /* medium blue */
-  padding: 15px 20px;
-  box-shadow: 0 4px 12px rgba(25, 35, 70, 0.35);
+  padding: 15px 40px;
+  box-shadow: 0 4px 8px rgba(25, 35, 70, 0.3);
   z-index: 1000;
-  box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-left: calc(-50vw + 50%); /* override container centering */
 }
 
 /* Navigation list styling */
@@ -60,7 +60,9 @@ nav ul {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700; /* bold */
   font-size: 1rem;
-  box-sizing: border-box;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
 }
 
 /* Navigation links */
@@ -176,6 +178,8 @@ footer img {
   nav {
     padding: 10px 20px;
     background-color: #4a5ebc; /* keep consistent */
+    margin-left: 0; /* override for small screens */
+    width: 100%; /* full width on mobile */
   }
   nav ul {
     display: flex;
@@ -190,6 +194,6 @@ footer img {
   }
   nav a {
     font-size: 1.15rem; /* slightly bigger on mobile */
-    white-space: nowrap; /* prevent wrapping */
+    white-space: nowrap;
   }
 }
