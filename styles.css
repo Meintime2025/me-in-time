@@ -13,23 +13,27 @@ body {
   line-height: 1.7;
   background-color: #f9f6f2;
   max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
+  margin: 40px auto 40px auto;
+  padding: 20px 20px 20px 20px;
+  padding-top: 70px; /* equal to nav height to avoid overlap */
   text-align: left;
+  transition: padding-top 0.3s ease;
 }
 
 /* Headings font style */
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #3c362f;
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
+  line-height: 1.2;
 }
 
-/* Paragraph styling */
-p {
+/* Paragraph and list styling */
+p, li {
+  font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
   color: #5e5349;
@@ -38,31 +42,44 @@ p {
   text-align: left;
 }
 
+ul, ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #5e5349;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 /* Sticky navigation banner */
 nav {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
+  max-width: 900px;
+  height: 70px;
   background-color: #f3ede6;
-  padding: 15px 40px;
+  padding: 0 40px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  z-index: 1000;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
   transition: top 0.3s ease;
+  overflow-wrap: break-word;
 }
 
 /* Navigation list styling */
 nav ul {
   display: flex;
-  flex-wrap: wrap; /* Wrap items on smaller screens */
+  flex-wrap: wrap; /* allow wrap to second row on small screens */
   justify-content: flex-start;
-  gap: 15px;
+  gap: 20px;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  padding-left: 0;
-  margin: 0;
+  width: 100%;
 }
 
 /* Navigation links */
@@ -73,7 +90,9 @@ nav a {
   border-radius: 30px;
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
-  white-space: nowrap;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  white-space: nowrap; /* keep links intact */
 }
 
 /* Hover/focus nav link styles */
@@ -101,6 +120,7 @@ a.contact-link, .button-link, button {
   line-height: 1.4;
 }
 
+/* Contact link / button hover/focus */
 a.contact-link:hover, a.contact-link:focus,
 .button-link:hover, .button-link:focus,
 button:hover, button:focus {
@@ -189,21 +209,18 @@ footer img {
 @media (max-width: 600px) {
   body {
     padding: 15px 20px;
-  }
-  nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    padding-top: 80px; /* extra for mobile nav height if taller */
   }
   nav {
-    padding: 10px 20px;
+    padding: 0 20px;
+    height: auto;
   }
-  h1, h2, h3 {
-    margin-top: 30px;
+  nav ul {
+    justify-content: center;
+    gap: 15px;
   }
   nav a {
-    padding: 8px 12px;
+    padding: 6px 12px;
     font-size: 0.9rem;
   }
 }
