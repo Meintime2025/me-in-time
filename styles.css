@@ -108,9 +108,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 6px;
-      width: 30px;
-      height: 30px;
+      gap: 5px;
+      width: 35px;
+      height: 35px;
       background: none;
       border: none;
       cursor: pointer;
@@ -119,7 +119,7 @@
 
     .hamburger span {
       display: block;
-      height: 3px;
+      height: 4px;
       width: 100%;
       background: white;
       border-radius: 2px;
@@ -158,11 +158,22 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 1.1rem;
+      opacity: 0;
+      transform: translateY(-10px);
+      animation: fadeSlideIn 0.3s forwards;
+      animation-delay: 0.1s;
     }
 
-    .mobile-nav a:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
+    .mobile-nav.open a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .sticky-contact {
