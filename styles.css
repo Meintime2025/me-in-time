@@ -1,85 +1,94 @@
-/* Reset */
+/* Reset box-sizing and margin/padding */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Base styles */
+/* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
-  color: #2c3e50; /* dark blue-grey */
+  color: #1f2a44; /* Darker blue text */
   font-size: 16px;
   line-height: 1.7;
-  background-color: #eaf2f8; /* light blue tint */
+  background-color: #e6f0ff; /* Very light blue background */
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
   text-align: left;
 }
 
-/* Headings */
-h1, h2, h3 {
+/* Headings font style */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #1a5276; /* stronger blue */
+  color: #1a2338; /* Darker blue for headings */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
   line-height: 1.2;
 }
 
-/* Paragraphs and lists */
+/* Paragraph styling */
 p, li {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
-  color: #34495e; /* medium blue-grey */
+  color: #2c3e70; /* Medium dark blue */
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: left;
 }
 
-/* Sticky banner container centered on desktop */
+/* Lists styling */
+ul, ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  color: #2c3e70;
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Sticky navigation banner */
 nav {
   position: sticky;
   top: 0;
-  background-color: #d6eaf8; /* subtle light blue */
-  padding: 15px 20px;
-  box-shadow: 0 4px 10px rgba(26, 82, 118, 0.3); /* stronger blue shadow */
+  width: 100%;
+  background-color: #d0dafd; /* Lighter blue */
+  padding: 15px 40px;
+  box-shadow: 0 4px 8px rgba(25, 35, 70, 0.3); /* stronger shadow */
   z-index: 1000;
-  max-width: 900px;
-  margin: 0 auto 40px auto; /* center nav */
-  border-radius: 8px;
 }
 
-/* Navigation list */
+/* Navigation list styling */
 nav ul {
   display: flex;
-  justify-content: center; /* center on desktop */
-  flex-wrap: wrap;
+  justify-content: flex-start; /* Left aligned */
   gap: 25px;
   list-style: none;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
+  font-weight: 700; /* Bold nav links */
+  white-space: nowrap; /* Prevent wrapping, all on one line */
+  overflow-x: auto; /* In case screen is too narrow, allow horizontal scroll */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Navigation links */
 nav a {
-  color: #1a5276;
+  color: #1a2338; /* Dark blue */
   text-decoration: none;
-  padding: 10px 18px;
+  padding: 8px 15px;
   border-radius: 30px;
-  background-color: transparent;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
   display: inline-block;
+  font-weight: 700; /* Ensure bold */
 }
 
-/* Hover and focus for nav */
+/* Hover/focus nav link styles */
 nav a:hover,
 nav a:focus {
-  background-color: #1a5276;
+  background-color: #364a9f; /* Darker blue on hover */
   color: #fff;
   outline: none;
 }
@@ -87,10 +96,10 @@ nav a:focus {
 /* Contact link / button style */
 a.contact-link, .button-link, button {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  background-color: #1a5276;
+  font-weight: 700;
+  background-color: #364a9f; /* Dark blue */
   color: white;
-  padding: 10px 30px;
+  padding: 10px 25px;
   border-radius: 25px;
   text-decoration: none;
   display: inline-block;
@@ -101,58 +110,26 @@ a.contact-link, .button-link, button {
   line-height: 1.4;
 }
 
+/* Contact link / button hover/focus */
 a.contact-link:hover, a.contact-link:focus,
 .button-link:hover, .button-link:focus,
 button:hover, button:focus {
-  background-color: #154360;
+  background-color: #22336a; /* Even darker blue */
   outline: none;
 }
 
-/* FAQ details spacing */
-details {
-  background: #fff;
+/* Form inputs and textarea styling */
+input, textarea {
+  font-family: 'Lora', serif;
+  font-size: 1.1rem;
+  color: #1f2a44;
+  padding: 12px;
+  border: 1px solid #94a3ff; /* Light blue border */
   border-radius: 6px;
-  margin-bottom: 25px;
-  padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(26, 82, 118, 0.1);
-  cursor: pointer;
-}
-
-/* Summary styling */
-summary {
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
-  outline: none;
-  user-select: none;
-  margin-bottom: 10px;
-  list-style: none;
-  color: #1a5276;
-}
-
-/* Hide default marker */
-summary::-webkit-details-marker {
-  display: none;
-}
-
-/* Custom arrow icons */
-details[open] summary::before {
-  content: "▼ ";
-  color: #1a5276;
-}
-
-summary::before {
-  content: "► ";
-  color: #1a5276;
-}
-
-/* FAQ paragraph and list inside details */
-details p, details ul {
-  margin-top: 12px;
-  font-size: 1rem;
-  color: #34495e;
-  padding-left: 20px;
-  line-height: 1.6;
+  margin-bottom: 20px;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Footer styling */
@@ -160,7 +137,7 @@ footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #5d6d7e;
+  color: #5a6477; /* Medium blue-grey */
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
@@ -172,40 +149,23 @@ footer img {
   margin-top: 10px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  nav ul {
-    justify-content: center;
-    gap: 20px;
-  }
-  nav a {
-    font-size: 0.9rem;
-    padding: 8px 14px;
-  }
+/* Responsive tweaks */
+@media (max-width: 600px) {
   body {
-    font-size: 17px; /* slightly bigger for mobile readability */
-    padding: 15px;
+    padding: 15px 20px;
   }
-  /* Nav wraps to 2 lines on mobile */
   nav ul {
-    flex-wrap: wrap;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-}
-
-/* Smaller phones */
-@media (max-width: 480px) {
-  nav ul {
-    max-width: 280px;
+    /* Still one line but allow horizontal scroll */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     gap: 15px;
   }
   nav a {
-    font-size: 0.85rem;
-    padding: 6px 12px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
   }
-  body {
-    font-size: 18px;
-    padding: 12px;
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 30px;
+    margin-bottom: 15px;
   }
 }
