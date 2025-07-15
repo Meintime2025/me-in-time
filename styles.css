@@ -16,21 +16,20 @@
     /* Base font styles and layout */
     body {
       font-family: 'Lora', serif;
-      color: #555A4A; /* darker warm gray-green text */
+      color: #555A4A;
       font-size: 16px;
       line-height: 1.7;
-      background-color: #E7E9D1; /* richer cream/soft olive-beige */
+      background-color: #E7E9D1;
       max-width: 900px;
       margin: 40px auto;
       padding: 20px;
       text-align: left;
     }
 
-    /* Standardize all headings */
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      color: #567235; /* darker olive green */
+      color: #567235;
       margin-top: 40px;
       margin-bottom: 20px;
       text-align: left;
@@ -38,7 +37,6 @@
       font-size: inherit;
     }
 
-    /* Explicit font sizes for headings */
     h1 { font-size: 2rem; }
     h2 { font-size: 2rem; }
     h3 { font-size: 1.5rem; }
@@ -46,7 +44,6 @@
     h5 { font-size: 1.1rem; }
     h6 { font-size: 1rem; }
 
-    /* Paragraph styling */
     p {
       font-family: 'Lora', serif;
       font-weight: 400;
@@ -57,7 +54,7 @@
       text-align: justify;
     }
 
-    /* Navigation styles (desktop) */
+    /* Navigation styles */
     nav {
       position: sticky;
       top: 0;
@@ -71,11 +68,13 @@
       font-size: 1rem;
     }
 
+    /* ✅ Updated spacing here */
     nav ul {
       max-width: 900px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 40px;
       list-style: none;
     }
 
@@ -94,7 +93,6 @@
       outline: none;
     }
 
-    /* Mobile-only hamburger menu */
     .hamburger {
       display: none;
       font-size: 30px;
@@ -130,7 +128,6 @@
       display: flex;
     }
 
-    /* Footer styling */
     footer {
       text-align: left;
       margin-top: 60px;
@@ -146,10 +143,9 @@
       margin-top: 10px;
     }
 
-    /* Responsive styles for mobile */
     @media (max-width: 600px) {
       nav ul {
-        display: none; /* hide desktop nav */
+        display: none;
       }
 
       .hamburger {
@@ -169,9 +165,8 @@
 </head>
 <body>
 
-  <!-- Navigation bar -->
   <nav>
-    <!-- Hamburger (mobile only) -->
+    <!-- Hamburger for mobile -->
     <button class="hamburger" onclick="toggleMenu()">☰</button>
 
     <!-- Desktop nav -->
@@ -183,7 +178,7 @@
     </ul>
   </nav>
 
-  <!-- Mobile nav (initially hidden) -->
+  <!-- Mobile dropdown nav -->
   <div class="mobile-nav" id="mobileNav">
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -191,7 +186,6 @@
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- Page content -->
   <main>
     <h1>Welcome to Me In Time</h1>
     <p>This is a calm and grounded space for reflection, healing, and support. Whether you’re here for therapy, growth, or simply to explore, you’re welcome here just as you are.</p>
@@ -200,12 +194,10 @@
     <p>We provide a range of services including 1:1 counselling, online sessions, and resources designed to support you in your own time and your own way.</p>
   </main>
 
-  <!-- Footer -->
   <footer>
     &copy; 2025 Me In Time. All rights reserved.
   </footer>
 
-  <!-- JavaScript for mobile menu toggle -->
   <script>
     function toggleMenu() {
       const nav = document.getElementById('mobileNav');
