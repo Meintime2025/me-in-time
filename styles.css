@@ -48,11 +48,13 @@ nav {
   padding: 15px 40px;
   box-shadow: 0 4px 8px rgba(25, 35, 70, 0.3);
   z-index: 1000;
-  margin-left: calc(-50vw + 50%); /* override container centering */
+  box-sizing: border-box;
 }
 
 /* Navigation list styling */
 nav ul {
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
   justify-content: flex-start; /* left-aligned */
   gap: 30px;
@@ -60,9 +62,7 @@ nav ul {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700; /* bold */
   font-size: 1rem;
-  overflow: visible;
-  margin: 0;
-  padding: 0;
+  overflow: visible; /* default for desktop */
 }
 
 /* Navigation links */
@@ -178,22 +178,19 @@ footer img {
   nav {
     padding: 10px 20px;
     background-color: #4a5ebc; /* keep consistent */
-    margin-left: 0; /* override for small screens */
-    width: 100%; /* full width on mobile */
+    width: 100vw; /* full width */
+    overflow-x: hidden;
   }
   nav ul {
-    display: flex;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    gap: 20px;
-    padding-bottom: 10px;
-    scrollbar-width: none; /* Firefox */
-  }
-  nav ul::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    /* Two rows for nav items */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
   }
   nav a {
-    font-size: 1.15rem; /* slightly bigger on mobile */
-    white-space: nowrap;
+    font-size: 1.2rem; /* slightly bigger on mobile */
+    white-space: nowrap; /* prevent wrapping inside each link */
   }
 }
