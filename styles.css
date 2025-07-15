@@ -116,9 +116,11 @@
       max-height: 0;
       transition: max-height 0.4s ease;
       border-radius: 0 0 10px 10px;
+      display: none;
     }
 
     .mobile-nav.open {
+      display: block;
       max-height: 500px;
     }
 
@@ -151,7 +153,6 @@
       text-decoration: none;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       z-index: 9999;
-      display: block;
     }
 
     .sticky-contact:hover {
@@ -214,6 +215,10 @@
 
       .sticky-contact {
         display: block !important;
+      }
+
+      .mobile-nav {
+        display: block;
       }
     }
   </style>
