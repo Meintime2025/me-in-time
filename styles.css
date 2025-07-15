@@ -55,6 +55,14 @@
       flex-wrap: wrap;
     }
 
+    .site-title {
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      flex: 1;
+    }
+
     nav ul {
       display: flex;
       gap: 20px;
@@ -116,11 +124,9 @@
       max-height: 0;
       transition: max-height 0.4s ease;
       border-radius: 0 0 10px 10px;
-      display: none;
     }
 
     .mobile-nav.open {
-      display: block;
       max-height: 500px;
     }
 
@@ -206,19 +212,11 @@
 
     @media (max-width: 768px) {
       nav ul {
-        display: none !important;
+        display: none;
       }
 
       .hamburger {
-        display: flex !important;
-      }
-
-      .sticky-contact {
-        display: block !important;
-      }
-
-      .mobile-nav {
-        display: block;
+        display: flex;
       }
     }
   </style>
@@ -226,7 +224,7 @@
 <body>
   <nav>
     <div class="nav-inner">
-      <span style="color: white; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.2rem;">Me In Time</span>
+      <span class="site-title">Me In Time</span>
       <button class="hamburger" onclick="toggleMenu()" id="hamburger">
         <span></span>
         <span></span>
