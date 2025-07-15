@@ -8,10 +8,10 @@
 /* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
-  color: #8C8C8C; /* paler warm gray for text */
+  color: #555555; /* darker warm gray for text */
   font-size: 16px;
   line-height: 1.7;
-  background-color: #FBFAF4; /* paler cream/light beige background */
+  background-color: #E8E6D3; /* darker cream/light beige background */
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
@@ -22,7 +22,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #9AB777; /* paler olive green */
+  color: #6B8045; /* darker olive green */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
@@ -43,17 +43,17 @@ p {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
-  color: #8C8C8C; /* paler text color */
+  color: #555555; /* darker text color */
   line-height: 1.6;
   margin-bottom: 20px;
-  text-align: justify; /* justified text */
+  text-align: justify;
 }
 
 /* Lists (ul, ol) styling */
 ul, ol {
   font-family: 'Lora', serif;
   font-size: 1.1rem;
-  color: #8C8C8C; /* paler text color */
+  color: #555555; /* darker text color */
   line-height: 1.6;
   margin-bottom: 20px;
   padding-left: 40px;
@@ -63,14 +63,14 @@ ul, ol {
 a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #9AB777; /* paler olive green */
+  color: #6B8045; /* darker olive green */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #B6D18F; /* lighter moss green */
+  color: #8CAF52; /* darker moss green */
   outline: none;
 }
 
@@ -79,9 +79,9 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #D6E2BA; /* paler soft pastel green */
-  padding: 15px 0; /* Removed horizontal padding */
-  box-shadow: 0 4px 8px rgba(160, 182, 130, 0.3); /* subtle greenish shadow */
+  background-color: #B5C283; /* darker soft pastel green */
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(120, 135, 95, 0.3);
   z-index: 1000;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -90,14 +90,14 @@ nav {
 
 /* Navigation list styling - Desktop only */
 nav ul {
-  max-width: none; /* Removed max-width */
+  max-width: none;
   margin: 0;
-  padding: 0 40px; /* Added horizontal padding */
+  padding: 0 40px;
   width: 100%;
   display: flex;
-  justify-content: space-between; /* spread nav items evenly */
+  justify-content: space-between;
   list-style: none;
-  overflow: visible; /* default for desktop */
+  overflow: visible;
   box-sizing: border-box;
 }
 
@@ -112,8 +112,8 @@ nav a {
 /* Hover/focus nav link styles */
 nav a:hover,
 nav a:focus {
-  background-color: #B6D18F; /* lighter medium moss green */
-  color: #FBFAF4; /* paler cream text on hover */
+  background-color: #8CAF52;
+  color: #E8E6D3; /* darker cream text on hover */
   outline: none;
 }
 
@@ -123,7 +123,7 @@ a.contact-link,
 button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  background-color: #B6D18F; /* lighter medium moss green button */
+  background-color: #8CAF52;
   color: white;
   padding: 10px 25px;
   border-radius: 25px;
@@ -142,7 +142,7 @@ a.contact-link:focus,
 .button-link:focus,
 button:hover,
 button:focus {
-  background-color: #9AB777; /* lighter darker olive green */
+  background-color: #6B8045;
   outline: none;
 }
 
@@ -152,11 +152,11 @@ details {
   border-radius: 6px;
   margin-bottom: 25px;
   padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(180, 195, 140, 0.1);
+  box-shadow: 0 2px 6px rgba(130, 145, 90, 0.1);
   cursor: pointer;
   font-family: 'Lora', serif;
   font-size: 1rem;
-  color: #8C8C8C;
+  color: #555555;
   line-height: 1.6;
 }
 
@@ -169,7 +169,7 @@ summary {
   user-select: none;
   margin-bottom: 10px;
   list-style: none;
-  color: #9AB777;
+  color: #6B8045;
 }
 
 /* Hide default marker */
@@ -180,12 +180,12 @@ summary::-webkit-details-marker {
 /* Custom arrow icons */
 details[open] summary::before {
   content: "▼ ";
-  color: #D6E2BA;
+  color: #B5C283;
 }
 
 summary::before {
   content: "► ";
-  color: #D6E2BA;
+  color: #B5C283;
 }
 
 /* FAQ paragraph and list inside details */
@@ -200,7 +200,7 @@ footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #9AB777;
+  color: #6B8045;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
@@ -226,10 +226,10 @@ footer img {
     -webkit-overflow-scrolling: touch;
     gap: 20px;
     padding-bottom: 10px;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
   }
   nav ul::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none;
   }
   nav a {
     font-size: 1.15rem;
