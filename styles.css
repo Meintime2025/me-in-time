@@ -18,24 +18,38 @@ body {
   text-align: left;
 }
 
-/* Headings font style */
-h1, h2, h3 {
+/* Headings font style - consistent for all levels */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #203070; /* darker blue */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
+  line-height: 1.25;
+  /* Consistent sizes - adjust as needed */
 }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
 
-/* Paragraph styling */
-p {
+/* Paragraphs and list items */
+p, li {
+  font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
   color: #2c3a83;
   line-height: 1.6;
   margin-bottom: 20px;
-  text-align: left;
+}
+
+/* Lists styling */
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 20px;
 }
 
 /* Sticky navigation banner */
@@ -55,12 +69,11 @@ nav ul {
   margin: 0 auto;
   display: flex;
   justify-content: space-between; /* spread nav items evenly */
-  gap: 0; /* remove gap */
   list-style: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700; /* bold */
   font-size: 1rem;
-  overflow: visible; /* default for desktop */
+  overflow: visible;
 }
 
 /* Navigation links */
@@ -72,7 +85,7 @@ nav a {
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700; /* bold */
+  font-weight: 700;
 }
 
 /* Hover/focus nav link styles */
@@ -191,6 +204,15 @@ footer img {
   nav a {
     font-size: 1.15rem; /* slightly bigger on mobile */
     white-space: nowrap; /* prevent wrapping */
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
   }
 }
 
