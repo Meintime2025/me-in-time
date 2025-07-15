@@ -8,10 +8,10 @@
 /* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
-  color: #555555; /* darker warm gray for text */
+  color: #555A4A; /* darker warm gray-green text */
   font-size: 16px;
   line-height: 1.7;
-  background-color: #E8E6D3; /* darker cream/light beige background */
+  background-color: #E7E9D1; /* richer cream/soft olive-beige */
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
@@ -22,7 +22,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #6B8045; /* darker olive green */
+  color: #567235; /* darker olive green */
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
@@ -43,7 +43,7 @@ p {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 1.1rem;
-  color: #555555; /* darker text color */
+  color: #555A4A; /* darker text */
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: justify;
@@ -53,7 +53,7 @@ p {
 ul, ol {
   font-family: 'Lora', serif;
   font-size: 1.1rem;
-  color: #555555; /* darker text color */
+  color: #555A4A;
   line-height: 1.6;
   margin-bottom: 20px;
   padding-left: 40px;
@@ -63,14 +63,14 @@ ul, ol {
 a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: #6B8045; /* darker olive green */
+  color: #69892C; /* richer olive green */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: #8CAF52; /* darker moss green */
+  color: #8DB54B; /* brighter moss green */
   outline: none;
 }
 
@@ -79,9 +79,9 @@ nav {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #B5C283; /* darker soft pastel green */
-  padding: 15px 0;
-  box-shadow: 0 4px 8px rgba(120, 135, 95, 0.3);
+  background-color: #789E2D; /* deeper pastel olive green */
+  padding: 15px 40px;
+  box-shadow: 0 4px 8px rgba(70, 90, 40, 0.5); /* stronger shadow */
   z-index: 1000;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -90,15 +90,12 @@ nav {
 
 /* Navigation list styling - Desktop only */
 nav ul {
-  max-width: none;
-  margin: 0;
-  padding: 0 40px;
-  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* spread nav items evenly */
   list-style: none;
   overflow: visible;
-  box-sizing: border-box;
 }
 
 /* Navigation links */
@@ -112,8 +109,8 @@ nav a {
 /* Hover/focus nav link styles */
 nav a:hover,
 nav a:focus {
-  background-color: #8CAF52;
-  color: #E8E6D3; /* darker cream text on hover */
+  background-color: #8DB54B; /* lighter medium moss green */
+  color: #E7E9D1; /* pale cream text on hover */
   outline: none;
 }
 
@@ -123,7 +120,7 @@ a.contact-link,
 button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  background-color: #8CAF52;
+  background-color: #8DB54B; /* lighter medium moss green button */
   color: white;
   padding: 10px 25px;
   border-radius: 25px;
@@ -142,7 +139,7 @@ a.contact-link:focus,
 .button-link:focus,
 button:hover,
 button:focus {
-  background-color: #6B8045;
+  background-color: #567235; /* darker olive green */
   outline: none;
 }
 
@@ -152,11 +149,11 @@ details {
   border-radius: 6px;
   margin-bottom: 25px;
   padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(130, 145, 90, 0.1);
+  box-shadow: 0 2px 6px rgba(120, 140, 70, 0.15);
   cursor: pointer;
   font-family: 'Lora', serif;
   font-size: 1rem;
-  color: #555555;
+  color: #555A4A;
   line-height: 1.6;
 }
 
@@ -169,7 +166,7 @@ summary {
   user-select: none;
   margin-bottom: 10px;
   list-style: none;
-  color: #6B8045;
+  color: #69892C;
 }
 
 /* Hide default marker */
@@ -180,12 +177,12 @@ summary::-webkit-details-marker {
 /* Custom arrow icons */
 details[open] summary::before {
   content: "▼ ";
-  color: #B5C283;
+  color: #789E2D;
 }
 
 summary::before {
   content: "► ";
-  color: #B5C283;
+  color: #789E2D;
 }
 
 /* FAQ paragraph and list inside details */
@@ -200,7 +197,7 @@ footer {
   text-align: left;
   margin-top: 60px;
   padding: 20px 0;
-  color: #6B8045;
+  color: #69892C;
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
@@ -226,10 +223,10 @@ footer img {
     -webkit-overflow-scrolling: touch;
     gap: 20px;
     padding-bottom: 10px;
-    scrollbar-width: none;
+    scrollbar-width: none; /* Firefox */
   }
   nav ul::-webkit-scrollbar {
-    display: none;
+    display: none; /* Chrome, Safari */
   }
   nav a {
     font-size: 1.15rem;
