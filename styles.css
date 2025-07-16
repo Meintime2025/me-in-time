@@ -1,0 +1,17 @@
+body {
+  font-family: 'Lora', serif;
+  background-color: #E7E9D1;
+  color: #555A4A;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #567235;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
