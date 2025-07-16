@@ -5,73 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Me | Counselling & Coaching in Manchester | Me In Time</title>
   <meta name="description" content="Contact Stuart Walker at Me In Time for counselling, coaching, and psychotherapy support. Reach out via email, WhatsApp, phone, or text. Your privacy is respected." />
-
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="welcome-2.html">Welcome</a></li>
-    <li><a href="counselling.html">Counselling</a></li>
-    <li><a href="coaching.html">Coaching</a></li>
-    <li><a href="contact.html" class="contact-link" aria-current="page">Contact</a></li>
-    <li><a href="faq.html">FAQs</a></li>
-  </ul>
+  <div class="nav-inner">
+    <span class="site-title">Me In Time</span>
+    <button class="hamburger" onclick="toggleMenu()" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="welcome-2.html">Welcome</a></li>
+      <li><a href="counselling.html">Counselling</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+    </ul>
+  </div>
 </nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="welcome-2.html">Welcome</a>
+  <a href="counselling.html">Counselling</a>
+  <a href="coaching.html">Coaching</a>
+  <a href="contact.html" aria-current="page">Contact</a>
+  <a href="faq.html">FAQs</a>
+</div>
 
 <main>
   <h1>Contact Me</h1>
 
   <p>If you have questions about counselling, coaching, psychotherapy, or anything else not covered in the FAQs, I’m here to help. You can reach out in whichever way feels easiest and most comfortable for you.</p>
 
+  <p><a href="mailto:stuart.meintime@gmail.com" class="contact-link">Send Me an Email</a></p>
+
+  <p>You can also message me directly on WhatsApp:</p>
+  <p><a href="https://wa.me/447889249507" class="contact-link" target="_blank" rel="noopener noreferrer">Contact me on WhatsApp</a></p>
+
+  <p>If you’re on a mobile device, tap below to call or text:</p>
   <p>
-    <a href="mailto:stuart.meintime@gmail.com" class="contact-link">Send Me an Email</a>
+    Call: <a href="tel:07889249507">07889 249507</a><br />
+    Text: <a href="sms:07889249507">07889 249507</a>
   </p>
 
-  <p>
-    You can also message me directly on WhatsApp by clicking the link below.
-  </p>
-  
-  <p>
-    <a href="https://wa.me/447889249507" class="contact-link" target="_blank" rel="noopener noreferrer">Contact me on WhatsApp</a>
-  </p>
+  <p><em>Please note: I may be with a client when you contact me, but I will respond as soon as possible.</em></p>
 
-  <p>If you’re on a mobile device, tapping either of the links below will open your phone’s dialer or messaging app so you can reach me easily:</p>
-  
-  <p>
-    Call me: <a href="tel:07889249507">07889 249507</a><br />
-    Or send a text: <a href="sms:07889249507">07889 249507</a>
-  </p>
-
-  <p><em>Please note that I may not respond immediately as I might be with a client, but I will get back to you as soon as possible.</em></p>
-
-  <section>
-    <div class="privacy">
-      <h2>Privacy & Confidentiality</h2>
-      <p>Your privacy matters.</p>
-      <p>All sessions are confidential and handled in line with the ethical guidelines of the 
-        <a href="https://www.bacp.co.uk/about-us/" target="_blank" rel="noopener noreferrer">British Association for Counselling and Psychotherapy (BACP)</a>.
-      </p>
-      <p>As a practitioner, I am committed to protecting your personal information and complying with the UK General Data Protection Regulation (GDPR). I am registered with the 
-        <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer">Information Commissioner's Office (ICO)</a> and adhere to their data protection standards.
-      </p>
-      <p><strong>How your information is used:</strong></p>
-      <ul>
-        <li>Contact information submitted via the website is used solely to respond to your enquiry.</li>
-        <li>No information is shared with third parties.</li>
-        <li>Messages are stored securely and deleted when no longer needed.</li>
-      </ul>
-      <p>If you would like to know more about how your information is handled, you're welcome to <a href="contact.html">get in touch</a>.</p>
-    </div>
+  <section class="privacy">
+    <h2>Privacy & Confidentiality</h2>
+    <p>Your privacy matters. All sessions are confidential and handled in line with the ethical guidelines of the 
+      <a href="https://www.bacp.co.uk/about-us/" target="_blank" rel="noopener noreferrer">British Association for Counselling and Psychotherapy (BACP)</a>.
+    </p>
+    <p>I’m registered with the 
+      <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer">Information Commissioner's Office (ICO)</a> and follow UK GDPR standards.
+    </p>
+    <p><strong>How your information is used:</strong></p>
+    <ul>
+      <li>Your contact info is only used to respond to your enquiry.</li>
+      <li>No details are shared with third parties.</li>
+      <li>Messages are stored securely and deleted when no longer needed.</li>
+    </ul>
+    <p>To know more, you're welcome to <a href="contact.html">get in touch</a>.</p>
   </section>
 </main>
 
 <footer>
-  &copy; 2025 Me In Time | Stuart Walker Counselling
+  <p>&copy; 2025 Me In Time | Stuart Walker Counselling</p>
 </footer>
+
+<a href="contact.html" class="sticky-contact">📩 Get in Touch</a>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobileNav');
+    const burger = document.getElementById('hamburger');
+    nav.classList.toggle('open');
+    burger.classList.toggle('open');
+  }
+</script>
 
 </body>
 </html>
