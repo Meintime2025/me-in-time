@@ -1,5 +1,301 @@
-body { font-family: 'Lora', serif; background: #E7E9D1; color: #555A4A; max-width: 900px; margin: 40px auto; padding: 20px; }
-h1 { font-family: 'Montserrat', sans-serif; color: #567235; }
-.contact-link, .button-link, .sticky-contact { background-color: #8DB54B; color: white; padding: 12px 20px; border-radius: 30px; text-decoration: none; display: inline-block; font-family: 'Montserrat', sans-serif; font-weight: 700; }
-.sticky-contact { position: fixed; bottom: 20px; right: 20px; z-index: 9999; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-.sticky-contact:hover { background-color: #567235; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs | Me In Time Counselling & Coaching</title>
+  <meta name="description" content="Frequently asked questions about therapy, coaching, pricing, confidentiality, and how sessions work at Me In Time with Stuart Walker." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lora', serif;
+      background-color: #E7E9D1;
+      color: #555A4A;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #567235;
+      margin: 40px 0 20px;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: #69892C;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    nav {
+      background-color: #789E2D;
+      box-shadow: 0 4px 12px rgba(70, 90, 40, 0.5);
+      border-radius: 10px;
+      margin: 0 auto 40px auto;
+      max-width: 1100px;
+      padding: 20px 0;
+    }
+
+    .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      width: 30px;
+      height: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background: white;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translateY(6px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-6px);
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #789E2D;
+      padding: 10px 20px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    .mobile-nav a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      padding: 10px 0;
+    }
+
+    .mobile-nav a:hover {
+      background-color: #8DB54B;
+      border-radius: 6px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      background-color: #8DB54B;
+    }
+
+    .button-link {
+      background-color: #8DB54B;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-link:hover {
+      background-color: #567235;
+      color: #E7E9D1;
+    }
+
+    footer {
+      text-align: left;
+      margin-top: 60px;
+      padding: 20px 0;
+      color: #69892C;
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+    }
+
+    .sticky-contact {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #8DB54B;
+      color: white;
+      padding: 14px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 9999;
+    }
+
+    .sticky-contact:hover {
+      background-color: #567235;
+    }
+
+    details {
+      background: white;
+      border-radius: 6px;
+      margin-bottom: 25px;
+      padding: 20px 25px;
+      box-shadow: 0 2px 6px rgba(120, 140, 70, 0.15);
+      cursor: pointer;
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      color: #555A4A;
+      line-height: 1.6;
+    }
+
+    summary {
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      user-select: none;
+      list-style: none;
+      color: #69892C;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details[open] summary::before {
+      content: "▼ ";
+      color: #789E2D;
+    }
+
+    summary::before {
+      content: "► ";
+      color: #789E2D;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-nav {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <span class="site-title">Me In Time</span>
+      <button class="hamburger" onclick="toggleMenu(this)">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="welcome-2.html">Welcome</a></li>
+        <li><a href="counselling.html">Counselling</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html" aria-current="page">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">Home</a>
+      <a href="welcome-2.html">Welcome</a>
+      <a href="counselling.html">Counselling</a>
+      <a href="coaching.html">Coaching</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">FAQs</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Frequently Asked Questions</h1>
+
+    <details><summary>How do I book a session?</summary><p>You can email me directly, use the contact form, or reach out on WhatsApp. I’ll get back to you to arrange a free initial conversation.</p></details>
+
+    <details><summary>What happens in the first session?</summary><p>The first session is a relaxed space to explore what brings you to therapy or coaching. There’s no pressure, and you can ask anything you like before deciding to continue.</p></details>
+
+    <details><summary>How much does it cost?</summary><p>Sessions cost £60. A reduced rate of £25 is available for those who need it. Let’s talk if finances are a barrier — I’ll always do what I can.</p></details>
+
+    <details><summary>How many sessions will I need?</summary><p>That’s completely up to you. Some people come for a few sessions, others work longer term. We’ll check in regularly and decide together what feels right.</p></details>
+
+    <details><summary>Are sessions confidential?</summary><p>Yes. Everything you share is confidential, except in rare cases where safety or legal reasons require otherwise. We’ll talk this through clearly at the start.</p></details>
+
+    <details><summary>Do you work with men, LGBTQ+, and neurodivergent clients?</summary><p>Absolutely. My practice is inclusive and affirming. Everyone is welcome, and I’ll always do my best to make you feel safe and supported.</p></details>
+
+    <p>Still have a question? <a href="contact.html" class="button-link">Get in touch</a> — I’d be happy to help.</p>
+  </main>
+
+  <footer>
+    &copy; 2025 Me In Time. All rights reserved.
+  </footer>
+
+  <a href="contact.html" class="sticky-contact">📩 Get in Touch</a>
+
+  <script>
+    function toggleMenu(button) {
+      const mobileNav = document.getElementById('mobileNav');
+      mobileNav.classList.toggle('open');
+      button.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
