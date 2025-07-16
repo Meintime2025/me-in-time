@@ -2,260 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQs – Counselling & Coaching Support | Me In Time</title>
   <meta name="description" content="Frequently Asked Questions about counselling, coaching, and support services at Me In Time. Answers about booking, session details, confidentiality, pricing, and more." />
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
-  
-  <!-- External CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
-  
-  <!-- FAQ Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a session?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can book online via the tab below, or get in touch by email, phone, the contact form at the bottom of this page, or through social media. We’ll then arrange an initial session—either in person, by phone, or online."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What happens in the first session?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The initial session is a chance for us to get to know each other and explore how we might work together. There’s no obligation to continue, and I always encourage clients to find the therapist who feels like the right fit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How soon can I start?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I usually have availability within the same week you're in touch, and I offer flexible appointment times to suit your schedule."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long will counselling take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "There’s no fixed number of sessions. Some people come for just a few sessions, others longer term. We might start with six and review together as we go. It’s always your choice—and you’re free to pause or stop at any time."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What can I expect from the first session?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The first session is a chance for us to get to know each other. We'll explore what’s brought you to therapy, talk through any goals or hopes you may have, and give you space to ask any questions. It’s a gentle introduction — there’s no pressure to share anything you’re not ready to."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does it cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sessions cost £60. A concessionary rate of £25 is available for those who need it. Payment is usually made by bank transfer after each session."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long are sessions and how often will we meet?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sessions are 50 minutes long. Most people come weekly, but we can agree together on what works best for you — some prefer fortnightly or a more flexible arrangement."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What if I can’t afford therapy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I understand that therapy is an investment, and it’s important that it feels manageable. If cost is a barrier, please feel free to talk to me about this — I offer a limited number of lower-cost spaces, and I may also be able to signpost you to other services."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is therapy confidential?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, therapy is confidential. What you share stays between us, with a few legal and ethical exceptions — for example, if there’s a risk of serious harm, safeguarding concerns, or a legal requirement to disclose information. I’ll explain all of this clearly in our first session so you feel informed and safe."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What kinds of issues do you work with?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I work with a wide range of concerns, including anxiety, depression, grief and loss, trauma, low self-esteem, relationship difficulties, identity questions, men’s mental health, and more. If you're unsure whether I can help, please do get in touch — I'm happy to talk it through."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to prepare or bring anything to sessions?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No preparation is needed. Just bring yourself. Therapy is your space, and we can take things at a pace that feels right for you."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I know if therapy is right for me?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Many people feel uncertain at first. The best way to find out is to try a session and see how it feels. There’s no obligation to continue if it doesn’t feel like the right fit — this is your process."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What if I don’t feel comfortable?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Feeling safe and heard is key to good therapy. If something doesn’t feel right, I encourage you to talk about it — it’s an important part of the process. I also know I may not be the right fit for everyone, and that’s okay. We can discuss this openly, and if needed, I can help signpost you to another therapist who may be a better match for you."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can sessions be held online or in person?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I offer sessions online and in person (depending on availability). We can discuss what suits you best when you get in touch."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What’s your cancellation policy?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "I ask for 48 hours’ notice if you need to cancel or reschedule a session. Cancellations made with less notice may be charged at the full session fee, unless there are exceptional circumstances."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you work with men, LGBTQ+ or neurodivergent clients?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. My practice is inclusive and welcoming to people of all genders, identities, and backgrounds. I work with individuals from all walks of life and aim to create a space where you feel safe, seen, and respected."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
+  <nav>
+    <div class="nav-inner">
+      <span class="site-title">Me In Time</span>
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="welcome-2.html">Welcome</a></li>
+        <li><a href="counselling.html">Counselling</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="contact.html" class="button-link">Contact</a></li>
+        <li><a href="faq.html" aria-current="page">FAQs</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="welcome-2.html">Welcome</a></li>
-    <li><a href="counselling.html">Counselling</a></li>
-    <li><a href="coaching.html">Coaching</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="faq.html" aria-current="page">FAQs</a></li>
-  </ul>
-</nav>
-
-<main>
-  <h1>Frequently Asked Questions</h1>
-
-  <details>
-    <summary>How do I book a session?</summary>
-    <p>You can book online via the tab below, or get in touch by email, phone, the contact form at the bottom of this page, or through social media. We’ll then arrange an initial session—either in person, by phone, or online.</p>
-  <p><a href="contact.html" class="contact-link">Contact me.</a></p></details>
-
-  <details>
-    <summary>What happens in the first session?</summary>
-    <p>The initial session is a chance for us to get to know each other and explore how we might work together. There’s no obligation to continue, and I always encourage clients to find the therapist who feels like the right fit.</p>
-  </details>
-
-  <details>
-    <summary>How soon can I start?</summary>
-    <p>I usually have availability within the same week you're in touch, and I offer flexible appointment times to suit your schedule.</p>
-  </details>
-
-  <details>
-    <summary>How long will counselling take?</summary>
-    <p>There’s no fixed number of sessions. Some people come for just a few sessions, others longer term. We might start with six and review together as we go. It’s always your choice—and you’re free to pause or stop at any time.</p>
-  </details>
-
-  <details>
-    <summary>What can I expect from the first session?</summary>
-    <p>The first session is a chance for us to get to know each other. We'll explore what’s brought you to therapy, talk through any goals or hopes you may have, and give you space to ask any questions. It’s a gentle introduction — there’s no pressure to share anything you’re not ready to.</p>
-  </details>
-
-  <details>
-    <summary>How much does it cost?</summary>
-    <p>Sessions cost £60. A concessionary rate of £25 is available for those who need it. Payment is usually made by bank transfer after each session.</p>
-  </details>
-
-  <details>
-    <summary>How long are sessions and how often will we meet?</summary>
-    <p>Sessions are 50 minutes long. Most people come weekly, but we can agree together on what works best for you — some prefer fortnightly or a more flexible arrangement.</p>
-  </details>
-
-  <details>
-    <summary>What if I can’t afford therapy?</summary>
-    <p>I understand that therapy is an investment, and it’s important that it feels manageable. If cost is a barrier, please feel free to talk to me about this — I offer a limited number of lower-cost spaces, and I may also be able to signpost you to other services.</p>
-  </details>
-
-  <details>
-    <summary>Is therapy confidential?</summary>
-    <p>Yes, therapy is confidential. What you share stays between us, with a few legal and ethical exceptions — for example, if there’s a risk of serious harm, safeguarding concerns, or a legal requirement to disclose information. I’ll explain all of this clearly in our first session so you feel informed and safe.</p>
-  </details>
-
-  <details>
-    <summary>What kinds of issues do you work with?</summary>
-    <p>I work with a wide range of concerns, including anxiety, depression, grief and loss, trauma, low self-esteem, relationship difficulties, identity questions, men’s mental health, and more. If you're unsure whether I can help, please do get in touch — I'm happy to talk it through.</p>
-  </details>
-
-  <details>
-    <summary>Do I need to prepare or bring anything to sessions?</summary>
-    <p>No preparation is needed. Just bring yourself. Therapy is your space, and we can take things at a pace that feels right for you.</p>
-  </details>
-
-  <details>
-    <summary>How do I know if therapy is right for me?</summary>
-    <p>Many people feel uncertain at first. The best way to find out is to try a session and see how it feels. There’s no obligation to continue if it doesn’t feel like the right fit — this is your process.</p>
-  </details>
-
-  <details>
-    <summary>What if I don’t feel comfortable?</summary>
-    <p>Feeling safe and heard is key to good therapy. If something doesn’t feel right, I encourage you to talk about it — it’s an important part of the process. I also know I may not be the right fit for everyone, and that’s okay. We can discuss this openly, and if needed, I can help signpost you to another therapist who may be a better match for you.</p>
-  </details>
-
-  <details>
-    <summary>Can sessions be held online or in person?</summary>
-    <p>I offer sessions online and in person (depending on availability). We can discuss what suits you best when you get in touch.</p>
-  </details>
-
-  <details>
-    <summary>What’s your cancellation policy?</summary>
-    <p>I ask for 48 hours’ notice if you need to cancel or reschedule a session. Cancellations made with less notice may be charged at the full session fee, unless there are exceptional circumstances.</p>
-  </details>
-
-  <details>
-    <summary>Do you work with men, LGBTQ+ or neurodivergent clients?</summary>
-    <p>Yes. My practice is inclusive and welcoming to people of all genders, identities, and backgrounds. I work with individuals from all walks of life and aim to create a space where you feel safe, seen, and respected.</p>
-  </details>
-
-  <div class="closing-text">
-    <p>If you have any other questions or simply want to have a warm, friendly chat about how I might support you, please don’t hesitate to get in touch.</p>
-    <p>I’m here to listen, understand, and help you take that next gentle step.</p>
-    <p><a href="contact.html" class="contact-link">Reach out anytime — I’d love to hear from you.</a></p>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="welcome-2.html">Welcome</a>
+    <a href="counselling.html">Counselling</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="contact.html" class="button-link">Contact</a>
+    <a href="faq.html" aria-current="page">FAQs</a>
   </div>
-</main>
 
-<footer>
-  &copy; 2025 Me In Time | Stuart Walker Counselling
-</footer>
+  <main>
+    <h1>Frequently Asked Questions</h1>
 
+    <section class="faq">
+      <details><summary>How do I book a session?</summary>
+        <p>You can book online via the tab below, or get in touch by email, phone, the contact form at the bottom of this page, or through social media. We’ll then arrange an initial session—either in person, by phone, or online.</p>
+        <p><a href="contact.html" class="button-link">Contact me.</a></p>
+      </details>
+
+      <details><summary>What happens in the first session?</summary>
+        <p>The initial session is a chance for us to get to know each other and explore how we might work together. There’s no obligation to continue, and I always encourage clients to find the therapist who feels like the right fit.</p>
+      </details>
+
+      <details><summary>How soon can I start?</summary>
+        <p>I usually have availability within the same week you're in touch, and I offer flexible appointment times to suit your schedule.</p>
+      </details>
+
+      <details><summary>How long will counselling take?</summary>
+        <p>There’s no fixed number of sessions. Some people come for just a few sessions, others longer term. We might start with six and review together as we go. It’s always your choice—and you’re free to pause or stop at any time.</p>
+      </details>
+
+      <details><summary>How much does it cost?</summary>
+        <p>Sessions cost £60. A concessionary rate of £25 is available for those who need it. Payment is usually made by bank transfer after each session.</p>
+      </details>
+
+      <details><summary>How long are sessions and how often will we meet?</summary>
+        <p>Sessions are 50 minutes long. Most people come weekly, but we can agree together on what works best for you — some prefer fortnightly or a more flexible arrangement.</p>
+      </details>
+
+      <details><summary>What if I can’t afford therapy?</summary>
+        <p>If cost is a barrier, please talk to me. I offer a limited number of reduced-rate sessions and may be able to signpost alternative services.</p>
+      </details>
+
+      <details><summary>Is therapy confidential?</summary>
+        <p>Yes. Everything shared is confidential, with a few legal/ethical exceptions (e.g. risk of harm). I explain these fully in our first session.</p>
+      </details>
+
+      <details><summary>What kinds of issues do you work with?</summary>
+        <p>I support a range of concerns including anxiety, grief, trauma, low self-worth, identity, and men’s mental health. Please reach out if unsure.</p>
+      </details>
+
+      <details><summary>Do I need to prepare or bring anything to sessions?</summary>
+        <p>Just bring yourself. There's no need to prepare unless you'd like to. Sessions are guided by what feels most helpful to you.</p>
+      </details>
+
+      <details><summary>What if I don’t feel comfortable?</summary>
+        <p>Therapy should feel safe. If anything doesn’t feel right, we can talk about it. I’m also happy to help you find another therapist if needed.</p>
+      </details>
+
+      <details><summary>Can sessions be held online or in person?</summary>
+        <p>I offer both options depending on availability and your preferences. Let’s discuss what suits you best.</p>
+      </details>
+
+      <details><summary>What’s your cancellation policy?</summary>
+        <p>48 hours’ notice is appreciated. Late cancellations may be charged unless there are exceptional circumstances.</p>
+      </details>
+
+      <details><summary>Do you work with men, LGBTQ+, or neurodivergent clients?</summary>
+        <p>Yes. My practice is inclusive and open to people of all identities and backgrounds. I strive to create a safe, respectful environment.</p>
+      </details>
+    </section>
+
+    <div class="closing-text">
+      <p>If you have other questions or simply want to chat, please don’t hesitate to get in touch.</p>
+      <p><a href="contact.html" class="button-link">Reach out anytime — I’d love to hear from you.</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Me In Time | Stuart Walker Counselling</p>
+  </footer>
+
+  <a href="contact.html" class="sticky-contact">📩 Get in Touch</a>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      const burger = document.getElementById('hamburger');
+      nav.classList.toggle('open');
+      burger.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
