@@ -3,61 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Welcome to Me In Time</title>
-  <title>Counselling & Psychotherapy in Manchester & Online</title><meta name="description" content="Me In Time offers warm, person-centred counselling and psychotherapy in Manchester. Stuart Walker supports men and others navigating life’s challenges." />
+  <title>Counselling & Psychotherapy in Manchester | Me In Time</title>
+  <meta name="description" content="Me In Time offers warm, person-centred counselling and psychotherapy in Manchester. Stuart Walker supports men and others navigating life’s challenges." />
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
   <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="welcome-2.html" aria-current="page">Welcome</a></li>
-      <li><a href="counselling.html">Counselling</a></li>
-      <li><a href="coaching.html">Coaching</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="faq.html">FAQs</a></li>
-    </ul>
+    <div class="nav-inner">
+      <span class="site-title">Me In Time</span>
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="welcome-2.html" aria-current="page">Welcome</a></li>
+        <li><a href="counselling.html">Counselling</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="contact.html" class="button-link">Contact</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
   </nav>
 
-</header>
-
-  <h1>Welcome to Me In Time</h1>
-<h1>Counselling & Psychotherapy in Manchester & Online</h1>
-  <p>Maybe you're feeling stuck. Maybe you’re holding more than you can manage on your own. Maybe something's shifted — or maybe nothing has, and that’s part of the problem.</p>
-
-  <p>Whatever brings you here, Me In Time is a space to pause and take stock.</p>
-
-  <p>I'm Stuart Walker — a therapist who offers time, space, and presence for people navigating the difficult bits of life. My approach is warm, grounded, and human. I don’t offer quick fixes, and I won’t pretend to have all the answers. But I’ll meet you with honesty, care, and curiosity.</p>
-
-  <p>I believe therapy is a conversation. It’s a place to explore things you might not say anywhere else. To be heard — without being judged or rushed. To remember your voice. To make space for whatever you’ve been carrying.</p>
-
-  <p>This work isn’t about getting it right. It’s about giving yourself time — to make sense, to feel, to breathe, to be.</p>
-
-  <div class="closing-lines">
-    <p>No need to be polished.<br />
-    No need to be strong.<br />
-    No need to be sorry.</p>
-
-    <p>Just begin.</p>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="welcome-2.html">Welcome</a>
+    <a href="counselling.html">Counselling</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="contact.html" class="button-link">Contact</a>
+    <a href="faq.html">FAQs</a>
   </div>
+
+  <main>
+    <h1>Welcome to Me In Time</h1>
+    <h2>Counselling & Psychotherapy in Manchester & Online</h2>
+
+    <p>Maybe you're feeling stuck. Maybe you’re holding more than you can manage on your own. Maybe something's shifted — or maybe nothing has, and that’s part of the problem.</p>
+
+    <p>Whatever brings you here, Me In Time is a space to pause and take stock.</p>
+
+    <p>I'm Stuart Walker — a therapist who offers time, space, and presence for people navigating the difficult bits of life. My approach is warm, grounded, and human. I don’t offer quick fixes, and I won’t pretend to have all the answers. But I’ll meet you with honesty, care, and curiosity.</p>
+
+    <p>I believe therapy is a conversation. It’s a place to explore things you might not say anywhere else. To be heard — without being judged or rushed. To remember your voice. To make space for whatever you’ve been carrying.</p>
+
+    <p>This work isn’t about getting it right. It’s about giving yourself time — to make sense, to feel, to breathe, to be.</p>
+
+    <p><a href="contact.html" class="button-link">📩 Get in Touch</a></p>
+
+    <div class="closing-lines">
+      <p>No need to be polished.<br />
+      No need to be strong.<br />
+      No need to be sorry.</p>
+      <p>Just begin.</p>
+    </div>
+  </main>
 
   <footer>
     &copy; 2025 Me In Time | Stuart Walker Counselling
     <div>
-      <img src="images/BACP-Logo.png" alt="British Association for Counselling and Psychotherapy Logo" />
+      <img src="images/BACP-Logo.png" alt="British Association for Counselling and Psychotherapy Logo" style="max-width:320px;margin-top:30px;" />
     </div>
   </footer>
 
-  <style>
-    footer img {
-      max-width: 320px; /* Bigger logo */
-      height: auto;
-      margin-top: 30px;
-      display: inline-block;
-    }
-  </style>
+  <a href="contact.html" class="sticky-contact">📩 Get in Touch</a>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      const burger = document.getElementById('hamburger');
+      nav.classList.toggle('open');
+      burger.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
