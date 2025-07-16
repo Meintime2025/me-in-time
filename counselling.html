@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Counselling Services in Manchester | Me In Time with Stuart Walker</title>
   <meta name="description" content="Explore compassionate one-to-one online counselling with Stuart Walker at Me In Time. Specialising in grief, men's mental health, trauma, and life transitions. Book a free consultation today." />
   <meta name="keywords" content="Counselling Manchester, online counselling, men's mental health, grief therapy, psychotherapy, life transitions, trauma counselling" />
@@ -11,63 +11,88 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<nav role="navigation" aria-label="Primary navigation">
-  <ul>
-    <li><a href="index.html" title="Home page">Home</a></li>
-    <li><a href="welcome-2.html" title="Welcome to Me In Time">Welcome</a></li>
-    <li><a href="counselling.html" aria-current="page" title="Counselling Services">Counselling</a></li>
-    <li><a href="coaching.html" title="Coaching Services">Coaching</a></li>
-    <li><a href="contact.html" title="Contact Me In Time">Contact</a></li>
-    <li><a href="faq.html" title="Frequently Asked Questions">FAQs</a></li>
-  </ul>
-</nav>
-
-<main>
-  <article>
-    <header>
-      <h1>Counselling Services</h1>
-    </header>
-
-    <p>Starting therapy for the first time—or returning after a difficult experience—can feel daunting. It’s common to carry fears about being misunderstood, judged, or not knowing what to expect. For many men, these feelings can be even harder to face, with pressures to appear strong and keep emotions private.</p>
-
-    <p>At Me In Time, I understand these challenges deeply. I offer integrative online counselling designed to meet you where you are, with kindness and patience. This is a safe, non-judgmental space where your story matters, and you can explore your feelings at your own pace—without pressure or expectations.</p>
-
-    <h2>What I Offer</h2>
-
-    <h3>One-to-One Counselling</h3>
-    <p>Weekly 50-minute sessions online, crafted to support you through your unique journey, whether it’s your first time or a fresh start after a tough experience.</p>
-
-    <h3>Individual Work</h3>
-    <p>Therapy can feel unfamiliar, but here you’ll find a confidential space to share openly, with someone who listens attentively and responds with empathy. Together, we’ll work to understand what’s happening for you, gently uncovering insights and building a foundation for healing.</p>
-
-    <h2>Understanding Counselling and Psychotherapy</h2>
-    <p>While counselling tends to focus on immediate challenges and practical support, psychotherapy often explores deeper patterns and longer-term change. I use an integrative approach, blending these methods and tailoring the work to what feels right for you.</p>
-    <p>We can discuss these differences more fully during an introductory meeting to ensure the right approach for you.</p>
-
-    <h2>Areas I Focus On</h2>
-    <p>Grief and loss, men’s mental health, trauma, life transitions, relationships, self-esteem, and more. I know how difficult it can be to ask for help when you’ve been hurt or felt unheard before. Together, we’ll create a compassionate space where you can break the silence and start to heal.</p>
-
-    <h2>Flexible Pricing</h2>
-    <p>Sessions cost £60, with a concessionary rate of £25 available for those who need it. I’m happy to discuss what works best for your situation.</p>
-
-    <h2>Confidentiality & Ethics</h2>
-    <p>Your privacy is respected completely. All sessions follow the ethical standards of the British Association for Counselling and Psychotherapy (BACP), with secure handling of your personal information under GDPR.</p>
-
-    <p><a href="contact.html" class="button-link" title="Find out more on the Contact page">Find out more on the Contact Me page</a></p>
-
-    <h2>How We Work Together</h2>
-    <p>I combine honesty, empathy, and practical support to create a welcoming space that helps you find clarity and take meaningful steps forward. I understand that reaching out is an act of courage—especially for men—and I’m here to meet you with respect, patience, and genuine care.</p>
-  </article>
-
-    <a href="contact.html" class="button-link" title="Get in touch for a free consultation">Get in Touch for a Free Consultation</a>
+  <nav>
+    <div class="nav-inner">
+      <span class="site-title">Me In Time</span>
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="welcome-2.html">Welcome</a></li>
+        <li><a href="counselling.html" aria-current="page">Counselling</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="contact.html" class="button-link">Contact</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
   </nav>
-</main>
 
-<footer>
-  <p>&copy; 2025 Me In Time | Stuart Walker Counselling & Psychotherapy</p>
-  <p><a href="contact.html" title="Privacy & Confidentiality">Privacy & Confidentiality</a> — Your privacy matters. If you have questions or want to know more, please don’t hesitate to <a href="contact.html" title="Contact Me In Time">get in touch</a>.</p>
-</footer>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="welcome-2.html">Welcome</a>
+    <a href="counselling.html">Counselling</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="contact.html" class="button-link">Contact</a>
+    <a href="faq.html">FAQs</a>
+  </div>
 
+  <main>
+    <article>
+      <header>
+        <h1>Counselling Services</h1>
+      </header>
+
+      <p>Starting therapy for the first time—or returning after a difficult experience—can feel daunting. It’s common to carry fears about being misunderstood, judged, or not knowing what to expect. For many men, these feelings can be even harder to face, with pressures to appear strong and keep emotions private.</p>
+
+      <p>At Me In Time, I understand these challenges deeply. I offer integrative online counselling designed to meet you where you are, with kindness and patience. This is a safe, non-judgmental space where your story matters, and you can explore your feelings at your own pace—without pressure or expectations.</p>
+
+      <h2>What I Offer</h2>
+
+      <h3>One-to-One Counselling</h3>
+      <p>Weekly 50-minute sessions online, crafted to support you through your unique journey, whether it’s your first time or a fresh start after a tough experience.</p>
+
+      <h3>Individual Work</h3>
+      <p>Therapy can feel unfamiliar, but here you’ll find a confidential space to share openly, with someone who listens attentively and responds with empathy. Together, we’ll work to understand what’s happening for you, gently uncovering insights and building a foundation for healing.</p>
+
+      <h2>Understanding Counselling and Psychotherapy</h2>
+      <p>While counselling tends to focus on immediate challenges and practical support, psychotherapy often explores deeper patterns and longer-term change. I use an integrative approach, blending these methods and tailoring the work to what feels right for you.</p>
+      <p>We can discuss these differences more fully during an introductory meeting to ensure the right approach for you.</p>
+
+      <h2>Areas I Focus On</h2>
+      <p>Grief and loss, men’s mental health, trauma, life transitions, relationships, self-esteem, and more. I know how difficult it can be to ask for help when you’ve been hurt or felt unheard before. Together, we’ll create a compassionate space where you can break the silence and start to heal.</p>
+
+      <h2>Flexible Pricing</h2>
+      <p>Sessions cost £60, with a concessionary rate of £25 available for those who need it. I’m happy to discuss what works best for your situation.</p>
+
+      <h2>Confidentiality & Ethics</h2>
+      <p>Your privacy is respected completely. All sessions follow the ethical standards of the British Association for Counselling and Psychotherapy (BACP), with secure handling of your personal information under GDPR.</p>
+
+      <p><a href="contact.html" class="button-link">Find out more on the Contact Me page</a></p>
+
+      <h2>How We Work Together</h2>
+      <p>I combine honesty, empathy, and practical support to create a welcoming space that helps you find clarity and take meaningful steps forward. I understand that reaching out is an act of courage—especially for men—and I’m here to meet you with respect, patience, and genuine care.</p>
+
+      <a href="contact.html" class="button-link">Get in Touch for a Free Consultation</a>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Me In Time | Stuart Walker Counselling & Psychotherapy</p>
+    <p><a href="contact.html" class="button-link">Privacy & Confidentiality</a></p>
+  </footer>
+
+  <a href="contact.html" class="sticky-contact">📩 Get in Touch</a>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      const burger = document.getElementById('hamburger');
+      nav.classList.toggle('open');
+      burger.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
