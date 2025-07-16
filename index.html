@@ -1,1 +1,79 @@
-<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Home | Me In Time</title><link rel='stylesheet' href='styles.css'></head><body><h1>Home</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Me In Time | Stuart Walker Counselling</title>
+  <meta name="description" content="Me In Time offers warm, grounded, person-centred counselling and coaching in Manchester and online." />
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <span class="site-title">Me In Time</span>
+      <button class="hamburger" onclick="toggleMenu()" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="welcome-2.html">Welcome</a></li>
+        <li><a href="counselling.html">Counselling</a></li>
+        <li><a href="coaching.html">Coaching</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="welcome-2.html">Welcome</a>
+    <a href="counselling.html">Counselling</a>
+    <a href="coaching.html">Coaching</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQs</a>
+  </div>
+
+  <main>
+    <section>
+      <h1>Welcome to Me In Time</h1>
+      <p>Grounded, human support for the difficult bits of life. Offering counselling and coaching online and in Manchester.</p>
+      <p><a href="contact.html" class="button-link">Get in Touch</a></p>
+    </section>
+
+    <section>
+      <h2>Our Approach</h2>
+      <p>I’m Stuart Walker — a therapist and coach who believes in meeting you where you are. With warmth, curiosity and no judgement, I’ll help you explore what’s been heavy, unclear, or stuck.</p>
+    </section>
+
+    <section>
+      <h2>Services</h2>
+      <ul>
+        <li><strong>Counselling:</strong> Person-centred support for grief, anxiety, transitions and more</li>
+        <li><strong>Coaching:</strong> Gentle, practical reflection for clarity and next steps</li>
+        <li><strong>Flexible sessions:</strong> Online or in-person, with options for reduced fees</li>
+      </ul>
+      <p><a href="counselling.html" class="button-link">Explore Counselling</a>
+         <a href="coaching.html" class="button-link">Explore Coaching</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Me In Time | Stuart Walker Counselling
+  </footer>
+
+  <a href="contact.html" class="sticky-contact">📩 Get in Touch</a>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('mobileNav');
+      const burger = document.getElementById('hamburger');
+      nav.classList.toggle('open');
+      burger.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
