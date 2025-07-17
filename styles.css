@@ -153,11 +153,25 @@
   }
 
   .sticky-contact {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    z-index: 9999;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8DB54B;
+  color: white;
+  padding: 12px 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.sticky-contact:hover {
+  background-color: #567235;
+  color: #E7E9D1;
+
   }
 
   .privacy {
