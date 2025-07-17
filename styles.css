@@ -220,7 +220,7 @@ details {
   color: #555A4A;
 }
 
-/* Intro Layout for Contact/Welcome */
+/* Intro Layout for All Pages */
 .intro-section {
   display: flex;
   align-items: flex-start;
@@ -229,7 +229,24 @@ details {
   margin: 40px 0;
 }
 
-/* Welcome Page Image */
+/* Coaching Image Styling (Tram.jpeg) */
+.coaching-photo {
+  flex: 0 0 280px;
+  max-width: 280px;
+  margin-top: 20px;
+  align-self: flex-end; /* Moves it down */
+}
+
+.coaching-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4.2; /* Makes it taller */
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Welcome Image */
 .welcome-photo {
   flex: 0 0 200px;
   max-width: 200px;
@@ -241,7 +258,7 @@ details {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact Page Image */
+/* Contact Image */
 .contact-photo {
   flex: 0 0 220px;
   max-width: 220px;
@@ -253,83 +270,14 @@ details {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Text block stays the same */
+/* Text Block */
 .intro-text {
   flex: 1;
   min-width: 200px;
   text-align: left;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .intro-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .welcome-photo,
-  .contact-photo {
-    max-width: 140px;
-    flex: 0 0 140px;
-    margin-bottom: 20px;
-  }
-
-  .intro-text {
-    width: 100%;
-    text-align: left;
-  }
-/* Coaching Page Image */
-.coaching-photo {
-  flex: 0 0 240px; /* Slightly wider */
-  max-width: 240px;
-  align-self: flex-start; /* Align to top */
-}
-
-/* Coaching Section Layout */
-.coaching-photo {
-  flex: 0 0 260px;
-  max-width: 260px;
-  align-self: flex-start;
-  margin-bottom: 20px;
-}
-
-.coaching-photo img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  aspect-ratio: 3 / 4; /* Slightly taller image */
-}
-
-/* Responsive layout for coaching intro */
-@media (max-width: 768px) {
-  .intro-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .coaching-photo {
-    max-width: 160px;
-    flex: 0 0 160px;
-  }
-
-  .intro-text {
-    width: 100%;
-    text-align: left;
-  }
-}
-  }
-/* Text block stays the same */
-.intro-text {
-  flex: 1;
-  min-width: 200px;
-  text-align: left;
-}
-
-/* Mobile adjustments */
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .intro-section {
     flex-direction: column;
@@ -343,6 +291,7 @@ details {
     max-width: 140px;
     flex: 0 0 140px;
     margin-bottom: 20px;
+    align-self: center;
   }
 
   .intro-text {
