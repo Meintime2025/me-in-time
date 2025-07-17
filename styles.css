@@ -21,11 +21,10 @@
 }
 
 .bacp-logo img {
-  height: 70px; /* Increase or tweak here */
+  height: 70px; /* Adjust if still too large */
   width: auto;
   max-width: 100%;
   display: block;
-}
 }
     body {
       font-family: 'Lora', serif;
