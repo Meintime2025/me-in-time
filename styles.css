@@ -281,9 +281,11 @@ details {
   }
 /* Coaching Page Image */
 .coaching-photo {
-  flex: 0 0 220px;
-  max-width: 220px;
+  flex: 0 0 260px; /* slightly taller */
+  max-width: 260px;
+  align-self: flex-start; /* aligns top with text */
 }
+
 .coaching-photo img {
   width: 100%;
   height: auto;
