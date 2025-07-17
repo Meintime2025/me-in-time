@@ -74,14 +74,12 @@ nav {
 }
 
 .site-logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-right: auto;
+  flex-shrink: 0;
+  margin-right: 20px;
 }
 
 .site-logo img {
-  height: 50px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   display: block;
