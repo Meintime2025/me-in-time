@@ -244,8 +244,8 @@ details {
 
 /* Contact Page Image */
 .contact-photo {
-  flex: 0 0 180px;
-  max-width: 180px;
+  flex: 0 0 100px;
+  max-width: 100px;
 }
 .contact-photo img {
   width: 100%;
