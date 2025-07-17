@@ -281,9 +281,9 @@ details {
   }
 /* Coaching Page Image */
 .coaching-photo {
-  flex: 0 0 260px; /* slightly taller */
-  max-width: 260px;
-  align-self: flex-start; /* aligns top with text */
+  flex: 0 0 240px; /* Slightly wider */
+  max-width: 240px;
+  align-self: flex-start; /* Align to top */
 }
 
 .coaching-photo img {
@@ -291,6 +291,8 @@ details {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 3 / 4; /* Makes the image taller */
+  object-fit: cover;
 }
 
 /* Text block stays the same */
