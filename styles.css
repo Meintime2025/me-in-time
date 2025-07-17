@@ -268,18 +268,6 @@ details {
     text-align: center;
   }
 
-  .contact-photo {
-    max-width: 140px;
-    flex: 0 0 140px;
-    margin-bottom: 20px;
-  }
-
-  .intro-text {
-    width: 100%;
-    text-align: left;
-  }
-}
-
   .welcome-photo,
   .contact-photo {
     max-width: 140px;
