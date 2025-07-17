@@ -293,8 +293,24 @@ details {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   aspect-ratio: 3 / 4; /* Makes the image taller */
   object-fit: cover;
-}
+} 
+ @media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
+  .coaching-photo {
+    max-width: 160px;
+    flex: 0 0 160px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text {
+    width: 100%;
+    text-align: left;
+  }
 /* Text block stays the same */
 .intro-text {
   flex: 1;
