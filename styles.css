@@ -142,13 +142,14 @@
     color: #E7E9D1;
   }
 
-  footer {
-    text-align: left;
-    margin-top: 60px;
-    padding: 20px 0;
-    color: #69892C;
-    font-family: 'Lora', serif;
-    font-size: 0.9rem;
+ footer {
+  text-align: left;
+  margin-top: 60px;
+  padding: 20px 0;
+  color: #69892C;
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
+}
   }
 
   .sticky-contact {
