@@ -68,7 +68,6 @@ nav {
   box-shadow: 0 4px 12px rgba(70, 90, 40, 0.5);
   color: black;
 }
-
 nav::before {
   content: "";
   position: absolute;
