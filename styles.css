@@ -239,34 +239,30 @@ details {
   line-height: 1.6;
 }
 
-/* Welcome Page Image */
-.welcome-photo {
-  text-align: center;
-  margin: 30px 0;
+/* Intro Section for Welcome and Contact Pages */
+.intro-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 40px 0;
 }
 
-.welcome-photo img {
+.intro-photo {
+  flex: 0 0 180px;
   max-width: 180px;
+}
+
+.intro-photo img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: max-width 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact Page Image */
-.contact-photo {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.contact-photo img {
-  max-width: 180px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: max-width 0.3s ease;
+.intro-text {
+  flex: 1;
+  min-width: 200px;
 }
 
 /* Mobile Styles */
@@ -341,8 +337,18 @@ details {
     border-radius: 6px;
   }
 
-  .welcome-photo img,
-  .contact-photo img {
-    max-width: 110px;
+  .intro-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-photo {
+    max-width: 130px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text {
+    width: 100%;
   }
 }
