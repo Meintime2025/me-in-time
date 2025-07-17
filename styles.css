@@ -121,8 +121,10 @@ nav a:hover {
   display: block;
 }
 
-/* Reusable button base */
-.button-base {
+/* Button Styles (all three share same rules) */
+.button-link,
+.contact-button,
+.sticky-contact {
   display: inline-block;
   background-color: #8DB54B;
   color: white;
@@ -136,16 +138,11 @@ nav a:hover {
   transition: background-color 0.3s ease;
 }
 
-.button-base:hover {
+.button-link:hover,
+.contact-button:hover,
+.sticky-contact:hover {
   background-color: #567235;
   color: #E7E9D1;
-}
-
-/* Apply base to buttons */
-.button-link,
-.contact-button,
-.sticky-contact {
-  composes: button-base;
 }
 
 /* Sticky floating contact */
@@ -157,6 +154,7 @@ nav a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Footer */
 footer {
   text-align: left;
   margin-top: 60px;
@@ -167,6 +165,7 @@ footer {
   line-height: 1.4;
 }
 
+/* Privacy Section */
 .privacy {
   margin-top: 40px;
 }
