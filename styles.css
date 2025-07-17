@@ -286,15 +286,25 @@ details {
   align-self: flex-start; /* Align to top */
 }
 
+/* Coaching Section Layout */
+.coaching-photo {
+  flex: 0 0 260px;
+  max-width: 260px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
 .coaching-photo img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  aspect-ratio: 3 / 4; /* Makes the image taller */
   object-fit: cover;
-} 
- @media (max-width: 768px) {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 3 / 4; /* Slightly taller image */
+}
+
+/* Responsive layout for coaching intro */
+@media (max-width: 768px) {
   .intro-section {
     flex-direction: column;
     align-items: center;
@@ -304,12 +314,13 @@ details {
   .coaching-photo {
     max-width: 160px;
     flex: 0 0 160px;
-    margin-bottom: 20px;
   }
 
   .intro-text {
     width: 100%;
     text-align: left;
+  }
+}
   }
 /* Text block stays the same */
 .intro-text {
