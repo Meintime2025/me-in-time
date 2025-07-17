@@ -332,7 +332,7 @@ details {
 }
 
 .welcome-photo img {
-  max-width: 100%;
+  max-width: 66%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -342,10 +342,11 @@ details {
 }
 
 .contact-photo img {
-  max-width: 250px;
+  max-width: 66px; /* previously 250px */
   width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 }
 }
