@@ -57,7 +57,7 @@ a:hover {
 /* Navigation (Banner) */
 nav {
   position: relative;
-  background-image: url("images/manchester-skyline.jpg");
+  background-image: url("/images/manchester-skyline.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
