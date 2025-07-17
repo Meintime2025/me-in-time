@@ -50,17 +50,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Typography */
-@media (max-width: 768px) {
-  body {
-    font-size: 1rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-}
-
 /* Navigation Banner */
 nav {
   position: relative;
@@ -250,8 +239,46 @@ details {
   line-height: 1.6;
 }
 
+/* Welcome Page Image */
+.welcome-photo {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.welcome-photo img {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: max-width 0.3s ease;
+}
+
+/* Contact Page Image */
+.contact-photo {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.contact-photo img {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: max-width 0.3s ease;
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
   .site-logo img {
     height: 70px;
   }
@@ -313,64 +340,9 @@ details {
     background-color: #8DB54B;
     border-radius: 6px;
   }
-.welcome-intro {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
-}
 
-.welcome-text {
-  flex: 1 1 55%;
-}
-
-.welcome-photo {
-  flex: 1 1 40%;
-  text-align: center;
-}
-
-/* === Welcome Page Image === */
-.welcome-photo {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.welcome-photo img {
-  max-width: 250px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: max-width 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .welcome-photo img {
-    max-width: 140px;
-  }
-}
-
-/* === Contact Page Image === */
-.contact-photo {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.contact-photo img {
-  max-width: 250px;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: max-width 0.3s ease;
-}
-
-@media (max-width: 768px) {
+  .welcome-photo img,
   .contact-photo img {
-    max-width: 140px;
+    max-width: 110px;
   }
 }
-  }
-
