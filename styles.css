@@ -145,7 +145,7 @@ nav a:hover {
 .contact-button,
 .sticky-contact {
   display: inline-block;
-  background-color: #8DB54B;
+  background-color: #789E2D; /* toned-down olive green */
   color: white;
   padding: 12px 25px;
   font-family: 'Montserrat', sans-serif;
@@ -155,13 +155,14 @@ nav a:hover {
   text-decoration: none;
   margin-bottom: 12px;
   transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .button-link:hover,
 .contact-button:hover,
 .sticky-contact:hover {
-  background-color: #567235;
-  color: #E7E9D1;
+  background-color: #5F7F24; /* slightly darker olive for hover */
+  color: #F5F7EC; /* soft off-white */
 }
 
 /* Sticky floating contact */
