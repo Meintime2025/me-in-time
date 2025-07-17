@@ -150,8 +150,6 @@
   font-family: 'Lora', serif;
   font-size: 0.9rem;
 }
-  }
-
   .sticky-contact {
   position: fixed;
   bottom: 20px;
@@ -171,7 +169,6 @@
 .sticky-contact:hover {
   background-color: #567235;
   color: #E7E9D1;
-
   }
 
   .privacy {
