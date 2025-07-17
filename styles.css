@@ -313,4 +313,27 @@ details {
     background-color: #8DB54B;
     border-radius: 6px;
   }
+.welcome-intro {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.welcome-text {
+  flex: 1 1 55%;
+}
+
+.welcome-photo {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.welcome-photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
