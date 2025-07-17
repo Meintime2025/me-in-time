@@ -13,12 +13,15 @@
       padding: 0;
     }
 .bacp-logo {
-  text-align: left;
-  margin-top: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 60px;
+  padding-left: 10px;
 }
 
 .bacp-logo img {
-  height: 50px; 
+  height: 70px; /* Increase or tweak here */
   width: auto;
   max-width: 100%;
   display: block;
