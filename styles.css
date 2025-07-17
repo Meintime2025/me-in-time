@@ -331,22 +331,46 @@ details {
   text-align: center;
 }
 
+/* === Welcome Page Image === */
+.welcome-photo {
+  text-align: center;
+  margin: 40px 0;
+}
+
 .welcome-photo img {
-  max-width: 66%;
+  max-width: 250px;
+  width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  .contact-photo {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: max-width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .welcome-photo img {
+    max-width: 140px;
+  }
+}
+
+/* === Contact Page Image === */
+.contact-photo {
   text-align: center;
   margin: 40px 0;
 }
 
 .contact-photo img {
-  max-width: 66px; /* previously 250px */
+  max-width: 250px;
   width: 100%;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: max-width 0.3s ease;
 }
+
+@media (max-width: 768px) {
+  .contact-photo img {
+    max-width: 140px;
+  }
 }
-}
+  }
+
