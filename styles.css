@@ -80,7 +80,7 @@
   }
 
   .site-logo img {
-    height: 120px; /* Twice the size */
+    height: 120px; 
     width: auto;
     object-fit: contain;
     display: block;
@@ -99,7 +99,7 @@
     font-weight: 700;
     padding: 10px 15px;
     border-radius: 30px;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
   }
 
   nav a:hover {
