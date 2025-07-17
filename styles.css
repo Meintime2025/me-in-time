@@ -336,4 +336,16 @@ details {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  .contact-photo {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.contact-photo img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 }
