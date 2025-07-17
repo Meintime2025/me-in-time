@@ -71,18 +71,19 @@ nav {
   gap: 20px;
 }
 
+.site-logo img {
+  height: 50px; /* adjust this to control size */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .site-logo {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  margin-right: auto;
 }
-
-.site-logo img {
-  height: 70px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
-
 .nav-links {
   display: flex;
   gap: 20px;
