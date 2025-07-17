@@ -243,8 +243,8 @@ details {
 
 /* Contact Page Image */
 .contact-photo {
-  flex: 0 0 175px;
-  max-width: 175px;
+  flex: 0 0 150px;
+  max-width: 150px;
 }
 .contact-photo img {
   width: 100%;
