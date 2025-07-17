@@ -269,8 +269,8 @@ details {
 
   .welcome-photo,
   .contact-photo {
-    max-width: 120px;
-    flex: 0 0 120px;
+    max-width: 140px;
+    flex: 0 0 140px;
     margin-bottom: 20px;
   }
 
