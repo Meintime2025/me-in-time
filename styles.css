@@ -257,6 +257,7 @@ details {
 .intro-text {
   flex: 1;
   min-width: 200px;
+  text-align: left;
 }
 
 /* Mobile adjustments */
@@ -266,6 +267,18 @@ details {
     align-items: center;
     text-align: center;
   }
+
+  .contact-photo {
+    max-width: 140px;
+    flex: 0 0 140px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text {
+    width: 100%;
+    text-align: left;
+  }
+}
 
   .welcome-photo,
   .contact-photo {
