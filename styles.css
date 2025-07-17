@@ -1,9 +1,11 @@
+/* Reset box-sizing and margin/padding */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Base font styles and layout */
 body {
   font-family: 'Lora', serif;
   color: #555A4A;
@@ -17,13 +19,13 @@ body {
   position: relative;
 }
 
+/* Standardize headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #567235;
   margin-top: 40px;
   margin-bottom: 20px;
-  text-align: left;
   line-height: 1.2;
 }
 
@@ -51,6 +53,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Navigation Bar */
 nav {
   background-color: #789E2D;
   box-shadow: 0 4px 12px rgba(70, 90, 40, 0.5);
@@ -65,17 +68,9 @@ nav {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
   gap: 20px;
-}
-
-.site-logo img {
-  height: 50px; /* adjust this to control size */
-  width: auto;
-  object-fit: contain;
-  display: block;
 }
 
 .site-logo {
@@ -84,28 +79,37 @@ nav {
   justify-content: flex-start;
   margin-right: auto;
 }
-.nav-links {
+
+.site-logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Nav links */
+nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
   flex-wrap: wrap;
-  margin-left: auto;
 }
 
 nav a {
   color: white;
-  text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   padding: 8px 12px;
   border-radius: 30px;
   font-size: 0.95rem;
+  text-decoration: none;
 }
 
 nav a:hover {
   background-color: #8DB54B;
 }
 
+/* Buttons */
 .button-link, .contact-button, .sticky-contact {
   display: inline-block;
   background-color: #8DB54B;
@@ -125,6 +129,16 @@ nav a:hover {
   color: #E7E9D1;
 }
 
+/* Sticky button */
+.sticky-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+/* Footer */
 footer {
   text-align: left;
   margin-top: 60px;
@@ -134,14 +148,7 @@ footer {
   font-size: 0.9rem;
 }
 
-.sticky-contact {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  z-index: 9999;
-}
-
+/* Privacy section */
 .privacy {
   margin-top: 40px;
 }
@@ -150,6 +157,7 @@ footer {
   margin-left: 20px;
 }
 
+/* Expandable FAQs */
 summary {
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
@@ -186,13 +194,13 @@ details {
   line-height: 1.6;
 }
 
-/* Mobile styles */
+/* Mobile navigation */
 @media (max-width: 768px) {
   .site-logo img {
-    height: 50px;
+    height: 40px;
   }
 
-  .nav-links {
+  nav ul {
     display: none;
   }
 
