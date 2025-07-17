@@ -12,7 +12,12 @@
       margin: 0;
       padding: 0;
     }
-
+.bacp-logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+  margin: 40px auto 0;
+}
     body {
       font-family: 'Lora', serif;
       color: #555A4A;
