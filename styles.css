@@ -221,7 +221,6 @@ details {
 }
 
 /* Intro Layout for Contact/Welcome */
-/* Optional: Shared structure */
 .intro-section {
   display: flex;
   align-items: flex-start;
@@ -232,8 +231,8 @@ details {
 
 /* Welcome Page Image */
 .welcome-photo {
-  flex: 0 0 230px;
-  max-width: 230px;
+  flex: 0 0 200px;
+  max-width: 200px;
 }
 .welcome-photo img {
   width: 100%;
@@ -244,8 +243,8 @@ details {
 
 /* Contact Page Image */
 .contact-photo {
-  flex: 0 0 100px;
-  max-width: 100px;
+  flex: 0 0 175px;
+  max-width: 175px;
 }
 .contact-photo img {
   width: 100%;
@@ -268,12 +267,15 @@ details {
     text-align: center;
   }
 
-  .welcome-photo, .contact-photo {
-    max-width: 180px;
+  .welcome-photo,
+  .contact-photo {
+    max-width: 120px;
+    flex: 0 0 120px;
     margin-bottom: 20px;
   }
 
   .intro-text {
     width: 100%;
+    text-align: left;
   }
 }
