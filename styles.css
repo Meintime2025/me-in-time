@@ -269,7 +269,22 @@ details {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+/* Counselling Page Image */
+.counselling-photo {
+  flex: 0 0 280px;
+  max-width: 280px;
+  margin-top: 20px;
+  align-self: flex-end;
+}
 
+.counselling-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4.2;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 /* Text Block */
 .intro-text {
   flex: 1;
@@ -287,7 +302,8 @@ details {
 
   .welcome-photo,
   .contact-photo,
-  .coaching-photo {
+  .coaching-photo,
+  .counselling-photo {
     max-width: 140px;
     flex: 0 0 140px;
     margin-bottom: 20px;
