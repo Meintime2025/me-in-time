@@ -68,13 +68,14 @@ nav {
   box-shadow: 0 4px 12px rgba(70, 90, 40, 0.5);
   color: black;
 }
+
 nav::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.4); /* Light overlay to make text stand out */
+  background: rgba(255, 255, 255, 0.4); /* overlay for contrast */
   z-index: 0;
   border-radius: 10px;
 }
@@ -117,11 +118,12 @@ nav a {
   border-radius: 30px;
   font-size: 1.4rem;
   background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: rgba(141, 181, 75, 0.9);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
 }
 
 /* BACP Logo */
@@ -140,12 +142,12 @@ nav a:hover {
   display: block;
 }
 
-/* Buttons (green bubble style) */
+/* Buttons (toned-down green) */
 .button-link,
 .contact-button,
 .sticky-contact {
   display: inline-block;
-  background-color: #789E2D; /* toned-down olive green */
+  background-color: #789E2D;
   color: white;
   padding: 12px 25px;
   font-family: 'Montserrat', sans-serif;
@@ -161,11 +163,23 @@ nav a:hover {
 .button-link:hover,
 .contact-button:hover,
 .sticky-contact:hover {
-  background-color: #5F7F24; /* slightly darker olive for hover */
-  color: #F5F7EC; /* soft off-white */
+  background-color: #5F7F24;
+  color: #F5F7EC;
 }
 
-/* Sticky floating contact */
+/* Sticky translucent override for banner button */
+.sticky-contact.sticky-translucent {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  backdrop-filter: blur(5px);
+}
+
+.sticky-contact.sticky-translucent:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+/* Sticky floating position */
 .sticky-contact {
   position: fixed;
   bottom: 20px;
@@ -294,14 +308,4 @@ details {
     background-color: #8DB54B;
     border-radius: 6px;
   }
-/* Override sticky button on banner */
-.sticky-contact.sticky-translucent {
-  background-color: rgba(255, 255, 255, 0.6); /* translucent white */
-  color: black;
-  backdrop-filter: blur(5px); /* optional glass effect */
 }
-
-.sticky-contact.sticky-translucent:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
-}}
