@@ -61,7 +61,7 @@ a:hover {
   }
 }
 
-/* Navigation (Banner) */
+/* Navigation Banner */
 nav {
   position: relative;
   background-image: url("images/manchester-skyline.jpg");
@@ -128,7 +128,7 @@ nav a:hover {
   color: black;
 }
 
-/* Buttons */
+/* Buttons - Default Solid Green */
 .button-link,
 .contact-button,
 .sticky-contact {
@@ -153,7 +153,7 @@ nav a:hover {
   color: #F5F7EC;
 }
 
-/* Translucent Variant */
+/* Translucent Button Variant */
 .button-link.translucent-button,
 .contact-button.translucent-button,
 .sticky-contact.sticky-translucent {
@@ -169,7 +169,7 @@ nav a:hover {
   color: black;
 }
 
-/* Sticky Button Floating Position */
+/* Sticky Floating Contact Button */
 .sticky-contact {
   position: fixed;
   bottom: 20px;
