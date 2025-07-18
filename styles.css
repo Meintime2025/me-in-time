@@ -220,7 +220,7 @@ details {
   color: #555A4A;
 }
 
-/* Intro Layout */
+/* Intro Section Layout */
 .intro-section {
   display: flex;
   align-items: flex-start;
@@ -229,14 +229,20 @@ details {
   margin: 40px 0;
 }
 
-/* Welcome Image Inside Text */
+/* Inline Images for Text Wrap */
 .inline-welcome-image {
-  float: right;
   width: 180px;
-  margin-left: 20px;
-  margin-bottom: 10px;
+  margin: 0 20px 10px 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.inline-welcome-image.left {
+  float: left;
+}
+
+.inline-welcome-image.right {
+  float: right;
 }
 
 /* Other Page Photos */
@@ -267,7 +273,7 @@ details {
   text-align: left;
 }
 
-/* Mobile Responsive */
+/* Responsive Layout */
 @media (max-width: 768px) {
   .intro-section {
     flex-direction: column;
@@ -275,10 +281,12 @@ details {
     text-align: center;
   }
 
-  .inline-welcome-image {
+  .inline-welcome-image,
+  .inline-welcome-image.left,
+  .inline-welcome-image.right {
     float: none;
-    margin: 0 auto 20px auto;
     display: block;
+    margin: 0 auto 20px auto;
   }
 
   .intro-text {
