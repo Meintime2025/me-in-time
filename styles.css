@@ -285,97 +285,65 @@ details {
 .coaching-only .text-without-image {
   margin-top: 60px;
 }
-/* Welcome Page Only */
-.welcome-only .intro-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 30px;
-  margin-bottom: 60px;
-}
-
-.welcome-only .intro-text {
-  flex: 1;
-  min-width: 250px;
-}
-
-.welcome-only .welcome-photo {
-  flex: 0 0 260px;
-  max-width: 100%;
-}
-
-.welcome-only .welcome-photo img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.welcome-only .text-with-image {
-  overflow: auto;
-  margin-bottom: 60px;
-}
-
-.welcome-only .text-with-image img.block-image {
-  width: 260px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.welcome-only .text-with-image:nth-of-type(1) .block-image {
-  float: right;
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-.welcome-only .text-with-image:nth-of-type(2) .block-image {
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-
-.welcome-only .text-with-image:nth-of-type(3) .block-image {
-  float: right;
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-.welcome-only .text-block {
-  overflow: hidden;
-}
-
-.welcome-only .text-without-image {
-  margin-top: 60px;
-}
-
-/* Responsive for Welcome Page */
-@media (max-width: 768px) {
-  .welcome-only .intro-section {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .welcome-only .welcome-photo {
+.coaching-only .coaching-photo {
     width: 100%;
     margin-bottom: 20px;
   }
 
-  .welcome-only .text-with-image img.block-image {
+  .coaching-only .text-with-image img.block-image {
     float: none;
     display: block;
     margin: 0 auto 20px auto;
     width: 100%;
   }
 
-  .welcome-only .text-with-image,
-  .welcome-only .text-block {
+  .coaching-only .text-with-image,
+  .coaching-only .text-block {
     text-align: left;
+}
+/* Welcome Page Text & Image Tweaks */
+.welcome-only .text-with-image {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 30px;
+}
+
+.welcome-only .text-block {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
+.welcome-only .block-image {
+  flex: 0 0 260px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.welcome-only .block-image.left {
+  order: 0;
+}
+
+.welcome-only .block-image.right {
+  order: 1;
+}
+
+@media (max-width: 768px) {
+  .welcome-only .text-with-image {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .welcome-only .block-image {
+    order: unset;
+    width: 100%;
+    margin: 0 auto 20px auto;
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .coaching-only .intro-section {
     flex-direction: column;
