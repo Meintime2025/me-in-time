@@ -34,7 +34,33 @@ p {
   text-align: justify;
 }
 
-/* Image + Text layout */
+/* Coaching Page Layout */
+.intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.coaching-photo {
+  flex: 0 0 260px;
+  max-width: 100%;
+}
+
+.coaching-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Text + Floating Image Sections (Counselling style layout) */
 .text-with-image {
   overflow: auto;
   margin-bottom: 60px;
@@ -66,7 +92,6 @@ p {
   margin-bottom: 10px;
 }
 
-/* Text block */
 .text-block {
   overflow: hidden;
 }
@@ -97,6 +122,16 @@ p {
 
 /* Responsive */
 @media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .coaching-photo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
   .text-with-image img.block-image {
     float: none;
     display: block;
