@@ -14,17 +14,15 @@ body {
   max-width: 900px;
   margin: 40px auto;
   padding: 20px;
-  text-align: left;
-  position: relative;
 }
 
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #567235;
   margin-top: 40px;
   margin-bottom: 20px;
-  line-height: 1.2;
 }
 
 h1 {
@@ -36,86 +34,49 @@ p {
   text-align: justify;
 }
 
-ul {
-  margin-bottom: 20px;
-  padding-left: 20px;
+/* Image + Text layout */
+.text-with-image {
+  overflow: auto;
+  margin-bottom: 60px;
 }
 
-a {
-  color: #69892C;
-  text-decoration: none;
+.text-with-image img.block-image {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-a:hover {
-  text-decoration: underline;
+.text-with-image:nth-of-type(1) .block-image {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
-/* Navigation */
-nav {
-  position: relative;
-  background-image: url("images/manchester-skyline.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-  margin: 0 auto 40px auto;
-  max-width: 1100px;
-  padding: 20px 0;
-  box-shadow: 0 4px 12px rgba(70, 90, 40, 0.5);
+.text-with-image:nth-of-type(2) .block-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
-nav::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.4);
-  z-index: 0;
-  border-radius: 10px;
+.text-with-image:nth-of-type(3) .block-image {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
-.nav-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Text block */
+.text-block {
+  overflow: hidden;
 }
 
-.site-logo img {
-  height: 120px;
-  width: auto;
-}
-
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  padding: 10px 15px;
-  border-radius: 30px;
-  font-size: 1.4rem;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.6);
+.text-without-image {
+  margin-top: 60px;
 }
 
 /* Buttons */
-.button-link,
-.contact-button,
-.sticky-contact {
+.button-link {
   display: inline-block;
   background-color: #789E2D;
   color: white;
@@ -125,158 +86,26 @@ nav a:hover {
   font-size: 1rem;
   border-radius: 30px;
   text-decoration: none;
-  margin-bottom: 12px;
+  margin-top: 20px;
   transition: background-color 0.3s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.button-link:hover,
-.contact-button:hover,
-.sticky-contact:hover {
+.button-link:hover {
   background-color: #5F7F24;
-  color: #F5F7EC;
 }
 
-.button-link.translucent-button,
-.contact-button.translucent-button,
-.sticky-contact.sticky-translucent {
-  background-color: rgba(255, 255, 255, 0.6);
-  color: black;
-  backdrop-filter: blur(5px);
-}
-
-.button-link.translucent-button:hover,
-.contact-button.translucent-button:hover,
-.sticky-contact.sticky-translucent:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Sticky Contact Button */
-.sticky-contact {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* BACP Logo */
-.bacp-logo {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 60px 0 20px 0;
-  padding-left: 10px;
-}
-
-.bacp-logo img {
-  height: 95px;
-  width: auto;
-  max-width: 100%;
-}
-
-/* Footer */
-footer {
-  text-align: left;
-  margin-top: 60px;
-  padding: 20px 0;
-  color: #69892C;
-  font-family: 'Lora', serif;
-  font-size: 0.9rem;
-}
-
-/* FAQ Expandables */
-summary {
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.15rem;
-  user-select: none;
-  color: #69892C;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-details[open] summary::before {
-  content: "▼ ";
-  color: #789E2D;
-}
-
-summary::before {
-  content: "► ";
-  color: #789E2D;
-}
-
-details {
-  background: white;
-  border-radius: 6px;
-  margin-bottom: 25px;
-  padding: 20px 25px;
-  box-shadow: 0 2px 6px rgba(120, 140, 70, 0.15);
-  cursor: pointer;
-  font-family: 'Lora', serif;
-  font-size: 1rem;
-  color: #555A4A;
-}
-
-/* Intro Layout */
-.intro-section {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin: 40px 0;
-}
-
-/* Text Blocks with Alternating Image Alignment */
-.text-with-image {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: flex-start;
-  margin-bottom: 40px;
-}
-
-.text-block {
-  flex: 1;
-  min-width: 250px;
-}
-
-.block-image.right {
-  flex: 0 0 220px;
-  max-width: 220px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.block-image.left {
-  flex: 0 0 220px;
-  max-width: 220px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  order: -1;
-}
-
-/* Final Section Without Image */
-.text-without-image {
-  margin-top: 60px;
-}
-
-/* Responsive Layout */
+/* Responsive */
 @media (max-width: 768px) {
-  .text-with-image {
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-  }
-
-  .block-image.left,
-  .block-image.right {
-    margin-top: 20px;
-    order: 0;
-  }
-
-  .text-block {
+  .text-with-image img.block-image {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
     width: 100%;
+  }
+
+  .text-with-image,
+  .text-block {
+    text-align: left;
   }
 }
