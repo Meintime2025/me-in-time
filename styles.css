@@ -309,10 +309,11 @@ details {
   }
 
   .welcome-photo,
-  .contact-photo,
-  .coaching-photo,
-  .counselling-photo.
-  .welcome-image {
+.contact-photo,
+.coaching-photo,
+.counselling-photo,
+.welcome-image {
+
     max-width: 140px;
     flex: 0 0 140px;
     margin-bottom: 20px;
