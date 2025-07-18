@@ -220,6 +220,71 @@ details {
   font-size: 1rem;
   color: #555A4A;
 }
+  
+/* Coaching Page Only */
+.coaching-only .intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.coaching-only .intro-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.coaching-only .coaching-photo {
+  flex: 0 0 260px;
+  max-width: 100%;
+}
+
+.coaching-only .coaching-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.coaching-only .text-with-image {
+  overflow: auto;
+  margin-bottom: 60px;
+}
+
+.coaching-only .text-with-image img.block-image {
+  width: 260px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.coaching-only .text-with-image:nth-of-type(1) .block-image {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.coaching-only .text-with-image:nth-of-type(2) .block-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.coaching-only .text-with-image:nth-of-type(3) .block-image {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.coaching-only .text-block {
+  overflow: hidden;
+}
+
+.coaching-only .text-without-image {
+  margin-top: 60px;
+}
 /* Welcome Page Only */
 .welcome-only .intro-section {
   display: flex;
@@ -308,70 +373,6 @@ details {
   .welcome-only .text-block {
     text-align: left;
   }
-  
-/* Coaching Page Only */
-.coaching-only .intro-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 30px;
-  margin-bottom: 60px;
-}
-
-.coaching-only .intro-text {
-  flex: 1;
-  min-width: 250px;
-}
-
-.coaching-only .coaching-photo {
-  flex: 0 0 260px;
-  max-width: 100%;
-}
-
-.coaching-only .coaching-photo img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-.coaching-only .text-with-image {
-  overflow: auto;
-  margin-bottom: 60px;
-}
-
-.coaching-only .text-with-image img.block-image {
-  width: 260px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.coaching-only .text-with-image:nth-of-type(1) .block-image {
-  float: right;
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-.coaching-only .text-with-image:nth-of-type(2) .block-image {
-  float: left;
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-
-.coaching-only .text-with-image:nth-of-type(3) .block-image {
-  float: right;
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-.coaching-only .text-block {
-  overflow: hidden;
-}
-
-.coaching-only .text-without-image {
-  margin-top: 60px;
 }
 
 /* Responsive */
