@@ -220,7 +220,7 @@ details {
   color: #555A4A;
 }
 
-/* Intro Layout for All Pages */
+/* Intro Layout */
 .intro-section {
   display: flex;
   align-items: flex-start;
@@ -229,54 +229,19 @@ details {
   margin: 40px 0;
 }
 
-/* Coaching Image Styling (Tram.jpeg) */
-.coaching-photo {
-  flex: 0 0 280px;
-  max-width: 280px;
-  margin-top: 20px;
-  align-self: flex-end; /* Moves it down */
-}
-
-.coaching-photo img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 4.2; /* Makes it taller */
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Welcome Image */
-.welcome-photo {
-  flex: 0 0 200px;
-  max-width: 200px;
-}
-.welcome-photo img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.inline-welcome-photo {
+/* Welcome Image Inside Text */
+.inline-welcome-image {
   float: right;
-  margin-right: 20px;
-  margin-bottom: 10px;
   width: 180px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
- } 
-/* Contact Image */
-.contact-photo {
-  flex: 0 0 220px;
-  max-width: 220px;
-}
-.contact-photo img {
-  width: 100%;
-  height: auto;
+  margin-left: 20px;
+  margin-bottom: 10px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-/* Counselling Page Image */
+
+/* Other Page Photos */
+.coaching-photo,
+.contact-photo,
 .counselling-photo {
   flex: 0 0 280px;
   max-width: 280px;
@@ -284,26 +249,13 @@ details {
   align-self: flex-end;
 }
 
+.coaching-photo img,
+.contact-photo img,
 .counselling-photo img {
   width: 100%;
   height: auto;
   aspect-ratio: 3 / 4.2;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-.welcome-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 40px auto;
-  border-radius: 12px;
-}
-.inline-welcome-image {
-  float: right;
-  margin-left: 20px;
-  margin-bottom: 10px;
-  width: 180px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -323,16 +275,10 @@ details {
     text-align: center;
   }
 
-  .welcome-photo,
-.contact-photo,
-.coaching-photo,
-.counselling-photo,
-.welcome-image {
-
-    max-width: 140px;
-    flex: 0 0 140px;
-    margin-bottom: 20px;
-    align-self: center;
+  .inline-welcome-image {
+    float: none;
+    margin: 0 auto 20px auto;
+    display: block;
   }
 
   .intro-text {
